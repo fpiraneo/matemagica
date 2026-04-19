@@ -1,0 +1,573 @@
+% ============================================================
+%  cap_potenze.tex — Le potenze
+%  Matemagica — Scuole medie Canton Ticino (DECS)
+% ============================================================
+
+\chapter{Le potenze}
+
+% --- Obiettivi di apprendimento --------------------------------
+\section*{Obiettivi di apprendimento}
+\begin{itemize}[leftmargin=1.5em]
+  \item Comprendere il significato di \textbf{potenza} come moltiplicazione ripetuta.
+  \item Conoscere e applicare le \textbf{proprietà delle potenze}.
+  \item Riconoscere la precedenza dell'elevamento a potenza nelle espressioni aritmetiche.
+  \item Leggere e scrivere numeri grandi utilizzando le \textbf{potenze di 10}.
+  \item Comprendere i principi di base della \textbf{notazione scientifica}.
+\end{itemize}
+
+% ============================================================
+\section{Dalla moltiplicazione alla potenza}
+% ============================================================
+
+\subsection{La riproduzione batterica}
+
+I batteri sono microrganismi unicellulari che si riproducono dividendosi a metà:
+da ogni divisione derivano due batteri, ognuno dei quali si divide di nuovo, e così via.
+Immagina di partire da un singolo batterio che si riproduce ogni ora.
+
+\begin{center}
+  \begin{tikzpicture}[
+      every node/.style={circle, draw=blu, fill=azzurro, inner sep=3pt, font=\small},
+      level distance=1.1cm,
+      level 1/.style={sibling distance=5cm},
+      level 2/.style={sibling distance=2.5cm},
+      level 3/.style={sibling distance=1.3cm},
+      edge from parent/.style={draw=blu!60, thin}
+    ]
+    \node {1}
+    child { node {2}
+        child { node {4}
+            child { node {8} }
+            child { node {8} }
+          }
+        child { node {4}
+            child { node {8} }
+            child { node {8} }
+          }
+      }
+    child { node {2}
+        child { node {4}
+            child { node {8} }
+            child { node {8} }
+          }
+        child { node {4}
+            child { node {8} }
+            child { node {8} }
+          }
+      };
+    % Etichette ore
+    \node[draw=none, fill=none, right=0.3cm] at (4.5, 0)    {\small 0 ore};
+    \node[draw=none, fill=none, right=0.3cm] at (4.5, -1.1) {\small 1 ora};
+    \node[draw=none, fill=none, right=0.3cm] at (4.5, -2.2) {\small 2 ore};
+    \node[draw=none, fill=none, right=0.3cm] at (4.5, -3.3) {\small 3 ore};
+  \end{tikzpicture}
+\end{center}
+
+Quanti batteri ci sono dopo 5 ore? Bisogna moltiplicare 2 per sé stesso 5 volte:
+\[
+  2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 = 32
+\]
+
+Che calcoli lunghi! Esiste però un modo per abbreviare una \textbf{moltiplicazione
+  di fattori tutti uguali}: si chiama \textbf{elevazione a potenza}.
+
+\begin{center}
+  \begin{tabular}{@{} c c r @{}}
+    \toprule
+    \textbf{Ore trascorse} & \textbf{Moltiplicazione}                      & \textbf{Numero di batteri} \\
+    \midrule
+    0                      & $2^0$                                         & 1                          \\
+    1                      & $2^1$                                         & 2                          \\
+    2                      & $2 \times 2 = 2^2$                            & 4                          \\
+    3                      & $2 \times 2 \times 2 = 2^3$                   & 8                          \\
+    4                      & $2 \times 2 \times 2 \times 2 = 2^4$          & 16                         \\
+    5                      & $2 \times 2 \times 2 \times 2 \times 2 = 2^5$ & 32                         \\
+    12                     & $2^{12}$                                      & 4096                       \\
+    \bottomrule
+  \end{tabular}
+\end{center}
+
+\begin{sapevi}
+  \textbf{Lo sapevi?}
+
+  Lo yogurt che mangi a colazione esiste grazie ai batteri! Alcuni tipi di batteri
+  «buoni», detti \textit{fermenti lattici}, trasformano il latte in yogurt attraverso
+  un processo di fermentazione. Senza la riproduzione batterica — e senza le potenze
+  per descriverla — non potremmo capire quanto rapidamente avviene questo processo.
+\end{sapevi}
+
+% ============================================================
+\subsection{Perché servono le potenze? Tre storie matematiche}
+% ============================================================
+
+Le potenze non sono un'invenzione recente: i matematici le hanno usate (senza
+saperlo) per migliaia di anni. Ecco tre esempi tratti dalla storia.
+
+\subsubsection*{La scacchiera del bramino}
+
+\begin{sapevi}
+  \textbf{L'invenzione del gioco degli scacchi}
+
+  Secondo un antico racconto, il re Iadava perse il suo unico figlio durante una guerra
+  e cadde in una profonda disperazione. Un giorno, un umile bramino gli donò una tavola
+  divisa in 64 caselle: era la scacchiera. Il re apprezzò talmente il gioco da chiedere
+  al bramino come volesse essere ricompensato.
+
+  Il bramino rispose: «Non voglio oro, terreni o palazzi. Mi darai un chicco di grano
+  per la prima casella, due per la seconda, quattro per la terza, e così via,
+  raddoppiando la quantità ad ogni casella fino all'ultima.»
+
+  Il re rise: sembrava una richiesta da sciocco. Ma i matematici di corte calcolarono
+  la verità. Il numero totale di chicchi richiesti è:
+  \[
+    1 + 2 + 2^2 + 2^3 + \cdots + 2^{63} = 2^{64} - 1 = 18\,446\,744\,073\,709\,551\,615
+  \]
+  Circa $1{,}8 \times 10^{19}$ chicchi — più di tutta la produzione mondiale di grano
+  per migliaia di anni. Il bramino non era affatto uno sciocco!
+
+  \textit{Adattato da: Malba Tahan, \textup{L'uomo che sapeva contare}, Salani.}
+\end{sapevi}
+
+\subsubsection*{I sette gatti di Ahmes}
+
+Il seguente problema è contenuto nel \textbf{Papiro di Ahmes}, un documento egizio
+del 1700 a.C. conservato al British Museum di Londra — uno dei testi matematici
+più antichi del mondo.
+
+\begin{esempio}
+  \textit{In ogni casa ci sono sette gatti.
+    Ogni gatto acchiappa sette topi.
+    Ogni topo mangia sette spighe.
+    Ogni spiga dà sette heqat di grano.
+    Quante cose ci sono in tutto?}
+
+  \textit{Soluzione:}
+  \begin{align*}
+    \text{case}   & = 7 = 7^1                               \\
+    \text{gatti}  & = 7 \times 7 = 7^2 = 49                 \\
+    \text{topi}   & = 7 \times 7 \times 7 = 7^3 = 343       \\
+    \text{spighe} & = 7^4 = 2\,401                          \\
+    \text{heqat}  & = 7^5 = 16\,807                         \\[4pt]
+    \text{Totale} & = 7^1 + 7^2 + 7^3 + 7^4 + 7^5 = 19\,607
+  \end{align*}
+\end{esempio}
+
+\subsubsection*{La filastrocca di Camogli}
+
+Anche nella tradizione italiana compaiono moltiplicazioni ripetute:
+
+\begin{center}
+  \textit{Per una strada che mena a Camogli passava un uomo con sette mogli;}\\
+  \textit{ed ogni moglie aveva sette sacche, ed in ogni sacca aveva sette gatte;}\\
+  \textit{ed ogni gatta sette gattini.}\\[4pt]
+  \textit{Fra gatti, gatte, sacche e mogli, in quanti andavano, dite, a Camogli?}
+\end{center}
+
+\begin{esempio}
+  \textit{Soluzione:}
+  \begin{align*}
+    \text{mogli}   & = 7                               \\
+    \text{sacche}  & = 7 \times 7 = 7^2 = 49           \\
+    \text{gatte}   & = 7 \times 7 \times 7 = 7^3 = 343 \\
+    \text{gattini} & = 7^4 = 2\,401                    \\[4pt]
+    \text{Totale}  & = 7 + 7^2 + 7^3 + 7^4 = 2\,800
+  \end{align*}
+\end{esempio}
+
+\begin{attenzione}
+  Tutte e tre le situazioni — batteri, scacchiera, filastrocca — descrivono lo stesso
+  fenomeno matematico: una quantità che si \textbf{moltiplica ripetutamente} per uno
+  stesso numero. Le potenze sono lo strumento esatto per descrivere questo tipo di crescita.
+\end{attenzione}
+
+% ============================================================
+\section{Che cos'è una potenza?}
+% ============================================================
+
+Quando si moltiplica un numero per sé stesso più volte, si può usare una scrittura
+abbreviata chiamata \textbf{potenza}.
+
+\begin{definizione}
+  La \textbf{potenza} $a^n$ è il prodotto di $n$ fattori uguali al numero $a$:
+  \[
+    a^n = \underbrace{a \times a \times a \times \cdots \times a}_{n \text{ volte}}
+  \]
+  Il numero $a$ si chiama \textbf{base}, il numero $n$ si chiama \textbf{esponente}.
+  Si legge: «$a$ elevato alla $n$» oppure «$a$ alla $n$».
+\end{definizione}
+
+\subsection{Le parti di una potenza}
+
+\begin{esempio}
+  Considera la potenza $3^4$:
+  \[
+    \underbrace{3}_{\text{base}}^{\!\!\!\underbrace{4}_{\text{esponente}}}
+    = 3 \times 3 \times 3 \times 3 = 81
+  \]
+  Il risultato $81$ è detto \textbf{valore} della potenza.
+\end{esempio}
+
+\begin{esempio}
+  Alcuni esempi di calcolo:
+  \begin{align*}
+    2^5  & = 2 \times 2 \times 2 \times 2 \times 2 = 32 \\
+    5^3  & = 5 \times 5 \times 5 = 125                  \\
+    10^4 & = 10 \times 10 \times 10 \times 10 = 10\,000
+  \end{align*}
+\end{esempio}
+
+% ============================================================
+\subsection{Casi particolari: esponente 0 e 1}
+% ============================================================
+
+\begin{regola}
+  Per qualsiasi numero $a$ con $a \neq 0$ valgono le seguenti regole:
+  \[
+    a^1 = a \qquad \text{(un solo fattore uguale alla base)}
+  \]
+  \[
+    a^0 = 1 \qquad \text{(qualsiasi numero diverso da zero elevato a zero vale 1)}
+  \]
+\end{regola}
+
+\begin{esempio}
+  \begin{align*}
+    7^1   & = 7   \\
+    7^0   & = 1   \\
+    100^0 & = 1   \\
+    100^1 & = 100
+  \end{align*}
+\end{esempio}
+
+\begin{attenzione}
+  \textbf{Caso speciale: $0^0$}
+
+  Il valore di $0^0$ è una questione matematica delicata: in alcuni contesti
+  si considera uguale a $1$, in altri è considerato indeterminato.
+  A livello di scuola media, questa situazione non viene di solito incontrata,
+  ma è importante sapere che $0^0$ non si comporta come le altre potenze di zero.
+
+  Regola pratica: nelle espressioni che incontrerai, la base e l'esponente
+  non saranno mai contemporaneamente zero.
+\end{attenzione}
+
+% ============================================================
+\section{Le potenze nelle espressioni aritmetiche}
+% ============================================================
+
+\begin{regola}
+  Nelle espressioni aritmetiche, l'\textbf{elevamento a potenza} ha
+  \textbf{precedenza} rispetto a moltiplicazioni, divisioni, addizioni e sottrazioni.
+
+  L'ordine completo delle operazioni è:
+  \begin{enumerate}[leftmargin=2em]
+    \item Operazioni tra parentesi (dall'interno verso l'esterno)
+    \item \textbf{Elevamento a potenza}
+    \item Moltiplicazioni e divisioni (da sinistra verso destra)
+    \item Addizioni e sottrazioni (da sinistra verso destra)
+  \end{enumerate}
+\end{regola}
+
+\begin{esempio}
+  Calcola: $2 + 3 \times 2^3$
+
+  \textit{Soluzione:}
+  \begin{align*}
+    2 + 3 \times 2^3
+     & = 2 + 3 \times 8 &  & \text{(prima la potenza: } 2^3 = 8\text{)} \\
+     & = 2 + 24         &  & \text{(poi la moltiplicazione)}            \\
+     & = 26             &  & \text{(infine l'addizione)}
+  \end{align*}
+\end{esempio}
+
+\begin{esempio}
+  Calcola: $(2 + 3)^2 - 4 \times 2$
+
+  \textit{Soluzione:}
+  \begin{align*}
+    (2 + 3)^2 - 4 \times 2
+     & = 5^2 - 4 \times 2 &  & \text{(prima la parentesi)}     \\
+     & = 25 - 4 \times 2  &  & \text{(poi la potenza)}         \\
+     & = 25 - 8           &  & \text{(poi la moltiplicazione)} \\
+     & = 17               &  & \text{(infine la sottrazione)}
+  \end{align*}
+\end{esempio}
+
+\begin{attenzione}
+  \textbf{Errore comune: confondere $(-3)^2$ e $-3^2$}
+
+  \begin{align*}
+    (-3)^2 & = (-3) \times (-3) = 9 \qquad \text{(la base è $-3$)}                \\
+    -3^2   & = -(3 \times 3) = -9 \qquad \text{(si eleva prima $3$, poi si nega)}
+  \end{align*}
+
+  Le parentesi cambiano completamente il risultato!
+\end{attenzione}
+
+% ============================================================
+\section{Proprietà delle potenze}
+% ============================================================
+
+Le proprietà che seguono valgono per basi e esponenti appartenenti
+ai numeri naturali (con le restrizioni indicate caso per caso).
+
+% ============================================================
+\subsection{Prodotto di potenze con la stessa base}
+% ============================================================
+
+\begin{regola}
+  Il prodotto di due potenze con la \textbf{stessa base} si calcola mantenendo
+  la base e \textbf{sommando gli esponenti}:
+  \[
+    a^b \times a^c = a^{b+c}
+  \]
+\end{regola}
+
+\begin{esempio}
+  \[
+    3^2 \times 3^4 = 3^{2+4} = 3^6 = 729
+  \]
+  \textit{Verifica:} $\;3^2 \times 3^4 = 9 \times 81 = 729$ \quad\textit{(corretto)}
+\end{esempio}
+
+\begin{attenzione}
+  Questa proprietà vale \textbf{solo} se le due potenze hanno la stessa base.
+  Non è possibile semplificare $2^3 \times 5^3$ usando questa regola,
+  perché le basi sono diverse.
+\end{attenzione}
+
+% ============================================================
+\subsection{Quoziente di potenze con la stessa base}
+% ============================================================
+
+\begin{regola}
+  Il quoziente di due potenze con la \textbf{stessa base} si calcola mantenendo
+  la base e \textbf{sottraendo l'esponente del divisore}:
+  \[
+    a^c \div a^b = a^{c-b} \qquad \text{con } a \neq 0 \text{ e } c \geq b
+  \]
+\end{regola}
+
+\begin{esempio}
+  \[
+    5^7 \div 5^3 = 5^{7-3} = 5^4 = 625
+  \]
+  \textit{Verifica:} $\;5^7 \div 5^3 = 78125 \div 125 = 625$ \quad\textit{(corretto)}
+\end{esempio}
+
+% ============================================================
+\subsection{Potenza di una potenza}
+% ============================================================
+
+\begin{regola}
+  La \textbf{potenza di una potenza} si calcola mantenendo la base e
+  \textbf{moltiplicando gli esponenti}:
+  \[
+    (a^b)^c = a^{b \times c}
+  \]
+\end{regola}
+
+\begin{esempio}
+  \[
+    (2^3)^4 = 2^{3 \times 4} = 2^{12} = 4096
+  \]
+  \textit{Verifica:} $\;2^3 = 8$ e $\;8^4 = 4096$ \quad\textit{(corretto)}
+\end{esempio}
+
+\begin{attenzione}
+  Non confondere $(a^b)^c$ con $a^{(b^c)}$:
+  \[
+    (2^3)^4 = 2^{12} = 4096 \qquad \text{ma} \qquad 2^{(3^4)} = 2^{81}
+  \]
+  Il secondo valore è enormemente più grande! Le parentesi sono decisive.
+\end{attenzione}
+
+% ============================================================
+\subsection{Prodotto di potenze con lo stesso esponente}
+% ============================================================
+
+\begin{regola}
+  Il prodotto di due potenze con il \textbf{stesso esponente} si calcola
+  \textbf{moltiplicando le basi} e mantenendo l'esponente:
+  \[
+    b^a \times c^a = (b \times c)^a
+  \]
+\end{regola}
+
+\begin{esempio}
+  \[
+    3^4 \times 2^4 = (3 \times 2)^4 = 6^4 = 1296
+  \]
+  \textit{Verifica:} $\;3^4 \times 2^4 = 81 \times 16 = 1296$ \quad\textit{(corretto)}
+\end{esempio}
+
+% ============================================================
+\subsection{Quoziente di potenze con lo stesso esponente}
+% ============================================================
+
+\begin{regola}
+  Il quoziente di due potenze con il \textbf{stesso esponente} si calcola
+  \textbf{dividendo le basi} e mantenendo l'esponente:
+  \[
+    b^a \div c^a = \left(\frac{b}{c}\right)^a \qquad \text{con } c \neq 0
+  \]
+\end{regola}
+
+\begin{esempio}
+  \[
+    6^3 \div 2^3 = \left(\frac{6}{2}\right)^3 = 3^3 = 27
+  \]
+  \textit{Verifica:} $\;6^3 \div 2^3 = 216 \div 8 = 27$ \quad\textit{(corretto)}
+\end{esempio}
+
+% ============================================================
+\subsection{Riepilogo delle proprietà}
+% ============================================================
+
+\begin{center}
+  \begin{tabular}{@{} l l @{}}
+    \toprule
+    \textbf{Proprietà}          & \textbf{Formula}                  \\
+    \midrule
+    Prodotto, stessa base       & $a^b \times a^c = a^{b+c}$        \\[4pt]
+    Quoziente, stessa base      & $a^c \div a^b = a^{c-b}$          \\[4pt]
+    Potenza di potenza          & $(a^b)^c = a^{b \times c}$        \\[4pt]
+    Prodotto, stesso esponente  & $b^a \times c^a = (b \times c)^a$ \\[4pt]
+    Quoziente, stesso esponente & $b^a \div c^a = (b \div c)^a$     \\
+    \bottomrule
+  \end{tabular}
+\end{center}
+
+% ============================================================
+\section{Le potenze di 10 e i numeri grandi}
+% ============================================================
+
+\begin{definizione}
+  Le \textbf{potenze di 10} sono potenze con base uguale a 10:
+  \[
+    10^1 = 10, \quad 10^2 = 100, \quad 10^3 = 1000, \quad \ldots
+  \]
+  Il numero di \textbf{zeri} nel risultato è uguale all'esponente.
+\end{definizione}
+
+\begin{center}
+  \begin{tabular}{@{} c l r @{}}
+    \toprule
+    \textbf{Potenza} & \textbf{Forma estesa}   & \textbf{Nome} \\
+    \midrule
+    $10^0$           & $1$                     & uno           \\
+    $10^1$           & $10$                    & dieci         \\
+    $10^2$           & $100$                   & cento         \\
+    $10^3$           & $1\,000$                & mille         \\
+    $10^4$           & $10\,000$               & diecimila     \\
+    $10^5$           & $100\,000$              & centomila     \\
+    $10^6$           & $1\,000\,000$           & milione       \\
+    $10^9$           & $1\,000\,000\,000$      & miliardo      \\
+    $10^{12}$        & $1\,000\,000\,000\,000$ & bilione       \\
+    \bottomrule
+  \end{tabular}
+\end{center}
+
+\begin{esempio}
+  Le potenze di 10 rendono facile moltiplicare numeri grandi:
+  \[
+    7 \times 10^4 = 7 \times 10\,000 = 70\,000
+  \]
+  \[
+    3{,}5 \times 10^6 = 3{,}5 \times 1\,000\,000 = 3\,500\,000
+  \]
+\end{esempio}
+
+% ============================================================
+\section{La notazione scientifica}
+% ============================================================
+
+In scienza e tecnologia si incontrano spesso numeri molto grandi (o molto piccoli)
+che sarebbero scomodi da scrivere per esteso. La \textbf{notazione scientifica}
+permette di esprimerli in forma compatta.
+
+\begin{definizione}
+  Un numero è scritto in \textbf{notazione scientifica} quando è espresso nella forma:
+  \[
+    a \times 10^n
+  \]
+  dove $a$ è un numero con \textbf{una sola cifra prima della virgola}
+  (cioè $1 \leq a < 10$) e $n$ è un numero naturale.
+\end{definizione}
+
+\begin{esempio}
+  La distanza tra la Terra e il Sole è circa $150\,000\,000\,\text{km}$.
+
+  \textit{Conversione in notazione scientifica:}
+  \begin{align*}
+    150\,000\,000 & = 1{,}5 \times 100\,000\,000 \\
+                  & = 1{,}5 \times 10^8
+  \end{align*}
+
+  Si conta: la virgola deve essere spostata di \textbf{8 posizioni} verso sinistra.
+  \[
+    \underbrace{1\overbrace{50\,000\,000}^{8 \text{ cifre}}}
+  \]
+\end{esempio}
+
+\begin{esempio}
+  La massa della Terra è circa $4\,600\,000\,000\,000\,000\,000\,000\,\text{t}$.
+
+  \textit{Conversione in notazione scientifica:}
+  \begin{align*}
+    4\,600\,000\,000\,000\,000\,000\,000 & = 4{,}6 \times 10^{21}
+  \end{align*}
+
+  La cifra significativa è $4{,}6$; il numero di posizioni spostate è $21$.
+\end{esempio}
+
+\begin{regola}
+  \textbf{Come convertire un numero in notazione scientifica:}
+  \begin{enumerate}[leftmargin=2em]
+    \item Scrivi il numero con la virgola dopo la \textbf{prima cifra} non nulla.
+    \item Conta di quante posizioni hai spostato la virgola: quel numero è l'esponente $n$.
+    \item Scrivi il risultato nella forma $a \times 10^n$.
+  \end{enumerate}
+\end{regola}
+
+\begin{sapevi}
+  \textbf{Lo sapevi?}
+
+  La notazione scientifica è usata ogni giorno da astronomi, fisici e ingegneri.
+  La distanza dalla Terra alla stella più vicina (Proxima Centauri) è circa
+  $4{,}0 \times 10^{13}\,\text{km}$ — un numero con 13 zeri che sarebbe
+  difficilissimo da leggere nella forma estesa!
+
+  Anche i computer usano una forma analoga internamente per rappresentare numeri
+  molto grandi o molto piccoli: si chiama \textit{virgola mobile} (in inglese
+  \textit{floating point}).
+\end{sapevi}
+
+% ============================================================
+\section*{Riepilogo del capitolo}
+% ============================================================
+
+\begin{itemize}[leftmargin=1.5em]
+  \item Una \textbf{potenza} $a^n$ è la moltiplicazione ripetuta della base $a$
+        per $n$ volte. Il numero $n$ si chiama \textbf{esponente}.
+  \item $a^0 = 1$ per ogni $a \neq 0$;\quad $a^1 = a$ per ogni $a$.
+  \item Nelle espressioni aritmetiche, l'\textbf{elevamento a potenza}
+        si esegue \textbf{prima} di moltiplicazioni, divisioni, addizioni
+        e sottrazioni.
+  \item Le proprietà principali delle potenze:
+        \begin{itemize}
+          \item Stesso base, prodotto: si sommano gli esponenti.
+          \item Stessa base, quoziente: si sottraggono gli esponenti.
+          \item Potenza di potenza: si moltiplicano gli esponenti.
+          \item Stesso esponente, prodotto: si moltiplicano le basi.
+          \item Stesso esponente, quoziente: si dividono le basi.
+        \end{itemize}
+  \item Le \textbf{potenze di 10} hanno tanti zeri quant'è l'esponente.
+  \item La \textbf{notazione scientifica} $a \times 10^n$ (con $1 \leq a < 10$)
+        permette di scrivere in modo compatto numeri molto grandi.
+\end{itemize}
+
+% ============================================================
+%  (Sezione riservata per future soluzioni degli esercizi)
+% ============================================================
+% \section*{Soluzioni}

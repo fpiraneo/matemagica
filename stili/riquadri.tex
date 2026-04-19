@@ -1,0 +1,193 @@
+% =============================================================
+% stili/riquadri.tex
+% Definizione degli ambienti grafici per i riquadri didattici
+% Richiede: tcolorbox (caricato in preamble.tex)
+% =============================================================
+
+% -------------------------------------------------------------
+% RIQUADRO DEFINIZIONE
+% Sfondo azzurro chiaro, bordo sinistro blu
+% -------------------------------------------------------------
+\newtcolorbox{definizione}[2][]{
+    enhanced,
+    breakable,
+    colback     = coloreSecondario,
+    colframe    = coloreAccento,
+    leftrule    = 4pt,
+    rightrule   = 0pt,
+    toprule     = 0pt,
+    bottomrule  = 0pt,
+    arc         = 0pt,
+    outer arc   = 0pt,
+    fonttitle   = \bfseries\color{colorePrimarioScuro},
+    title       = {\faBookOpen\quad Definizione: #2},
+    attach boxed title to top left = {yshift=-2mm, xshift=4mm},
+    boxed title style = {
+        colback  = coloreAccento,
+        colframe = coloreAccento,
+        arc      = 2pt
+    },
+    top         = 8pt,
+    bottom      = 8pt,
+    left        = 8pt,
+    right       = 8pt,
+    #1
+}
+
+% Versione semplificata senza icona (se fontawesome non disponibile)
+\newtcolorbox{definizionesemplice}[2][]{
+    enhanced,
+    breakable,
+    colback     = coloreSecondario,
+    colframe    = coloreAccento,
+    leftrule    = 4pt,
+    rightrule   = 0pt,
+    toprule     = 0.5pt,
+    bottomrule  = 0.5pt,
+    arc         = 2pt,
+    fonttitle   = \bfseries\color{colorePrimarioScuro},
+    title       = {Definizione: #2},
+    top         = 8pt,
+    bottom      = 8pt,
+    left        = 8pt,
+    right       = 8pt,
+    #1
+}
+
+% -------------------------------------------------------------
+% RIQUADRO REGOLA / PROPRIETÀ
+% Sfondo azzurro chiaro, bordo sinistro blu scuro, grassetto
+% -------------------------------------------------------------
+\newtcolorbox{regola}[2][]{
+    enhanced,
+    breakable,
+    colback     = coloreSecondario,
+    colframe    = colorePrimarioScuro,
+    leftrule    = 4pt,
+    rightrule   = 0pt,
+    toprule     = 0.5pt,
+    bottomrule  = 0.5pt,
+    arc         = 2pt,
+    fonttitle   = \bfseries\color{colorePrimarioScuro},
+    title       = {Regola: #2},
+    top         = 8pt,
+    bottom      = 8pt,
+    left        = 8pt,
+    right       = 8pt,
+    #1
+}
+
+% -------------------------------------------------------------
+% RIQUADRO ESEMPIO RISOLTO
+% Sfondo bianco, bordo blu tratteggiato
+% -------------------------------------------------------------
+\newtcolorbox{esempio}[2][]{
+    enhanced,
+    breakable,
+    colback     = white,
+    colframe    = colorePrimario,
+    leftrule    = 1pt,
+    rightrule   = 1pt,
+    toprule     = 1pt,
+    bottomrule  = 1pt,
+    arc         = 4pt,
+    fonttitle   = \bfseries\color{colorePrimario},
+    title       = {Esempio: #2},
+    top         = 8pt,
+    bottom      = 8pt,
+    left        = 8pt,
+    right       = 8pt,
+    #1
+}
+
+% -------------------------------------------------------------
+% RIQUADRO ATTENZIONE / ERRORE COMUNE
+% Sfondo giallo ambra, bordo arancione
+% -------------------------------------------------------------
+\newtcolorbox{attenzione}[1][Attenzione!]{
+    enhanced,
+    breakable,
+    colback     = coloreTerziario,
+    colframe    = coloreAttenzione,
+    leftrule    = 4pt,
+    rightrule   = 0pt,
+    toprule     = 0.5pt,
+    bottomrule  = 0.5pt,
+    arc         = 2pt,
+    fonttitle   = \bfseries\color{coloreAttenzione},
+    title       = {⚠\quad #1},
+    top         = 8pt,
+    bottom      = 8pt,
+    left        = 8pt,
+    right       = 8pt,
+}
+
+% -------------------------------------------------------------
+% RIQUADRO "LO SAPEVI?"
+% Sfondo azzurro molto chiaro, bordo blu chiaro
+% -------------------------------------------------------------
+\newtcolorbox{sapevi}[1][Lo sapevi?]{
+    enhanced,
+    breakable,
+    colback     = coloreSapevi,
+    colframe    = colorePrimario,
+    leftrule    = 2pt,
+    rightrule   = 2pt,
+    toprule     = 2pt,
+    bottomrule  = 2pt,
+    arc         = 6pt,
+    fonttitle   = \itshape\color{colorePrimario},
+    title       = {💡\quad #1},
+    top         = 8pt,
+    bottom      = 8pt,
+    left        = 8pt,
+    right       = 8pt,
+}
+
+% -------------------------------------------------------------
+% RIQUADRO RIEPILOGO
+% Sfondo grigio chiaro, titolo blu, bordo pieno
+% -------------------------------------------------------------
+\newtcolorbox{riepilogo}[1][Riepilogo del capitolo]{
+    enhanced,
+    breakable,
+    colback     = gray!8,
+    colframe    = colorePrimario,
+    leftrule    = 1.5pt,
+    rightrule   = 1.5pt,
+    toprule     = 1.5pt,
+    bottomrule  = 1.5pt,
+    arc         = 4pt,
+    fonttitle   = \bfseries\large\color{colorePrimario},
+    title       = {#1},
+    top         = 10pt,
+    bottom      = 10pt,
+    left        = 10pt,
+    right       = 10pt,
+}
+
+% -------------------------------------------------------------
+% RIQUADRO SOLUZIONE ESERCIZI
+% Sfondo bianco, bordo tratteggiato grigio
+% -------------------------------------------------------------
+\newtcolorbox{soluzione}[1][Soluzioni]{
+    enhanced,
+    breakable,
+    colback     = white,
+    colframe    = coloreGrigio,
+    leftrule    = 0.5pt,
+    rightrule   = 0.5pt,
+    toprule     = 0.5pt,
+    bottomrule  = 0.5pt,
+    arc         = 2pt,
+    fonttitle   = \bfseries\color{coloreGrigio},
+    title       = {#1},
+    top         = 8pt,
+    bottom      = 8pt,
+    left        = 8pt,
+    right       = 8pt,
+}
+
+% =============================================================
+% Fine stili/riquadri.tex
+% =============================================================

@@ -1,0 +1,320 @@
+% ============================================================
+%  Capitolo 1 — I numeri
+%  Matemagica — Libro di matematica per le scuole medie
+%  Canton Ticino (DECS)
+% ============================================================
+
+\chapter{I numeri}
+
+% ------------------------------------------------------------
+\section*{Obiettivi di apprendimento}
+% ------------------------------------------------------------
+
+Al termine di questo capitolo l'allievo sarà in grado di:
+
+\begin{itemize}
+  \item Spiegare cosa sono i numeri e a cosa servono.
+  \item Riconoscere e utilizzare le \textbf{cifre arabe} nel sistema di numerazione decimale.
+  \item Leggere e scrivere semplici numeri con la \textbf{numerazione romana}.
+  \item Identificare e collocare i \textbf{numeri naturali} sulla retta numerica.
+  \item Comprendere il \textbf{sistema posizionale decimale}.
+  \item Utilizzare correttamente i \textbf{simboli di confronto} tra numeri.
+\end{itemize}
+
+\bigskip
+
+% ============================================================
+\section{Cosa sono i numeri}
+% ============================================================
+
+L'idea di numero è una delle conquiste intellettuali più antiche dell'umanità.
+Risale ad almeno 300\,000 anni fa, quando gli esseri umani vivevano nelle caverne
+e dedicavano quasi tutte le proprie energie alla ricerca del cibo.
+In quell'epoca non era ancora nota la capacità di contare:
+l'idea di quantità era limitata ai piccoli insiemi che si potevano riconoscere
+a colpo d'occhio — 1, 2, 3 e 4 oggetti.
+Per quantità maggiori si ricorreva a espressioni generiche
+come \emph{mucchio}, \emph{molti} o \emph{tanti}.
+
+\medskip
+
+Nel corso dei secoli, le civiltà hanno elaborato modalità diverse
+per rappresentare i numeri, ciascuna con caratteristiche proprie.
+
+\begin{definizione}
+  Un \textbf{numero} è un insieme di simboli, chiamati \textbf{cifre},
+  che indica una quantità.
+\end{definizione}
+
+% ------------------------------------------------------------
+\subsection{Il sistema di numerazione arabo}
+% ------------------------------------------------------------
+
+Il sistema di numerazione che utilizziamo ogni giorno fu sviluppato
+dalle popolazioni dell'\textbf{India} e successivamente diffuso in Europa
+dagli \textbf{Arabi}.
+Per questo motivo le nostre cifre sono chiamate \textbf{cifre arabe}
+o \textbf{cifre indo-arabiche}.
+
+\begin{regola}
+  Il sistema arabo utilizza esattamente \textbf{dieci cifre}:
+  \[
+    0,\quad 1,\quad 2,\quad 3,\quad 4,\quad 5,\quad 6,\quad 7,\quad 8,\quad 9
+  \]
+  Con queste dieci cifre è possibile scrivere qualsiasi numero.
+\end{regola}
+
+\begin{esempio}
+  Con le sole cifre $3$, $0$ e $7$ possiamo formare, tra gli altri,
+  i numeri $307$, $370$, $703$ e $730$.
+  Ogni combinazione rappresenta una quantità diversa.
+\end{esempio}
+
+% ------------------------------------------------------------
+\subsection{Cenni di numerazione romana}
+% ------------------------------------------------------------
+
+Un altro sistema di numerazione importante nella storia è quello \textbf{romano},
+usato nell'antica Roma e ancora oggi presente su orologi, monumenti e capitoli dei libri.
+
+\begin{regola}
+  La numerazione romana utilizza sette \textbf{simboli} fondamentali:
+
+  \medskip
+  \begin{center}
+    \begin{tabular}{cc}
+      \toprule
+      \textbf{Simbolo} & \textbf{Valore} \\
+      \midrule
+      I   &   1 \\
+      V   &   5 \\
+      X   &  10 \\
+      L   &  50 \\
+      C   & 100 \\
+      D   & 500 \\
+      M   & 1000 \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+
+  \medskip
+  I simboli si \textbf{sommano} se un simbolo di valore minore segue uno di valore maggiore
+  (es.\ $\mathrm{VI} = 6$);
+  si \textbf{sottraggono} se un simbolo di valore minore precede uno di valore maggiore
+  (es.\ $\mathrm{IV} = 4$).
+\end{regola}
+
+\begin{esempio}
+  \[
+    \mathrm{VIII} = 8 \qquad
+    \mathrm{XIV} = 14 \qquad
+    \mathrm{XL} = 40 \qquad
+    \mathrm{MMXXVI} = 2026
+  \]
+\end{esempio}
+
+\begin{attenzione}
+  \textbf{Errore comune — numerazione romana:}
+  non è consentito ripetere lo stesso simbolo più di tre volte di fila.
+  Quindi $40$ non si scrive $\mathrm{XXXX}$, ma $\mathrm{XL}$.
+\end{attenzione}
+
+\begin{sapevi}
+  \textbf{Lo sapevi?}
+  Il sistema romano non possiede un simbolo per lo zero.
+  Questa mancanza rese i calcoli molto complessi.
+  L'introduzione dello \textbf{zero} come cifra vera e propria,
+  avvenuta in India attorno al V secolo d.C.,
+  fu una delle rivoluzioni matematiche più importanti della storia.
+\end{sapevi}
+
+% ============================================================
+\section{I numeri naturali}
+% ============================================================
+
+I numeri che fin dalle origini l'essere umano ha usato per \textbf{contare}
+oggetti, animali, persone e giorni prendono il nome di \textbf{numeri naturali}.
+
+\begin{definizione}
+  I \textbf{numeri naturali} sono i numeri interi non negativi utilizzati per contare.
+  Si indicano con il simbolo $\mathbb{N}$:
+  \[
+    \mathbb{N} = \{0,\; 1,\; 2,\; 3,\; 4,\; 5,\; \ldots\}
+  \]
+  I puntini ($\ldots$) indicano che la sequenza continua all'infinito.
+\end{definizione}
+
+% ------------------------------------------------------------
+\subsection{La retta numerica}
+% ------------------------------------------------------------
+
+I numeri naturali possono essere rappresentati graficamente su una
+\textbf{retta numerica}: una semiretta orientata su cui i numeri
+sono collocati a distanze uguali tra loro.
+
+\medskip
+
+\begin{center}
+\begin{tikzpicture}
+  % Retta
+  \draw[->, thick, color=blu] (-0.3,0) -- (8.5,0);
+  % Tacche e numeri
+  \foreach \x/\n in {0/0, 1/1, 2/2, 3/3, 4/4, 5/5, 6/6, 7/7} {
+    \draw[thick] (\x,0.12) -- (\x,-0.12);
+    \node[below=4pt] at (\x,0) {$\n$};
+  }
+  % Puntini
+  \node at (8,0) {$\cdots$};
+\end{tikzpicture}
+\end{center}
+
+\begin{regola}
+  Sulla retta numerica:
+  \begin{itemize}
+    \item L'\textbf{origine} corrisponde al numero $0$.
+    \item Procedendo verso destra, i numeri \textbf{aumentano}.
+    \item Ogni numero naturale $n$ possiede un \textbf{successivo} $n + 1$
+          e, ad eccezione dello zero, un \textbf{precedente} $n - 1$.
+    \item Tra un numero e il suo successivo non esiste alcun altro numero naturale.
+  \end{itemize}
+\end{regola}
+
+\begin{attenzione}
+  \textbf{Attenzione — i numeri naturali sono infiniti:}
+  non esiste un numero naturale più grande di tutti gli altri.
+  Per indicare questo fatto si scrivono i puntini ($\ldots$)
+  all'estremità destra della sequenza.
+\end{attenzione}
+
+% ============================================================
+\section{Il sistema posizionale decimale}
+% ============================================================
+
+Il modo di rappresentare i numeri che utilizziamo abitualmente
+si chiama \textbf{sistema posizionale decimale}.
+
+\begin{definizione}
+  Nel \textbf{sistema posizionale decimale}:
+  \begin{itemize}
+    \item Si utilizzano \textbf{dieci cifre}: $0, 1, 2, 3, 4, 5, 6, 7, 8, 9$.
+    \item Il \textbf{valore} di ciascuna cifra dipende dalla
+          \textbf{posizione} che occupa nel numero.
+  \end{itemize}
+\end{definizione}
+
+\begin{esempio}
+  Nel numero $\mathbf{352}$:
+  \begin{itemize}
+    \item la cifra $3$ si trova nella posizione delle \textbf{centinaia}
+          e vale $3 \times 100 = 300$;
+    \item la cifra $5$ si trova nella posizione delle \textbf{decine}
+          e vale $5 \times 10 = 50$;
+    \item la cifra $2$ si trova nella posizione delle \textbf{unità}
+          e vale $2 \times 1 = 2$.
+  \end{itemize}
+  Quindi: $352 = 300 + 50 + 2$.
+\end{esempio}
+
+\begin{attenzione}
+  \textbf{Errore comune — il ruolo dello zero:}
+  la cifra $0$ non indica «nulla da scrivere» ma occupa una posizione precisa.
+  Nel numero $305$, lo zero occupa la posizione delle decine
+  e indica che non ci sono decine: $305 = 300 + 0 + 5$.
+  Senza lo zero, $305$ e $35$ sarebbero indistinguibili.
+\end{attenzione}
+
+\begin{sapevi}
+  \textbf{Lo sapevi?}
+  Il termine \textbf{decimale} deriva dal latino \emph{decem}, che significa dieci.
+  La scelta di dieci come base del sistema è probabilmente legata
+  al fatto che l'essere umano possiede dieci dita,
+  che in tempi antichi erano il primo strumento di calcolo.
+\end{sapevi}
+
+% ============================================================
+\section{Simboli di confronto}
+% ============================================================
+
+In matematica si usano simboli specifici per confrontare due numeri
+ed esprimere la loro relazione.
+
+\begin{definizione}
+  I \textbf{simboli di confronto} (o \textbf{simboli di relazione})
+  indicano la relazione di ordine tra due numeri o espressioni.
+\end{definizione}
+
+\begin{regola}
+  I simboli di confronto fondamentali sono:
+
+  \medskip
+  \begin{center}
+    \begin{tabular}{cll}
+      \toprule
+      \textbf{Simbolo} & \textbf{Nome} & \textbf{Esempio} \\
+      \midrule
+      $>$   & maggiore di          & $7 > 3$ \quad (7 è maggiore di 3) \\
+      $<$   & minore di            & $3 < 7$ \quad (3 è minore di 7) \\
+      $\geq$ & maggiore o uguale a & $5 \geq 5$ \quad (5 è maggiore o uguale a 5) \\
+      $\leq$ & minore o uguale a   & $4 \leq 6$ \quad (4 è minore o uguale a 6) \\
+      $=$   & uguale a             & $2 + 3 = 5$ \\
+      $\neq$ & diverso da          & $4 \neq 7$ \quad (4 è diverso da 7) \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{regola}
+
+\begin{esempio}
+  \textbf{Uso dei simboli di confronto — passo per passo.}
+
+  \medskip
+  \textit{Confrontare $48$ e $52$.}
+
+  \begin{enumerate}
+    \item Osserviamo le cifre delle \textbf{decine}: $48$ ha la cifra $4$,
+          mentre $52$ ha la cifra $5$.
+    \item Poiché $4 < 5$, il numero $48$ è minore di $52$.
+    \item Scriviamo: \quad $48 < 52$.
+  \end{enumerate}
+\end{esempio}
+
+\begin{esempio}
+  \textit{Verificare se $6 + 4 \neq 11$.}
+
+  \begin{enumerate}
+    \item Calcoliamo il primo membro: $6 + 4 = 10$.
+    \item Confrontiamo con $11$: $10 \neq 11$ è \textbf{vero}.
+  \end{enumerate}
+\end{esempio}
+
+\begin{attenzione}
+  \textbf{Errore comune — direzione del simbolo:}
+  il simbolo \emph{apre} sempre verso il numero maggiore.
+  $5 > 3$ e $3 < 5$ esprimono la stessa relazione vista da due direzioni diverse.
+  Un metodo utile: immaginare il simbolo come una freccia che punta
+  verso il numero più piccolo.
+\end{attenzione}
+
+\begin{sapevi}
+  \textbf{Lo sapevi?}
+  I simboli $<$ e $>$ furono introdotti dal matematico inglese
+  \textbf{Thomas Harriot} nel 1631, nell'opera \emph{Artis Analyticae Praxis}.
+  Prima di allora, i matematici esprimevano le relazioni di ordine
+  soltanto a parole.
+\end{sapevi}
+
+% ============================================================
+\section*{Riepilogo del capitolo}
+% ============================================================
+
+\begin{itemize}
+  \item Un \textbf{numero} è un insieme di simboli (cifre) che indica una quantità.
+  \item Il \textbf{sistema arabo} usa dieci cifre ($0$–$9$);
+        il \textbf{sistema romano} usa sette simboli ($\mathrm{I, V, X, L, C, D, M}$).
+  \item I \textbf{numeri naturali} ($\mathbb{N} = \{0, 1, 2, 3, \ldots\}$)
+        servono a contare; sono infiniti e si rappresentano sulla retta numerica.
+  \item Nel \textbf{sistema posizionale decimale} il valore di una cifra
+        dipende dalla posizione che occupa nel numero.
+  \item I \textbf{simboli di confronto}
+        ($>, <, \geq, \leq, =, \neq$)
+        esprimono la relazione tra due quantità.
+\end{itemize}

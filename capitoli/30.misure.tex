@@ -1,0 +1,594 @@
+% ============================================================
+%  cap_misure.tex — Matemagica
+%  Misure: lunghezza, massa, capacità, superficie, volume
+%  Equivalenze e misure agrarie
+% ============================================================
+
+\chapter{Le misure}
+
+% --- Obiettivi di apprendimento --------------------------------
+\section*{Obiettivi di apprendimento}
+\begin{itemize}[noitemsep]
+    \item Conoscere le unità di misura fondamentali per lunghezza, massa e capacità.
+    \item Saper utilizzare multipli e sottomultipli di ciascuna unità.
+    \item Comprendere la struttura decimale del Sistema Internazionale di misura.
+    \item Applicare la tavola delle misure per convertire tra unità diverse.
+    \item Conoscere le misure di superficie e di volume e la loro relazione con le misure lineari.
+    \item Comprendere la relazione tra decimetro cubo e litro.
+    \item Conoscere le misure agrarie (ara ed ettaro).
+\end{itemize}
+
+% ============================================================
+\section{Il Sistema Internazionale di misura}
+% ============================================================
+
+\begin{definizione}
+    Il \textbf{Sistema Internazionale di misura} (abbreviato \textbf{SI}) è il sistema di unità di misura adottato a livello mondiale in ambito scientifico e tecnico. È un sistema \textbf{decimale}: ogni unità è dieci volte più grande di quella immediatamente inferiore.
+\end{definizione}
+
+I prefissi del Sistema Internazionale seguono sempre lo stesso schema, indipendentemente dall'unità di misura considerata. Conoscere i prefissi significa saper leggere tutte le misure del sistema.
+
+\begin{center}
+    \begin{tabular}{llcc}
+        \toprule
+        \textbf{Prefisso} & \textbf{Simbolo} & \textbf{Significato}    & \textbf{Valore} \\
+        \midrule
+        chilo             & k                & mille volte l'unità     & $\times 1000$   \\
+        etto              & h                & cento volte l'unità     & $\times 100$    \\
+        deca              & da               & dieci volte l'unità     & $\times 10$     \\
+        —                 & —                & \textit{unità base}     & $1$             \\
+        deci              & d                & un decimo dell'unità    & $\div 10$       \\
+        centi             & c                & un centesimo dell'unità & $\div 100$      \\
+        milli             & m                & un millesimo dell'unità & $\div 1000$     \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+% ============================================================
+\section{La tavola delle misure}
+% ============================================================
+
+\begin{definizione}
+    La \textbf{tavola delle misure} è uno strumento che dispone in ordine decrescente tutti i multipli e sottomultipli di un'unità, da sinistra (valori maggiori) a destra (valori minori). Ogni passaggio verso destra corrisponde a dividere per 10; ogni passaggio verso sinistra corrisponde a moltiplicare per 10.
+\end{definizione}
+
+\begin{center}
+    \begin{tikzpicture}[font=\small]
+        % Celle della tavola
+        \foreach \i/\lbl/\sub in {
+                0/k/chilo,
+                1/h/etto,
+                2/da/deca,
+                3/{u.b.}/unità,
+                4/d/deci,
+                5/c/centi,
+                6/m/milli}
+            {
+                \node[draw=blu, fill=azzurro, minimum width=1.6cm, minimum height=0.9cm,
+                    inner sep=2pt, align=center] at (\i*1.7,0.5) {\textbf{\lbl}\\[1pt]\tiny\sub};
+            }
+        % Frecce
+        \draw[->, thick, blu] (0.8,-0.3) -- (10.4,-0.3)
+        node[midway, below=2pt]{\footnotesize $\div 10$ per ogni passo verso destra};
+        \draw[->, thick, blu!60] (10.4,-0.9) -- (0.8,-0.9)
+        node[midway, below=2pt]{\footnotesize $\times 10$ per ogni passo verso sinistra};
+    \end{tikzpicture}
+\end{center}
+
+\begin{regola}
+    Per convertire un'unità in un'unità più piccola (verso destra nella tavola), si \textbf{moltiplica} per una potenza di 10. Per convertire in un'unità più grande (verso sinistra), si \textbf{divide} per una potenza di 10. Il numero di zeri da aggiungere o di cifre da spostare corrisponde al numero di passi effettuati nella tavola.
+\end{regola}
+
+% ============================================================
+\section{Misure di lunghezza}
+% ============================================================
+
+\begin{definizione}
+    L'\textbf{unità di misura fondamentale della lunghezza} nel SI è il \textbf{metro} (simbolo: \textbf{m}). La lunghezza esprime la distanza tra due punti.
+\end{definizione}
+
+\subsection{Multipli e sottomultipli del metro}
+
+\begin{center}
+    \begin{tabular}{lllr}
+        \toprule
+        \textbf{Nome}  & \textbf{Simbolo} & \textbf{Relazione con il metro}   & \textbf{Valore in m} \\
+        \midrule
+        chilometro     & km               & $1\,\text{km} = 1000\,\text{m}$   & $1000$               \\
+        ettometro      & hm               & $1\,\text{hm} = 100\,\text{m}$    & $100$                \\
+        decametro      & dam              & $1\,\text{dam} = 10\,\text{m}$    & $10$                 \\
+        \textbf{metro} & \textbf{m}       & \textit{unità base}               & $1$                  \\
+        decimetro      & dm               & $1\,\text{dm} = {,}1\,\text{m}$   & ${,}1$               \\
+        centimetro     & cm               & $1\,\text{cm} = {,}01\,\text{m}$  & ${,}01$              \\
+        millimetro     & mm               & $1\,\text{mm} = {,}001\,\text{m}$ & ${,}001$             \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+\begin{esempio}
+    \textbf{Conversione di lunghezze}
+
+    \medskip
+    \textbf{a)} Convertire $3{,}5\,\text{km}$ in metri.
+
+    Da km a m si fanno \textbf{3 passi verso destra} nella tavola, quindi si moltiplica per $10^3 = 1000$:
+    \[
+        3{,}5\,\text{km} = 3{,}5 \times 1000\,\text{m} = 3500\,\text{m}
+    \]
+
+    \medskip
+    \textbf{b)} Convertire $47\,\text{cm}$ in metri.
+
+    Da cm a m si fanno \textbf{2 passi verso sinistra}, quindi si divide per $10^2 = 100$:
+    \[
+        47\,\text{cm} = 47 \div 100\,\text{m} = {,}47\,\text{m}
+    \]
+
+    \medskip
+    \textbf{c)} Convertire $2\,\text{km}$ e $340\,\text{m}$ in centimetri.
+
+    Prima si converte tutto in metri: $2\,\text{km} + 340\,\text{m} = 2340\,\text{m}$.\\
+    Da m a cm si fanno \textbf{2 passi verso destra}, quindi si moltiplica per $100$:
+    \[
+        2340\,\text{m} = 2340 \times 100\,\text{cm} = 234\,000\,\text{cm}
+    \]
+\end{esempio}
+
+\begin{attenzione}
+    \textbf{Errore comune — confondere dam e dm.}
+
+    Il \textbf{decametro} (dam) è \emph{dieci volte} il metro; il \textbf{decimetro} (dm) è \emph{un decimo} del metro. I simboli si assomigliano, ma il loro valore è molto diverso: $1\,\text{dam} = 100\,\text{dm}$. Quando si legge un simbolo, occorre verificare se la lettera iniziale è \emph{d} (deci, $\div 10$) oppure \emph{da} (deca, $\times 10$).
+\end{attenzione}
+
+% ============================================================
+\section{Misure di massa}
+% ============================================================
+
+\begin{definizione}
+    L'\textbf{unità di misura fondamentale della massa} nel SI è il \textbf{grammo} (simbolo: \textbf{g}). La massa indica la quantità di materia contenuta in un corpo.
+\end{definizione}
+
+\begin{attenzione}
+    \textbf{Massa e peso non sono la stessa cosa.}
+
+    Nel linguaggio comune si usa spesso la parola \emph{peso} per indicare la massa di un oggetto. In fisica, il \textbf{peso} è la forza con cui la Terra attrae un corpo e dipende dalla gravità; la \textbf{massa} è invece una proprietà intrinseca del corpo e non cambia al variare della gravità. In questo capitolo utilizziamo il termine \emph{massa}, come previsto dal SI.
+\end{attenzione}
+
+\subsection{Multipli e sottomultipli del grammo}
+
+\begin{center}
+    \begin{tabular}{lllr}
+        \toprule
+        \textbf{Nome}   & \textbf{Simbolo} & \textbf{Relazione con il grammo}  & \textbf{Valore in g} \\
+        \midrule
+        chilogrammo     & kg               & $1\,\text{kg} = 1000\,\text{g}$   & $1000$               \\
+        ettogrammo      & hg               & $1\,\text{hg} = 100\,\text{g}$    & $100$                \\
+        decagrammo      & dag              & $1\,\text{dag} = 10\,\text{g}$    & $10$                 \\
+        \textbf{grammo} & \textbf{g}       & \textit{unità base}               & $1$                  \\
+        decigrammo      & dg               & $1\,\text{dg} = {,}1\,\text{g}$   & ${,}1$               \\
+        centigrammo     & cg               & $1\,\text{cg} = {,}01\,\text{g}$  & ${,}01$              \\
+        milligrammo     & mg               & $1\,\text{mg} = {,}001\,\text{g}$ & ${,}001$             \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+\begin{sapevi}
+    \textbf{La tonnellata}
+
+    Nella vita quotidiana si usa spesso la \textbf{tonnellata} (simbolo: t) per indicare masse molto grandi. Non è un'unità del SI, ma è accettata nell'uso corrente: $1\,\text{t} = 1000\,\text{kg} = 1\,000\,000\,\text{g}$.
+\end{sapevi}
+
+\begin{esempio}
+    \textbf{Conversione di masse}
+
+    \medskip
+    \textbf{a)} Convertire $2\,\text{kg}$ e $350\,\text{g}$ in grammi.
+
+    $1\,\text{kg} = 1000\,\text{g}$, quindi:
+    \[
+        2\,\text{kg} + 350\,\text{g} = 2000\,\text{g} + 350\,\text{g} = 2350\,\text{g}
+    \]
+
+    \medskip
+    \textbf{b)} Convertire $4500\,\text{mg}$ in grammi.
+
+    Da mg a g si fanno \textbf{3 passi verso sinistra}, quindi si divide per $1000$:
+    \[
+        4500\,\text{mg} = 4500 \div 1000\,\text{g} = 4{,}5\,\text{g}
+    \]
+\end{esempio}
+
+% ============================================================
+\section{Misure di capacità}
+% ============================================================
+
+\begin{definizione}
+    L'\textbf{unità di misura fondamentale della capacità} è il \textbf{litro} (simbolo: \textbf{l} oppure \textbf{L}). La capacità indica il volume di liquido o gas che un contenitore può accogliere.
+\end{definizione}
+
+\begin{attenzione}
+    \textbf{Il simbolo del litro}
+
+    Il litro si scrive con la lettera elle minuscola (\textbf{l}) o, per evitare confusione con il numero 1, con la lettera \textbf{L} maiuscola. Entrambe le forme sono accettate; in questo libro si usa \textbf{l}.
+\end{attenzione}
+
+\subsection{Multipli e sottomultipli del litro}
+
+\begin{center}
+    \begin{tabular}{lllr}
+        \toprule
+        \textbf{Nome}  & \textbf{Simbolo} & \textbf{Relazione con il litro}   & \textbf{Valore in l} \\
+        \midrule
+        chilolitro     & kl               & $1\,\text{kl} = 1000\,\text{l}$   & $1000$               \\
+        ettolitro      & hl               & $1\,\text{hl} = 100\,\text{l}$    & $100$                \\
+        decalitro      & dal              & $1\,\text{dal} = 10\,\text{l}$    & $10$                 \\
+        \textbf{litro} & \textbf{l}       & \textit{unità base}               & $1$                  \\
+        decilitro      & dl               & $1\,\text{dl} = {,}1\,\text{l}$   & ${,}1$               \\
+        centilitro     & cl               & $1\,\text{cl} = {,}01\,\text{l}$  & ${,}01$              \\
+        millilitro     & ml               & $1\,\text{ml} = {,}001\,\text{l}$ & ${,}001$             \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+\begin{esempio}
+    \textbf{Conversione di capacità}
+
+    \medskip
+    \textbf{a)} Convertire $1{,}5\,\text{l}$ in millilitri.
+
+    Da l a ml si fanno \textbf{3 passi verso destra}, quindi si moltiplica per $1000$:
+    \[
+        1{,}5\,\text{l} = 1{,}5 \times 1000\,\text{ml} = 1500\,\text{ml}
+    \]
+
+    \medskip
+    \textbf{b)} Convertire $75\,\text{cl}$ in litri.
+
+    Da cl a l si fanno \textbf{2 passi verso sinistra}, quindi si divide per $100$:
+    \[
+        75\,\text{cl} = 75 \div 100\,\text{l} = {,}75\,\text{l}
+    \]
+\end{esempio}
+
+% ============================================================
+\section{Misure di superficie}
+% ============================================================
+
+\begin{definizione}
+    La \textbf{superficie} (o \textbf{area}) misura l'estensione di una figura piana. L'unità di misura fondamentale della superficie nel SI è il \textbf{metro quadrato} (simbolo: \textbf{m\textsuperscript{2}}), che corrisponde all'area di un quadrato con il lato di $1\,\text{m}$.
+\end{definizione}
+
+\subsection{Perché si moltiplica per 100 (e non per 10)?}
+
+Passando da un'unità lineare alla corrispondente unità di superficie, il fattore di conversione \textbf{si eleva al quadrato}.
+
+\begin{center}
+    \begin{tikzpicture}
+        % Quadrato 1m x 1m
+        \draw[thick, blu, fill=azzurro!60] (0,0) rectangle (3,3);
+        \node at (1.5,1.5) {$1\,\text{m}^2$};
+        \draw[<->, blu] (0,-0.4) -- (3,-0.4) node[midway,below]{$1\,\text{m}$};
+        \draw[<->, blu] (3.4,0) -- (3.4,3) node[midway,right]{$1\,\text{m}$};
+        % Divisione in dm
+        \foreach \x in {0.3,0.6,...,2.7} \draw[gray!50] (\x,0)--(\x,3);
+        \foreach \y in {0.3,0.6,...,2.7} \draw[gray!50] (0,\y)--(3,\y);
+        \node[below=1.2cm] at (1.5,0) {\footnotesize $1\,\text{m} = 10\,\text{dm}$, quindi $1\,\text{m}^2 = 10 \times 10\,\text{dm}^2 = 100\,\text{dm}^2$};
+    \end{tikzpicture}
+\end{center}
+
+\begin{regola}
+    Tra unità di superficie consecutive nella tavola, il fattore di conversione è $\mathbf{100}$ (non 10), perché la superficie ha \textbf{due dimensioni}.
+
+    \[
+        1\,\text{m}^2 = 100\,\text{dm}^2 \qquad 1\,\text{dm}^2 = 100\,\text{cm}^2 \qquad 1\,\text{cm}^2 = 100\,\text{mm}^2
+    \]
+
+    Per passare a un'unità più piccola si moltiplica per $100$; per passare a un'unità più grande si divide per $100$.
+\end{regola}
+
+\subsection{Tavola delle misure di superficie}
+
+\begin{center}
+    \begin{tabular}{lllr}
+        \toprule
+        \textbf{Nome}           & \textbf{Simbolo}              & \textbf{Relazione}                         & \textbf{Valore in m\textsuperscript{2}} \\
+        \midrule
+        chilometro quadrato     & km\textsuperscript{2}         & $1\,\text{km}^2 = 1\,000\,000\,\text{m}^2$ & $1\,000\,000$                           \\
+        ettometro quadrato      & hm\textsuperscript{2}         & $1\,\text{hm}^2 = 10\,000\,\text{m}^2$     & $10\,000$                               \\
+        decametro quadrato      & dam\textsuperscript{2}        & $1\,\text{dam}^2 = 100\,\text{m}^2$        & $100$                                   \\
+        \textbf{metro quadrato} & \textbf{m\textsuperscript{2}} & \textit{unità base}                        & $1$                                     \\
+        decimetro quadrato      & dm\textsuperscript{2}         & $1\,\text{dm}^2 = 0{,}01\,\text{m}^2$      & ${,}01$                                 \\
+        centimetro quadrato     & cm\textsuperscript{2}         & $1\,\text{cm}^2 = 0{,}0001\,\text{m}^2$    & ${,}0001$                               \\
+        millimetro quadrato     & mm\textsuperscript{2}         & $1\,\text{mm}^2 = 0{,}000001\,\text{m}^2$  & ${,}000001$                             \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+\begin{esempio}
+    \textbf{Conversione di superfici}
+
+    \medskip
+    \textbf{a)} Convertire $3\,\text{m}^2$ in centimetri quadrati.
+
+    Da m\textsuperscript{2} a cm\textsuperscript{2} ci sono \textbf{2 passi} nella tavola delle superfici, quindi si moltiplica per $100^2 = 10\,000$:
+    \[
+        3\,\text{m}^2 = 3 \times 10\,000\,\text{cm}^2 = 30\,000\,\text{cm}^2
+    \]
+
+    \medskip
+    \textbf{b)} Convertire $450\,\text{dm}^2$ in metri quadrati.
+
+    Da dm\textsuperscript{2} a m\textsuperscript{2} c'è \textbf{1 passo verso sinistra}, quindi si divide per $100$:
+    \[
+        450\,\text{dm}^2 = 450 \div 100\,\text{m}^2 = 4{,}5\,\text{m}^2
+    \]
+\end{esempio}
+
+\begin{attenzione}
+    \textbf{Errore comune — applicare il fattore lineare alle superfici.}
+
+    Un errore frequente è dividere o moltiplicare per $10$ invece che per $100$ quando si convertono superfici. Ricordare sempre: le superfici hanno due dimensioni, quindi il fattore di conversione è $10^2 = 100$ per ogni passo nella tavola. Ad esempio, $1\,\text{m}^2 \neq 10\,\text{dm}^2$, ma $1\,\text{m}^2 = 100\,\text{dm}^2$.
+\end{attenzione}
+
+% ============================================================
+\section{Misure di volume}
+% ============================================================
+
+\begin{definizione}
+    Il \textbf{volume} misura lo spazio occupato da un corpo nello spazio tridimensionale. L'unità di misura fondamentale del volume nel SI è il \textbf{metro cubo} (simbolo: \textbf{m\textsuperscript{3}}), che corrisponde al volume di un cubo con spigolo di $1\,\text{m}$.
+\end{definizione}
+
+\subsection{Perché si moltiplica per 1000?}
+
+Passando da un'unità lineare alla corrispondente unità di volume, il fattore di conversione \textbf{si eleva al cubo}.
+
+\begin{center}
+    \begin{tikzpicture}
+        % Cubo stilizzato in assonometria
+        \def\a{2.5}
+        \def\s{0.6}
+        % Faccia frontale
+        \draw[thick, blu, fill=azzurro!60] (0,0) rectangle (\a,\a);
+        % Faccia superiore
+        \draw[thick, blu, fill=azzurro!30]
+        (0,\a) -- (\s,\a+\s) -- (\a+\s,\a+\s) -- (\a,\a) -- cycle;
+        % Faccia laterale destra
+        \draw[thick, blu, fill=azzurro!45]
+        (\a,0) -- (\a+\s,\s) -- (\a+\s,\a+\s) -- (\a,\a) -- cycle;
+        % Quote
+        \draw[<->, blu] (0,-0.35) -- (\a,-0.35) node[midway,below]{$1\,\text{m}$};
+        \draw[<->, blu] (\a+\s+0.1,\s) -- (\a+\s+0.1,\a+\s) node[midway,right]{$1\,\text{m}$};
+        \node at (\a/2, \a/2) {$1\,\text{m}^3$};
+        \node[below=1.1cm] at (\a/2+0.2,0)
+        {\footnotesize $1\,\text{m} = 10\,\text{dm}$, quindi $1\,\text{m}^3 = 10 \times 10 \times 10\,\text{dm}^3 = 1000\,\text{dm}^3$};
+    \end{tikzpicture}
+\end{center}
+
+\begin{regola}
+    Tra unità di volume consecutive nella tavola, il fattore di conversione è $\mathbf{1000}$, perché il volume ha \textbf{tre dimensioni}.
+
+    \[
+        1\,\text{m}^3 = 1000\,\text{dm}^3 \qquad 1\,\text{dm}^3 = 1000\,\text{cm}^3 \qquad 1\,\text{cm}^3 = 1000\,\text{mm}^3
+    \]
+
+    Per passare a un'unità più piccola si moltiplica per $1000$; per passare a un'unità più grande si divide per $1000$.
+\end{regola}
+
+\subsection{Tavola delle misure di volume}
+
+\begin{center}
+    \begin{tabular}{lllr}
+        \toprule
+        \textbf{Nome}       & \textbf{Simbolo}              & \textbf{Relazione}                        & \textbf{Valore in m\textsuperscript{3}} \\
+        \midrule
+        chilometro cubo     & km\textsuperscript{3}         & $1\,\text{km}^3 = 10^9\,\text{m}^3$       & $1\,000\,000\,000$                      \\
+        ettometro cubo      & hm\textsuperscript{3}         & $1\,\text{hm}^3 = 10^6\,\text{m}^3$       & $1\,000\,000$                           \\
+        decametro cubo      & dam\textsuperscript{3}        & $1\,\text{dam}^3 = 1000\,\text{m}^3$      & $1\,000$                                \\
+        \textbf{metro cubo} & \textbf{m\textsuperscript{3}} & \textit{unità base}                       & $1$                                     \\
+        decimetro cubo      & dm\textsuperscript{3}         & $1\,\text{dm}^3 = 0{,}001\,\text{m}^3$    & ${,}001$                                \\
+        centimetro cubo     & cm\textsuperscript{3}         & $1\,\text{cm}^3 = 0{,}000001\,\text{m}^3$ & ${,}000001$                             \\
+        millimetro cubo     & mm\textsuperscript{3}         & $1\,\text{mm}^3 = 10^{-9}\,\text{m}^3$    & ${,}000000001$                          \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+\begin{esempio}
+    \textbf{Conversione di volumi}
+
+    \medskip
+    \textbf{a)} Convertire $2\,\text{m}^3$ in decimetri cubi.
+
+    Da m\textsuperscript{3} a dm\textsuperscript{3} c'è \textbf{1 passo verso destra}, quindi si moltiplica per $1000$:
+    \[
+        2\,\text{m}^3 = 2 \times 1000\,\text{dm}^3 = 2000\,\text{dm}^3
+    \]
+
+    \medskip
+    \textbf{b)} Convertire $5\,\text{dm}^3$ in centimetri cubi.
+
+    Da dm\textsuperscript{3} a cm\textsuperscript{3} c'è \textbf{1 passo verso destra}, quindi si moltiplica per $1000$:
+    \[
+        5\,\text{dm}^3 = 5 \times 1000\,\text{cm}^3 = 5000\,\text{cm}^3
+    \]
+\end{esempio}
+
+\begin{attenzione}
+    \textbf{Errore comune — applicare il fattore lineare o quadratico ai volumi.}
+
+    Per i volumi il fattore per ogni passo è $10^3 = 1000$, non $10$ né $100$. Questo vale per ogni coppia di unità adiacenti: $1\,\text{dm}^3 = 1000\,\text{cm}^3$, non $100\,\text{cm}^3$.
+\end{attenzione}
+
+% ============================================================
+\section{Relazione tra decimetro cubo e litro}
+% ============================================================
+
+\begin{definizione}
+    Il \textbf{decimetro cubo} e il \textbf{litro} sono due unità di misura equivalenti:
+    \[
+        \boxed{1\,\text{dm}^3 = 1\,\text{l}}
+    \]
+    In modo analogo: $1\,\text{cm}^3 = 1\,\text{ml}$ e $1\,\text{m}^3 = 1000\,\text{l}$.
+\end{definizione}
+
+Questa relazione deriva dalla definizione storica del litro: il litro fu definito come il volume occupato da un chilogrammo di acqua pura a $4\,°\text{C}$, che corrisponde esattamente a un decimetro cubo.
+
+\begin{center}
+    \begin{tikzpicture}
+        % Cubo dm
+        \def\a{1.8}
+        \def\s{0.45}
+        \draw[thick, blu, fill=azzurro!60] (0,0) rectangle (\a,\a);
+        \draw[thick, blu, fill=azzurro!30]
+        (0,\a) -- (\s,\a+\s) -- (\a+\s,\a+\s) -- (\a,\a) -- cycle;
+        \draw[thick, blu, fill=azzurro!45]
+        (\a,0) -- (\a+\s,\s) -- (\a+\s,\a+\s) -- (\a,\a) -- cycle;
+        \draw[<->, blu] (0,-0.3) -- (\a,-0.3) node[midway,below]{\footnotesize $1\,\text{dm}$};
+        \node at (\a/2,\a/2) {\footnotesize $1\,\text{dm}^3$};
+        % Simbolo uguale
+        \node at (\a+\s+0.7,\a/2+\s/2) {\Large $=$};
+        % Etichetta litro
+        \node[draw=blu, fill=azzurro!40, minimum width=1.5cm, minimum height=\a cm+0.2cm,
+            inner sep=4pt, align=center] at (\a+\s+1.9,\a/2+\s/2)
+        {\footnotesize $1\,\text{l}$};
+    \end{tikzpicture}
+\end{center}
+
+\begin{regola}
+    Grazie alla relazione $1\,\text{dm}^3 = 1\,\text{l}$, è possibile convertire direttamente tra misure di volume e misure di capacità:
+    \[
+        1\,\text{m}^3 = 1000\,\text{l} \qquad\qquad 1\,\text{cm}^3 = 1\,\text{ml}
+    \]
+\end{regola}
+
+\begin{esempio}
+    \textbf{Conversione tra volume e capacità}
+
+    \medskip
+    \textbf{a)} Una vasca da bagno ha un volume di ${,}3\,\text{m}^3$. Quanti litri contiene?
+
+    $1\,\text{m}^3 = 1000\,\text{l}$, quindi:
+    \[
+        {,}3\,\text{m}^3 = 0{,}3 \times 1000\,\text{l} = 300\,\text{l}
+    \]
+
+    \medskip
+    \textbf{b)} Una bottiglia contiene $750\,\text{ml}$. Qual è il suo volume in centimetri cubi?
+
+    $1\,\text{ml} = 1\,\text{cm}^3$, quindi:
+    \[
+        750\,\text{ml} = 750\,\text{cm}^3
+    \]
+\end{esempio}
+
+\begin{sapevi}
+    \textbf{Perché l'acqua è lo standard?}
+
+    Nell'antichità le misure variavano da città a città. Nel 1795, dopo la Rivoluzione Francese, la Francia introdusse il sistema metrico per unificare le misure in tutto il Paese. Il litro fu definito in riferimento all'acqua proprio perché è una sostanza facilmente disponibile ovunque e con proprietà fisiche precise e riproducibili.
+\end{sapevi}
+
+% ============================================================
+\section{Misure agrarie}
+% ============================================================
+
+\begin{definizione}
+    Le \textbf{misure agrarie} sono unità di misura della superficie utilizzate tradizionalmente per indicare l'estensione di terreni agricoli. Le principali sono:
+    \begin{itemize}[noitemsep]
+        \item l'\textbf{ara} (simbolo: \textbf{a}), pari a $1\,\text{dam}^2 = 100\,\text{m}^2$;
+        \item l'\textbf{ettaro} (simbolo: \textbf{ha}), pari a $1\,\text{hm}^2 = 10\,000\,\text{m}^2$.
+    \end{itemize}
+\end{definizione}
+
+\begin{center}
+    \begin{tabular}{llr}
+        \toprule
+        \textbf{Unità}                                                                            & \textbf{Equivalenza}            & \textbf{Valore in m\textsuperscript{2}} \\
+        \midrule
+        ettaro (ha)                                                                               & $1\,\text{ha} = 100\,\text{a}$  & $10\,000$                               \\
+        ara (a)                                                                                   & $1\,\text{a} = 100\,\text{m}^2$ & $100$                                   \\
+        \midrule
+        \multicolumn{2}{l}{$1\,\text{ha} = 100\,\text{a} = 10\,000\,\text{m}^2 = 1\,\text{hm}^2$} &                                                                           \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+\begin{regola}
+    \[
+        1\,\text{ha} = 100\,\text{a} \qquad 1\,\text{a} = 100\,\text{m}^2 \qquad 1\,\text{ha} = 10\,000\,\text{m}^2
+    \]
+\end{regola}
+
+\begin{esempio}
+    \textbf{Conversione con misure agrarie}
+
+    \medskip
+    \textbf{a)} Un campo ha un'estensione di $3{,}5\,\text{ha}$. Quanti metri quadrati sono?
+
+    $1\,\text{ha} = 10\,000\,\text{m}^2$, quindi:
+    \[
+        3{,}5\,\text{ha} = 3{,}5 \times 10\,000\,\text{m}^2 = 35\,000\,\text{m}^2
+    \]
+
+    \medskip
+    \textbf{b)} Un terreno misura $2500\,\text{m}^2$. Quante are sono?
+
+    $1\,\text{a} = 100\,\text{m}^2$, quindi:
+    \[
+        2500\,\text{m}^2 = 2500 \div 100\,\text{a} = 25\,\text{a}
+    \]
+\end{esempio}
+
+\begin{sapevi}
+    \textbf{L'ettaro nella vita quotidiana}
+
+    L'ettaro è tuttora l'unità più usata in agricoltura e nel settore immobiliare per i terreni. In Svizzera, i dati sulla superficie agricola sono sistematicamente espressi in ettari. Un campo da calcio standard ha un'area di circa ${,}7\,\text{ha}$.
+\end{sapevi}
+
+% ============================================================
+\section{Riepilogo}
+% ============================================================
+
+\begin{regola}
+    \textbf{Riepilogo delle conversioni fondamentali}
+
+    \medskip
+    \textbf{Misure lineari} — fattore $\times 10$ per ogni passo verso destra (unità più piccola):
+    \[
+        1\,\text{km} = 10\,\text{hm} = 100\,\text{dam} = 1000\,\text{m} = 10\,000\,\text{dm} = 100\,000\,\text{cm} = 1\,000\,000\,\text{mm}
+    \]
+
+    \medskip
+    \textbf{Misure di massa} — fattore $\times 10$ per ogni passo:
+    \[
+        1\,\text{kg} = 10\,\text{hg} = 100\,\text{dag} = 1000\,\text{g} = 10\,000\,\text{dg} = 100\,000\,\text{cg} = 1\,000\,000\,\text{mg}
+    \]
+
+    \medskip
+    \textbf{Misure di capacità} — fattore $\times 10$ per ogni passo:
+    \[
+        1\,\text{kl} = 10\,\text{hl} = 100\,\text{dal} = 1000\,\text{l} = 10\,000\,\text{dl} = 100\,000\,\text{cl} = 1\,000\,000\,\text{ml}
+    \]
+
+    \medskip
+    \textbf{Misure di superficie} — fattore $\times 100$ per ogni passo:
+    \[
+        1\,\text{km}^2 = 100\,\text{hm}^2 = 10\,000\,\text{dam}^2 = \ldots
+    \]
+
+    \medskip
+    \textbf{Misure di volume} — fattore $\times 1000$ per ogni passo:
+    \[
+        1\,\text{m}^3 = 1000\,\text{dm}^3 = 1\,000\,000\,\text{cm}^3 = 1\,000\,000\,000\,\text{mm}^3
+    \]
+
+    \medskip
+    \textbf{Relazione volume–capacità}:
+    \[
+        1\,\text{dm}^3 = 1\,\text{l} \qquad 1\,\text{cm}^3 = 1\,\text{ml} \qquad 1\,\text{m}^3 = 1000\,\text{l}
+    \]
+
+    \medskip
+    \textbf{Misure agrarie}:
+    \[
+        1\,\text{ha} = 100\,\text{a} = 10\,000\,\text{m}^2
+    \]
+\end{regola}

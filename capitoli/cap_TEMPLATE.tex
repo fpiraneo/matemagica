@@ -1,0 +1,125 @@
+% =============================================================
+% capitoli/capXX_argomento.tex
+% Template per un nuovo capitolo
+%
+% Istruzioni:
+%   1. Rinominare il file (es. cap01_numeri_naturali.tex)
+%   2. Sostituire tutti i segnaposto [...]
+%   3. Includere in main.tex con \input{capitoli/capXX_argomento}
+% =============================================================
+
+\chapter{[Titolo del Capitolo]}
+\label{cap:[etichetta]}
+
+% -------------------------------------------------------------
+% OBIETTIVI DI APPRENDIMENTO
+% -------------------------------------------------------------
+\begin{tcolorbox}[
+    colback  = gray!6,
+    colframe = colorePrimario,
+    arc      = 4pt,
+    title    = {\bfseries\color{colorePrimario} Obiettivi di apprendimento},
+    fonttitle = \bfseries
+]
+Al termine di questo capitolo sarai in grado di:
+\begin{itemize}
+    \item [Obiettivo 1]
+    \item [Obiettivo 2]
+    \item [Obiettivo 3]
+\end{itemize}
+\end{tcolorbox}
+
+\spazio
+
+% -------------------------------------------------------------
+% SEZIONE 1 — Prima sezione del capitolo
+% -------------------------------------------------------------
+\section{[Titolo sezione]}
+\label{sec:[etichetta]}
+
+[Testo introduttivo della sezione. Esporre il concetto con linguaggio
+chiaro e diretto. Definire ogni termine tecnico prima di utilizzarlo.
+Frasi brevi. Nessuna ambiguità.]
+
+% --- Definizione ---
+\begin{definizionesemplice}{[Nome della definizione]}
+    [Testo della definizione. Preciso, formale, completo.]
+    \[
+        [Formula\ se\ necessaria]
+    \]
+\end{definizionesemplice}
+
+\spazio
+
+% --- Regola / Proprietà ---
+\begin{regola}{[Nome della regola o proprietà]}
+    [Enunciato della regola. Eventuale formula:]
+    \[
+        [Formula]
+    \]
+\end{regola}
+
+\spazio
+
+% --- Esempio risolto ---
+\begin{esempio}{[Titolo breve dell'esempio]}
+    [Testo del problema / situazione di partenza.]
+
+    \medskip
+    \textbf{Soluzione:}
+
+    \begin{align*}
+        [Passaggio\ 1] &= [risultato] && \text{[spiegazione passaggio 1]} \\
+        [Passaggio\ 2] &= [risultato] && \text{[spiegazione passaggio 2]} \\
+        [Risultato\ finale] &= [valore]
+    \end{align*}
+
+    [Commento finale sul risultato, se necessario.]
+\end{esempio}
+
+\spazio
+
+% --- Errore comune ---
+\begin{attenzione}[Errore comune]
+    [Descrizione dell'errore tipico che gli allievi commettono.
+    Mostrare il ragionamento errato e quello corretto.]
+
+    \medskip
+    {\color{red}\textbf{Sbagliato:}} $[espressione\ errata]$
+
+    \medskip
+    {\color{colorePrimario}\textbf{Corretto:}} $[espressione\ corretta]$
+\end{attenzione}
+
+\spazio
+
+% --- Lo sapevi? ---
+\begin{sapevi}
+    [Curiosità storica, applicazione reale o collegamento
+    interdisciplinare legato all'argomento del capitolo.]
+\end{sapevi}
+
+\spazio
+
+% -------------------------------------------------------------
+% SEZIONE 2 — (aggiungere sezioni secondo necessità)
+% -------------------------------------------------------------
+% \section{[Titolo sezione 2]}
+
+% -------------------------------------------------------------
+% RIEPILOGO DEL CAPITOLO
+% -------------------------------------------------------------
+\section*{Riepilogo}
+
+\begin{riepilogo}
+    \begin{itemize}
+        \item [Concetto chiave 1: definizione sintetica]
+        \item [Concetto chiave 2: definizione sintetica]
+        \item [Regola principale: enunciato sintetico]
+        \item [Eventuali formule da ricordare]
+    \end{itemize}
+\end{riepilogo}
+
+% =============================================================
+% Fine capitolo
+% =============================================================

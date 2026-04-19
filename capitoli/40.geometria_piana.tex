@@ -1,0 +1,604 @@
+% ============================================================
+%  Capitolo — Geometria piana
+%  Matemagica — Scuole medie Canton Ticino (DECS)
+% ============================================================
+
+\chapter{Geometria piana}
+
+% --- Obiettivi di apprendimento ------------------------------
+\section*{Obiettivi di apprendimento}
+\begin{itemize}[leftmargin=1.5em]
+    \item Comprendere il significato di figura piana, perimetro e area.
+    \item Conoscere le principali figure piane: quadrato, rettangolo, triangolo, trapezio, rombo e parallelogramma.
+    \item Calcolare il perimetro e l'area di ciascuna figura.
+    \item Riconoscere le relazioni tra le diverse figure piane.
+\end{itemize}
+
+% =============================================================
+\section{Che cos'è la geometria piana}
+% =============================================================
+
+\begin{definizione}
+    La \textbf{geometria piana} è la parte della matematica che studia le figure che si trovano su un piano, cioè su una superficie piatta e illimitata. Le figure piane sono delimitate da lati (segmenti) o curve e non hanno spessore.
+\end{definizione}
+
+Le figure piane più importanti sono i \textbf{poligoni}: figure chiuse i cui lati sono tutti segmenti. In questo capitolo studieremo i poligoni più comuni: quadrato, rettangolo, triangolo, trapezio, rombo e parallelogramma.
+
+% =============================================================
+\section{Perimetro e area}
+% =============================================================
+
+\begin{definizione}
+    Il \textbf{perimetro} di una figura piana è la lunghezza totale del suo contorno, cioè la somma delle lunghezze di tutti i suoi lati. Si misura in unità di lunghezza (cm, m, km, \ldots).
+\end{definizione}
+
+\begin{definizione}
+    L'\textbf{area} di una figura piana è la misura della superficie racchiusa dalla figura. Si misura in unità di superficie (cm\textsuperscript{2}, m\textsuperscript{2}, km\textsuperscript{2}, \ldots).
+\end{definizione}
+
+\begin{attenzione}
+    \textbf{Attenzione:} perimetro e area sono due misure diverse. Il perimetro misura quanto è lungo il bordo della figura; l'area misura quanto è grande la sua superficie. Due figure con lo stesso perimetro possono avere aree diverse, e viceversa.
+\end{attenzione}
+
+% =============================================================
+\section{Il quadrato}
+% =============================================================
+
+\subsection{Definizione}
+
+\begin{definizione}
+    Il \textbf{quadrato} è un poligono con quattro lati uguali e quattro angoli retti (di 90°). È un caso particolare sia di rettangolo sia di rombo.
+\end{definizione}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[thick, color=blu] (0,0) rectangle (2.5,2.5);
+        % angoli retti
+        \draw[blu] (0.25,0) -- (0.25,0.25) -- (0,0.25);
+        \draw[blu] (2.25,0) -- (2.25,0.25) -- (2.5,0.25);
+        \draw[blu] (0.25,2.5) -- (0.25,2.25) -- (0,2.25);
+        \draw[blu] (2.25,2.5) -- (2.25,2.25) -- (2.5,2.25);
+        % etichette lati
+        \node[below] at (1.25,0) {$l$};
+        \node[right] at (2.5,1.25) {$l$};
+        \node[above] at (1.25,2.5) {$l$};
+        \node[left]  at (0,1.25)  {$l$};
+    \end{tikzpicture}
+\end{center}
+
+\subsection{Perimetro}
+
+\begin{regola}
+    Il \textbf{perimetro del quadrato} si calcola moltiplicando la lunghezza del lato per 4:
+    \[
+        P = 4 \times l
+    \]
+    dove $l$ è la lunghezza del lato.
+\end{regola}
+
+\begin{esempio}
+    Un quadrato ha il lato di 6 cm. Calcola il suo perimetro.
+
+    \medskip
+    \textbf{Dati:} $l = 6$ cm
+
+    \textbf{Formula:} $P = 4 \times l$
+
+    \textbf{Calcolo:} $P = 4 \times 6 = 24$ cm
+
+    \textbf{Risposta:} Il perimetro del quadrato è \textbf{24 cm}.
+\end{esempio}
+
+\subsection{Area}
+
+\begin{regola}
+    L'\textbf{area del quadrato} si calcola elevando al quadrato la lunghezza del lato:
+    \[
+        A = l \times l = l^2
+    \]
+    dove $l$ è la lunghezza del lato.
+\end{regola}
+
+\begin{esempio}
+    Un quadrato ha il lato di 6 cm. Calcola la sua area.
+
+    \medskip
+    \textbf{Dati:} $l = 6$ cm
+
+    \textbf{Formula:} $A = l^2$
+
+    \textbf{Calcolo:} $A = 6^2 = 36$ cm\textsuperscript{2}
+
+    \textbf{Risposta:} L'area del quadrato è \textbf{36 cm\textsuperscript{2}}.
+\end{esempio}
+
+% =============================================================
+\section{Il rettangolo}
+% =============================================================
+
+\subsection{Definizione}
+
+\begin{definizione}
+    Il \textbf{rettangolo} è un poligono con quattro angoli retti (di 90°) e lati opposti uguali e paralleli. I due lati diversi si chiamano \textbf{base} ($b$) e \textbf{altezza} ($h$). Il quadrato è un caso particolare di rettangolo in cui base e altezza sono uguali.
+\end{definizione}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[thick, color=blu] (0,0) rectangle (3.5,2);
+        \draw[blu] (0.25,0) -- (0.25,0.25) -- (0,0.25);
+        \draw[blu] (3.25,0) -- (3.25,0.25) -- (3.5,0.25);
+        \draw[blu] (0.25,2) -- (0.25,1.75) -- (0,1.75);
+        \draw[blu] (3.25,2) -- (3.25,1.75) -- (3.5,1.75);
+        \node[below] at (1.75,0) {$b$};
+        \node[right] at (3.5,1)  {$h$};
+        \node[above] at (1.75,2) {$b$};
+        \node[left]  at (0,1)    {$h$};
+    \end{tikzpicture}
+\end{center}
+
+\subsection{Perimetro}
+
+\begin{regola}
+    Il \textbf{perimetro del rettangolo} è la somma di tutti i lati, cioè il doppio della somma di base e altezza:
+    \[
+        P = 2 \times (b + h)
+    \]
+    dove $b$ è la base e $h$ è l'altezza.
+\end{regola}
+
+\begin{esempio}
+    Un rettangolo ha base 8 cm e altezza 3 cm. Calcola il perimetro.
+
+    \medskip
+    \textbf{Dati:} $b = 8$ cm, $h = 3$ cm
+
+    \textbf{Formula:} $P = 2 \times (b + h)$
+
+    \textbf{Calcolo:} $P = 2 \times (8 + 3) = 2 \times 11 = 22$ cm
+
+    \textbf{Risposta:} Il perimetro del rettangolo è \textbf{22 cm}.
+\end{esempio}
+
+\subsection{Area}
+
+\begin{regola}
+    L'\textbf{area del rettangolo} si calcola moltiplicando la base per l'altezza:
+    \[
+        A = b \times h
+    \]
+\end{regola}
+
+\begin{esempio}
+    Un rettangolo ha base 8 cm e altezza 3 cm. Calcola l'area.
+
+    \medskip
+    \textbf{Dati:} $b = 8$ cm, $h = 3$ cm
+
+    \textbf{Formula:} $A = b \times h$
+
+    \textbf{Calcolo:} $A = 8 \times 3 = 24$ cm\textsuperscript{2}
+
+    \textbf{Risposta:} L'area del rettangolo è \textbf{24 cm\textsuperscript{2}}.
+\end{esempio}
+
+% =============================================================
+\section{Il triangolo}
+% =============================================================
+
+\subsection{Definizione}
+
+\begin{definizione}
+    Il \textbf{triangolo} è un poligono con tre lati e tre angoli. La somma dei tre angoli interni di qualsiasi triangolo è sempre uguale a 180°.
+\end{definizione}
+
+I triangoli si classificano in due modi: in base ai \textbf{lati} e in base agli \textbf{angoli}.
+
+\subsubsection*{Classificazione in base ai lati}
+
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Scaleno}: tutti e tre i lati hanno lunghezze diverse.
+    \item \textbf{Isoscele}: due lati (detti \textbf{lati obliqui}) sono uguali; il terzo si chiama \textbf{base}.
+    \item \textbf{Equilatero}: tutti e tre i lati sono uguali. Tutti e tre gli angoli misurano 60°.
+\end{itemize}
+
+\subsubsection*{Classificazione in base agli angoli}
+
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Acutangolo}: tutti e tre gli angoli sono acuti (minori di 90°).
+    \item \textbf{Rettangolo}: ha un angolo retto (di 90°). I due lati che formano l'angolo retto si chiamano \textbf{cateti}; il lato opposto si chiama \textbf{ipotenusa}.
+    \item \textbf{Ottusangolo}: ha un angolo ottuso (maggiore di 90°).
+\end{itemize}
+
+\begin{center}
+    \begin{tikzpicture}[scale=0.9]
+        % Scaleno
+        \draw[thick, color=blu] (0,0) -- (2,0) -- (1.3,1.6) -- cycle;
+        \node[below] at (1,-0.25) {\small Scaleno};
+        % Isoscele
+        \draw[thick, color=blu] (3,0) -- (5,0) -- (4,1.8) -- cycle;
+        \node[below] at (4,-0.25) {\small Isoscele};
+        % Rettangolo
+        \draw[thick, color=blu] (6,0) -- (8,0) -- (6,1.6) -- cycle;
+        \draw[blu] (6.25,0) -- (6.25,0.25) -- (6,0.25);
+        \node[below] at (7,-0.25) {\small Rettangolo};
+    \end{tikzpicture}
+\end{center}
+
+\subsubsection*{Altezza di un triangolo}
+
+\begin{definizione}
+    L'\textbf{altezza} di un triangolo relativa a un lato (detto \textbf{base}) è il segmento perpendicolare condotto da un vertice opposto a quella base (o alla sua estensione). Ogni triangolo ha tre altezze, una per ciascun lato scelto come base.
+\end{definizione}
+
+\begin{center}
+    \begin{tikzpicture}
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (3.5,0);
+        \coordinate (C) at (1.2,2.2);
+        \draw[thick, color=blu] (A) -- (B) -- (C) -- cycle;
+        % piede dell'altezza
+        \coordinate (H) at (1.2,0);
+        \draw[dashed, color=blu!60] (C) -- (H);
+        \draw[blu] (1.2,0.22) -- (1.42,0.22) -- (1.42,0);
+        \node[below] at (1.75,0) {$b$};
+        \node[right]  at (1.3,1.1) {$h$};
+    \end{tikzpicture}
+\end{center}
+
+\subsection{Perimetro}
+
+\begin{regola}
+    Il \textbf{perimetro del triangolo} è la somma delle lunghezze dei tre lati:
+    \[
+        P = a + b + c
+    \]
+    dove $a$, $b$, $c$ sono i tre lati.
+\end{regola}
+
+\begin{esempio}
+    Un triangolo ha lati di 5 cm, 7 cm e 9 cm. Calcola il perimetro.
+
+    \medskip
+    \textbf{Dati:} $a = 5$ cm, $b = 7$ cm, $c = 9$ cm
+
+    \textbf{Formula:} $P = a + b + c$
+
+    \textbf{Calcolo:} $P = 5 + 7 + 9 = 21$ cm
+
+    \textbf{Risposta:} Il perimetro del triangolo è \textbf{21 cm}.
+\end{esempio}
+
+\subsection{Area}
+
+\begin{regola}
+    L'\textbf{area del triangolo} si calcola moltiplicando la base per l'altezza corrispondente e dividendo per 2:
+    \[
+        A = \frac{b \times h}{2}
+    \]
+    dove $b$ è la base scelta e $h$ è l'altezza relativa a quella base.
+\end{regola}
+
+\begin{attenzione}
+    \textbf{Attenzione:} la base e l'altezza devono essere \textbf{perpendicolari} tra loro. Non si può moltiplicare due lati qualsiasi: l'altezza non è un lato, ma un segmento perpendicolare alla base.
+\end{attenzione}
+
+\begin{esempio}
+    Un triangolo ha base 10 cm e altezza 6 cm. Calcola l'area.
+
+    \medskip
+    \textbf{Dati:} $b = 10$ cm, $h = 6$ cm
+
+    \textbf{Formula:} $A = \dfrac{b \times h}{2}$
+
+    \textbf{Calcolo:} $A = \dfrac{10 \times 6}{2} = \dfrac{60}{2} = 30$ cm\textsuperscript{2}
+
+    \textbf{Risposta:} L'area del triangolo è \textbf{30 cm\textsuperscript{2}}.
+\end{esempio}
+
+\begin{sapevi}
+    \textbf{Lo sapevi?} La formula dell'area del triangolo si ricava dal rettangolo: se si raddoppia un triangolo (facendone una copia capovolta e attaccandola), si ottiene sempre un parallelogramma o un rettangolo. L'area del triangolo è quindi esattamente la metà di quella figura.
+\end{sapevi}
+
+% =============================================================
+\section{Il trapezio}
+% =============================================================
+
+\subsection{Definizione}
+
+\begin{definizione}
+    Il \textbf{trapezio} è un quadrilatero con esattamente una coppia di lati paralleli, chiamati \textbf{basi}: la \textbf{base maggiore} ($B$) e la \textbf{base minore} ($b$). I due lati non paralleli si chiamano \textbf{lati obliqui}. L'\textbf{altezza} ($h$) è la distanza perpendicolare tra le due basi.
+\end{definizione}
+
+I tipi di trapezio più comuni sono:
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Trapezio scaleno}: i due lati obliqui hanno lunghezze diverse.
+    \item \textbf{Trapezio isoscele}: i due lati obliqui sono uguali. Gli angoli adiacenti a ciascuna base sono uguali tra loro.
+    \item \textbf{Trapezio rettangolo}: uno dei lati obliqui è perpendicolare alle basi (forma un angolo retto con esse).
+\end{itemize}
+
+\begin{center}
+    \begin{tikzpicture}[scale=0.9]
+        % Trapezio scaleno
+        \draw[thick, color=blu] (0,0) -- (3,0) -- (2.2,1.5) -- (0.5,1.5) -- cycle;
+        \node[below] at (1.5,-0.25) {\small Scaleno};
+        % Trapezio isoscele
+        \draw[thick, color=blu] (4,0) -- (7,0) -- (6.5,1.5) -- (4.5,1.5) -- cycle;
+        \node[below] at (5.5,-0.25) {\small Isoscele};
+        % Trapezio rettangolo
+        \draw[thick, color=blu] (8,0) -- (11,0) -- (11,1.5) -- (9,1.5) -- cycle;
+        \draw[blu] (8.22,0) -- (8.22,0.22) -- (8,0.22);
+        \draw[blu] (10.78,0) -- (10.78,0.22) -- (11,0.22);
+        \node[below] at (9.5,-0.25) {\small Rettangolo};
+    \end{tikzpicture}
+\end{center}
+
+\subsection{Perimetro}
+
+\begin{regola}
+    Il \textbf{perimetro del trapezio} è la somma dei quattro lati:
+    \[
+        P = B + b + c + d
+    \]
+    dove $B$ è la base maggiore, $b$ la base minore, $c$ e $d$ i lati obliqui.
+\end{regola}
+
+\begin{esempio}
+    Un trapezio ha base maggiore 12 cm, base minore 6 cm e lati obliqui di 5 cm e 7 cm. Calcola il perimetro.
+
+    \medskip
+    \textbf{Dati:} $B = 12$ cm, $b = 6$ cm, $c = 5$ cm, $d = 7$ cm
+
+    \textbf{Formula:} $P = B + b + c + d$
+
+    \textbf{Calcolo:} $P = 12 + 6 + 5 + 7 = 30$ cm
+
+    \textbf{Risposta:} Il perimetro del trapezio è \textbf{30 cm}.
+\end{esempio}
+
+\subsection{Area}
+
+\begin{regola}
+    L'\textbf{area del trapezio} si calcola moltiplicando la somma delle due basi per l'altezza e dividendo per 2:
+    \[
+        A = \frac{(B + b) \times h}{2}
+    \]
+    dove $B$ è la base maggiore, $b$ la base minore e $h$ l'altezza.
+\end{regola}
+
+\begin{esempio}
+    Un trapezio ha base maggiore 10 cm, base minore 4 cm e altezza 5 cm. Calcola l'area.
+
+    \medskip
+    \textbf{Dati:} $B = 10$ cm, $b = 4$ cm, $h = 5$ cm
+
+    \textbf{Formula:} $A = \dfrac{(B + b) \times h}{2}$
+
+    \textbf{Calcolo:} $A = \dfrac{(10 + 4) \times 5}{2} = \dfrac{14 \times 5}{2} = \dfrac{70}{2} = 35$ cm\textsuperscript{2}
+
+    \textbf{Risposta:} L'area del trapezio è \textbf{35 cm\textsuperscript{2}}.
+\end{esempio}
+
+% =============================================================
+\section{Il rombo}
+% =============================================================
+
+\subsection{Definizione}
+
+\begin{definizione}
+    Il \textbf{rombo} è un parallelogramma con tutti e quattro i lati uguali. Le sue \textbf{diagonali} (i segmenti che uniscono i vertici opposti) si intersecano perpendicolarmente nel loro punto medio e hanno lunghezze diverse (chiamate \textbf{diagonale maggiore} $d_1$ e \textbf{diagonale minore} $d_2$). Il quadrato è un caso particolare di rombo in cui le due diagonali sono uguali.
+\end{definizione}
+
+\begin{center}
+    \begin{tikzpicture}
+        \coordinate (L) at (0,1.2);
+        \coordinate (T) at (1.8,2.4);
+        \coordinate (R) at (3.6,1.2);
+        \coordinate (Bo) at (1.8,0);
+        \draw[thick, color=blu] (L) -- (T) -- (R) -- (Bo) -- cycle;
+        % diagonali
+        \draw[dashed, color=blu!60] (L) -- (R);
+        \draw[dashed, color=blu!60] (T) -- (Bo);
+        % simbolo perpendicolarità
+        \draw[blu] (1.8,1.2) ++(0.15,0) -- ++(0,0.15) -- ++(-0.15,0);
+        % etichette
+        \node[above] at (2.7,1.8) {\small $d_1$};
+        \node[right] at (2.3,0.8) {\small $d_2$};
+        \node[left]  at (0,1.2)   {$l$};
+    \end{tikzpicture}
+\end{center}
+
+\subsection{Perimetro}
+
+\begin{regola}
+    Il \textbf{perimetro del rombo} si calcola moltiplicando la lunghezza del lato per 4 (come per il quadrato, poiché tutti i lati sono uguali):
+    \[
+        P = 4 \times l
+    \]
+\end{regola}
+
+\begin{esempio}
+    Un rombo ha il lato di 9 cm. Calcola il perimetro.
+
+    \medskip
+    \textbf{Dati:} $l = 9$ cm
+
+    \textbf{Formula:} $P = 4 \times l$
+
+    \textbf{Calcolo:} $P = 4 \times 9 = 36$ cm
+
+    \textbf{Risposta:} Il perimetro del rombo è \textbf{36 cm}.
+\end{esempio}
+
+\subsection{Area}
+
+\begin{regola}
+    L'\textbf{area del rombo} si calcola moltiplicando le due diagonali e dividendo per 2:
+    \[
+        A = \frac{d_1 \times d_2}{2}
+    \]
+    dove $d_1$ e $d_2$ sono le due diagonali.
+\end{regola}
+
+\begin{attenzione}
+    \textbf{Attenzione:} per calcolare l'area del rombo si usano le \textbf{diagonali}, non i lati. Questo è diverso dal quadrato, dove si usa il lato. Non confondere le due formule.
+\end{attenzione}
+
+\begin{esempio}
+    Un rombo ha diagonale maggiore 12 cm e diagonale minore 8 cm. Calcola l'area.
+
+    \medskip
+    \textbf{Dati:} $d_1 = 12$ cm, $d_2 = 8$ cm
+
+    \textbf{Formula:} $A = \dfrac{d_1 \times d_2}{2}$
+
+    \textbf{Calcolo:} $A = \dfrac{12 \times 8}{2} = \dfrac{96}{2} = 48$ cm\textsuperscript{2}
+
+    \textbf{Risposta:} L'area del rombo è \textbf{48 cm\textsuperscript{2}}.
+\end{esempio}
+
+% =============================================================
+\section{Il parallelogramma}
+% =============================================================
+
+\subsection{Definizione}
+
+\begin{definizione}
+    Il \textbf{parallelogramma} è un quadrilatero con due coppie di lati paralleli e uguali. I lati opposti sono sempre uguali tra loro e gli angoli opposti sono uguali. L'\textbf{altezza} ($h$) è la distanza perpendicolare tra i due lati paralleli scelti come basi.
+\end{definizione}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[thick, color=blu] (0,0) -- (3.5,0) -- (4.5,2) -- (1,2) -- cycle;
+        % altezza
+        \draw[dashed, color=blu!60] (1,0) -- (1,2);
+        \draw[blu] (1,0.22) -- (1.22,0.22) -- (1.22,0);
+        \node[below] at (1.75,0) {$b$};
+        \node[left]  at (1,1)    {$h$};
+    \end{tikzpicture}
+\end{center}
+
+\begin{sapevi}
+    \textbf{Lo sapevi?} Il parallelogramma è la figura più generale tra quelle studiate in questo capitolo. Rettangolo, rombo e quadrato sono tutti casi particolari di parallelogramma:
+    \begin{itemize}[leftmargin=1.5em]
+        \item Il \textbf{rettangolo} è un parallelogramma con gli angoli retti.
+        \item Il \textbf{rombo} è un parallelogramma con tutti i lati uguali.
+        \item Il \textbf{quadrato} è un parallelogramma con gli angoli retti \emph{e} tutti i lati uguali: è quindi sia un rettangolo sia un rombo.
+    \end{itemize}
+\end{sapevi}
+
+\subsection{Perimetro}
+
+\begin{regola}
+    Il \textbf{perimetro del parallelogramma} è la somma dei quattro lati. Poiché i lati opposti sono uguali, si ha:
+    \[
+        P = 2 \times (b + c)
+    \]
+    dove $b$ è la base e $c$ è il lato obliquo.
+\end{regola}
+
+\begin{esempio}
+    Un parallelogramma ha base 11 cm e lato obliquo 5 cm. Calcola il perimetro.
+
+    \medskip
+    \textbf{Dati:} $b = 11$ cm, $c = 5$ cm
+
+    \textbf{Formula:} $P = 2 \times (b + c)$
+
+    \textbf{Calcolo:} $P = 2 \times (11 + 5) = 2 \times 16 = 32$ cm
+
+    \textbf{Risposta:} Il perimetro del parallelogramma è \textbf{32 cm}.
+\end{esempio}
+
+\subsection{Area}
+
+\begin{regola}
+    L'\textbf{area del parallelogramma} si calcola moltiplicando la base per l'altezza corrispondente:
+    \[
+        A = b \times h
+    \]
+    dove $b$ è la base e $h$ è l'altezza perpendicolare a quella base.
+\end{regola}
+
+\begin{attenzione}
+    \textbf{Attenzione:} l'altezza del parallelogramma \emph{non} è il lato obliquo, ma il segmento perpendicolare tra le due basi parallele. Il lato obliquo è sempre più lungo dell'altezza.
+\end{attenzione}
+
+\begin{esempio}
+    Un parallelogramma ha base 11 cm e altezza 4 cm. Calcola l'area.
+
+    \medskip
+    \textbf{Dati:} $b = 11$ cm, $h = 4$ cm
+
+    \textbf{Formula:} $A = b \times h$
+
+    \textbf{Calcolo:} $A = 11 \times 4 = 44$ cm\textsuperscript{2}
+
+    \textbf{Risposta:} L'area del parallelogramma è \textbf{44 cm\textsuperscript{2}}.
+\end{esempio}
+
+% =============================================================
+\section{Relazioni tra le figure piane}
+% =============================================================
+
+Le figure studiate in questo capitolo non sono indipendenti tra loro: alcune sono casi particolari di altre. Lo schema seguente mostra le relazioni di inclusione:
+
+\begin{center}
+    \begin{tikzpicture}[
+            box/.style={draw=blu, thick, rounded corners=4pt, fill=azzurro,
+                    text=black, font=\small\bfseries,
+                    minimum width=3.2cm, minimum height=0.75cm,
+                    align=center}
+        ]
+        % Coordinate assolute: evita la libreria positioning
+        \node[box] (par) at (0, 0)    {Parallelogramma};
+        \node[box] (ret) at (-2, -1.8) {Rettangolo};
+        \node[box] (rom) at ( 2, -1.8) {Rombo};
+        \node[box] (qua) at ( 0, -3.6) {Quadrato};
+
+        \draw[thick, color=blu, ->] (par) -- (ret)
+        node[midway, left, font=\footnotesize, text=black] {angoli retti};
+        \draw[thick, color=blu, ->] (par) -- (rom)
+        node[midway, right, font=\footnotesize, text=black] {lati uguali};
+        \draw[thick, color=blu, ->] (ret) -- (qua);
+        \draw[thick, color=blu, ->] (rom) -- (qua);
+    \end{tikzpicture}
+\end{center}
+
+\begin{attenzione}
+    Il \textbf{trapezio} non è un parallelogramma (ha solo una coppia di lati paralleli, non due). Occupa quindi una categoria separata tra i quadrilateri.
+\end{attenzione}
+
+% =============================================================
+\section*{Riepilogo del capitolo}
+% =============================================================
+
+\begin{regola}
+    \textbf{Formule principali — Geometria piana}
+
+    \medskip
+    \begin{tabular}{@{}llll@{}}
+        \toprule
+        \textbf{Figura} & \textbf{Perimetro} & \textbf{Area}                   \\
+        \midrule
+        Quadrato        & $P = 4l$           & $A = l^2$                       \\[4pt]
+        Rettangolo      & $P = 2(b+h)$       & $A = b \times h$                \\[4pt]
+        Triangolo       & $P = a+b+c$        & $A = \dfrac{b \times h}{2}$     \\[8pt]
+        Trapezio        & $P = B+b+c+d$      & $A = \dfrac{(B+b) \times h}{2}$ \\[8pt]
+        Rombo           & $P = 4l$           & $A = \dfrac{d_1 \times d_2}{2}$ \\[8pt]
+        Parallelogramma & $P = 2(b+c)$       & $A = b \times h$                \\
+        \bottomrule
+    \end{tabular}
+
+    \medskip
+    \small
+    \textit{Legenda:} $l$ = lato; $b$ = base; $h$ = altezza; $a,b,c$ = lati del triangolo;
+    $B$ = base maggiore; $c,d$ = lati obliqui; $d_1, d_2$ = diagonali.
+\end{regola}
+
+\begin{itemize}[leftmargin=1.5em]
+    \item Il \textbf{perimetro} misura il contorno di una figura (unità di lunghezza).
+    \item L'\textbf{area} misura la superficie di una figura (unità di superficie).
+    \item L'\textbf{altezza} è sempre perpendicolare alla base: non va confusa con un lato obliquo.
+    \item Il quadrato è un caso particolare di rettangolo e di rombo; entrambi sono casi particolari di parallelogramma.
+    \item Il trapezio ha una sola coppia di lati paralleli: non è un parallelogramma.
+\end{itemize}

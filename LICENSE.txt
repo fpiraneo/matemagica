@@ -1,0 +1,137 @@
+================================================================================
+LICENZA D'USO — MATEMAGICA
+Libro di matematica per le scuole medie, Canton Ticino (DECS)
+================================================================================
+
+Copyright © Francesco ed Emma Piraneo Giuliano, [ANNO].
+Tutti i diritti non espressamente concessi sono riservati.
+
+--------------------------------------------------------------------------------
+LICENZA PRINCIPALE
+--------------------------------------------------------------------------------
+
+Quest'opera è distribuita con licenza Creative Commons
+Attribuzione – Non Commerciale – Condividi allo stesso modo 4.0 Internazionale
+(CC BY-NC-SA 4.0).
+
+Testo completo della licenza (in inglese):
+https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+Riepilogo leggibile (in italiano):
+https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it
+
+--------------------------------------------------------------------------------
+COSA È CONSENTITO
+--------------------------------------------------------------------------------
+
+È consentito, a titolo gratuito e non commerciale:
+
+  ✦ Leggere, scaricare e stampare il materiale per uso personale o didattico.
+  ✦ Condividere il materiale (in forma integrale o parziale) citando
+    esplicitamente la fonte secondo le modalità indicate nella sezione
+    ATTRIBUZIONE OBBLIGATORIA qui sotto.
+  ✦ Adattare, tradurre o modificare il materiale, a condizione che:
+      (a) l'opera derivata sia distribuita con la stessa licenza CC BY-NC-SA 4.0,
+      (b) le modifiche siano chiaramente segnalate,
+      (c) l'attribuzione all'opera originale sia mantenuta.
+  ✦ Utilizzare il materiale in contesti scolastici, universitari o di
+    formazione non a scopo di lucro, inclusa la proiezione in aula e
+    la distribuzione agli studenti.
+
+--------------------------------------------------------------------------------
+COSA È VIETATO
+--------------------------------------------------------------------------------
+
+È espressamente vietato, senza previa autorizzazione scritta dell'autore:
+
+  ✗ Qualsiasi uso commerciale del materiale, anche parziale. Sono considerati
+    usi commerciali, a titolo esemplificativo e non esaustivo:
+      – La vendita del libro o di sue parti, in formato digitale o cartaceo.
+      – L'inclusione in prodotti o servizi a pagamento (piattaforme e-learning,
+        abbonamenti, corsi a pagamento, ecc.).
+      – L'utilizzo in pubblicazioni commerciali di terzi.
+      – La monetizzazione tramite pubblicità, affiliate marketing o meccanismi
+        analoghi.
+  ✗ La riproduzione integrale o parziale del testo, delle figure e del codice
+    sorgente LaTeX senza menzione esplicita della fonte.
+  ✗ La rimozione o l'alterazione delle informazioni di copyright e di licenza.
+  ✗ La presentazione del materiale come opera propria (plagio).
+  ✗ L'uso del nome dell'autore o del titolo "Matemagica" per promuovere opere
+    derivate senza autorizzazione.
+
+--------------------------------------------------------------------------------
+ATTRIBUZIONE OBBLIGATORIA
+--------------------------------------------------------------------------------
+
+Qualsiasi utilizzo consentito deve includere la seguente attribuzione, in forma
+visibile e leggibile:
+
+    «Matemagica — Libro di matematica per le scuole medie (Canton Ticino)
+     di Francesco ed Emma Piraneo Giuliano.
+     Distribuito con licenza CC BY-NC-SA 4.0.
+     Fonte: https://github.com/fpiraneo/matemagica»
+
+In formato digitale (HTML, PDF, slide, ecc.) il link alla repository GitHub
+deve essere cliccabile ove tecnicamente possibile.
+
+--------------------------------------------------------------------------------
+CODICE SORGENTE LaTeX
+--------------------------------------------------------------------------------
+
+Il codice sorgente LaTeX di quest'opera (file .tex, preamble, stili) è incluso
+nella repository e soggetto alla stessa licenza CC BY-NC-SA 4.0.
+
+È consentito riutilizzare porzioni del codice (macro, ambienti, struttura del
+preamble) in opere proprie, a condizione che:
+  – L'opera risultante sia distribuita con licenza compatibile (CC BY-NC-SA 4.0
+    o più restrittiva).
+  – Il codice riutilizzato sia chiaramente identificato e attribuito.
+
+--------------------------------------------------------------------------------
+DISCLAIMER — ACCURATEZZA DEI CONTENUTI
+--------------------------------------------------------------------------------
+
+I contenuti di Matemagica sono stati redatti con cura e in riferimento al Piano
+di studio DECS del Canton Ticino. Tuttavia:
+
+  – L'autore non garantisce la completezza, l'accuratezza o l'aggiornamento
+    dei contenuti rispetto alle versioni più recenti del curricolo ufficiale.
+  – Il materiale è fornito "così com'è" (as-is), senza garanzie di alcun tipo,
+    esplicite o implicite.
+  – L'autore declina ogni responsabilità per errori tipografici, omissioni o
+    inesattezze che potrebbero essere presenti nel testo.
+  – Il materiale non sostituisce l'insegnamento frontale di un docente
+    qualificato né i testi adottati ufficialmente dalle scuole.
+
+--------------------------------------------------------------------------------
+DISCLAIMER — USO DA PARTE DI TERZI
+--------------------------------------------------------------------------------
+
+  – L'autore non è responsabile di eventuali usi del materiale che violino
+    la presente licenza o le leggi vigenti.
+  – La presenza di questo progetto su GitHub non implica alcun endorsement
+    ufficiale da parte del DECS, del Canton Ticino o di qualsiasi istituzione
+    scolastica.
+  – Il font Atkinson Hyperlegible è di proprietà della Braille Institute of
+    America ed è distribuito separatamente con la propria licenza. Non è
+    incluso in questa repository.
+  – Latin Modern Math è distribuito con licenza GUST Font License (GFL).
+
+--------------------------------------------------------------------------------
+CONTATTI E AUTORIZZAZIONI
+--------------------------------------------------------------------------------
+
+Per richieste di utilizzo commerciale, adattamenti significativi o qualsiasi
+altra autorizzazione non coperta dalla presente licenza, contattare l'autore
+tramite GitHub: https://github.com/fpiraneo
+
+--------------------------------------------------------------------------------
+VERSIONE DELLA LICENZA
+--------------------------------------------------------------------------------
+
+Questo file fa riferimento alla licenza CC BY-NC-SA versione 4.0 (2013).
+In caso di difformità tra il presente testo riassuntivo e il testo legale
+ufficiale della licenza, prevale il testo legale ufficiale disponibile su:
+https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+================================================================================

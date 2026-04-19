@@ -1,0 +1,372 @@
+% ============================================================
+%  03.insiemistica.tex — Matemagica
+%  Capitolo 3: Insiemistica
+% ============================================================
+
+\chapter{Insiemistica}
+
+% --- Obiettivi di apprendimento --------------------------------
+\section*{Obiettivi di apprendimento}
+\begin{itemize}[leftmargin=1.5em]
+  \item Comprendere il concetto di insieme e saperlo rappresentare in modi diversi.
+  \item Distinguere insiemi finiti, infiniti e vuoti.
+  \item Usare correttamente i simboli di appartenenza e di inclusione.
+  \item Determinare intersezione e unione di due insiemi.
+  \item Rappresentare insiemi e operazioni tramite diagrammi di Eulero-Venn.
+\end{itemize}
+
+% ==============================================================
+\section{Gli insiemi}
+% ==============================================================
+
+\subsection{Concetto e definizione di insieme}
+
+Nella vita quotidiana raggruppiamo continuamente oggetti, persone o idee che hanno qualcosa in comune: «i libri della biblioteca», «gli allievi della classe 2B», «i numeri pari». In matematica questo tipo di raggruppamento prende il nome di \textbf{insieme}.
+
+\begin{definizione}
+Un \textbf{insieme} è un raggruppamento ben definito di oggetti — detti \textbf{elementi} — che condividono una caratteristica comune.
+Ogni insieme viene indicato con una \textbf{lettera maiuscola} dell'alfabeto (ad esempio $A$, $B$, $C$, \ldots).
+\end{definizione}
+
+L'espressione «ben definito» è fondamentale: per ogni oggetto deve essere possibile stabilire con certezza se appartiene o meno all'insieme, senza ambiguità.
+
+\begin{esempio}
+Sia $F$ l'insieme delle figure geometriche con quattro lati uguali.
+Un quadrato appartiene a $F$; un triangolo non vi appartiene.
+La definizione è precisa: non ci sono casi dubbi.
+\end{esempio}
+
+% ==============================================================
+\subsection{Tipi di insieme}
+
+Gli insiemi si classificano in tre categorie fondamentali.
+
+\subsubsection*{Insieme finito}
+
+\begin{definizione}
+Un insieme si dice \textbf{finito} se il numero dei suoi elementi può essere contato e risulta essere un numero naturale (incluso lo zero).
+\end{definizione}
+
+\begin{esempio}
+$V = \{a;\, e;\, i;\, o;\, u\}$ è l'insieme delle vocali dell'alfabeto italiano.
+Contiene esattamente 5 elementi: è un insieme finito.
+\end{esempio}
+
+\subsubsection*{Insieme infinito}
+
+\begin{definizione}
+Un insieme si dice \textbf{infinito} se contiene infiniti elementi, cioè il conteggio non termina mai.
+\end{definizione}
+
+Poiché non è possibile elencare tutti gli elementi di un insieme infinito, nella \emph{rappresentazione per elencazione} si scrivono i primi elementi seguiti da tre puntini (\ldots), a condizione che la regola di continuazione sia chiara e non ambigua.
+
+\begin{esempio}
+$P = \{2;\, 4;\, 6;\, 8;\, \ldots\}$ è l'insieme dei numeri naturali pari.
+I tre puntini indicano che l'elenco prosegue all'infinito seguendo la stessa regola: ogni elemento è ottenuto aggiungendo 2 al precedente.
+\end{esempio}
+
+\begin{attenzione}
+\textbf{Attenzione!} I tre puntini si usano \emph{soltanto} quando la regola di continuazione è evidente. Scrivere $\{3;\, 7;\, 12;\, \ldots\}$ senza specificare la regola non costituisce una rappresentazione valida di un insieme infinito.
+\end{attenzione}
+
+\subsubsection*{Insieme vuoto}
+
+\begin{definizione}
+Un insieme si dice \textbf{vuoto} se non contiene alcun elemento. Si rappresenta in uno dei due modi seguenti:
+\[
+  \{\} \qquad \text{oppure} \qquad \emptyset
+\]
+\end{definizione}
+
+\begin{esempio}
+Sia $Z$ l'insieme dei numeri naturali compresi tra 3 e 4 (esclusi).
+Non esiste alcun numero naturale con questa proprietà, quindi $Z = \emptyset$.
+\end{esempio}
+
+% ==============================================================
+\section{Appartenenza a un insieme}
+% ==============================================================
+
+Per indicare se un elemento fa parte o meno di un insieme si usano due simboli specifici.
+
+\begin{regola}
+Dato un insieme $A$ e un elemento $x$:
+\begin{itemize}[leftmargin=1.5em]
+  \item $x \in A$ si legge «$x$ \textbf{appartiene} ad $A$» e indica che $x$ è un elemento di $A$.
+  \item $x \notin A$ si legge «$x$ \textbf{non appartiene} ad $A$» e indica che $x$ non è un elemento di $A$.
+\end{itemize}
+\end{regola}
+
+\begin{esempio}
+Sia $C = \{1;\, 3;\, 5;\, 7;\, 9\}$ l'insieme delle cifre dispari.
+
+\begin{itemize}[leftmargin=1.5em]
+  \item $3 \in C$ \quad (3 appartiene a $C$)
+  \item $6 \notin C$ \quad (6 non appartiene a $C$)
+\end{itemize}
+\end{esempio}
+
+% ==============================================================
+\section{Rappresentazione di un insieme}
+% ==============================================================
+
+Un insieme può essere descritto in tre modi equivalenti.
+
+\subsection{Rappresentazione per elencazione (o in estensione)}
+
+\begin{regola}
+Nella \textbf{rappresentazione per elencazione} si elencano tutti gli elementi dell'insieme, separati da un punto e virgola (;), racchiusi tra due \textbf{parentesi graffe} \{ \}.
+\end{regola}
+
+L'ordine in cui si elencano gli elementi non ha importanza; ogni elemento viene scritto una sola volta.
+
+\begin{esempio}
+$A = \{2;\, 4;\, 6;\, 8\}$ è l'insieme dei numeri naturali pari minori di 10.
+\end{esempio}
+
+\subsection{Rappresentazione per caratteristica (o in comprensione)}
+
+\begin{regola}
+Nella \textbf{rappresentazione per caratteristica} si descrive la proprietà comune a tutti gli elementi, invece di elencarli singolarmente.
+\end{regola}
+
+Questa modalità è particolarmente utile per gli insiemi infiniti o con molti elementi.
+
+\begin{esempio}
+Invece di scrivere $\{2;\, 4;\, 6;\, 8;\, \ldots\}$ si può scrivere:
+\[
+  A = \{\,n \mid n \text{ è un numero naturale pari}\,\}
+\]
+che si legge «$A$ è l'insieme degli $n$ tali che $n$ è un numero naturale pari».
+\end{esempio}
+
+\subsection{Rappresentazione grafica: diagramma di Eulero-Venn}
+
+\begin{regola}
+Nel \textbf{diagramma di Eulero-Venn} l'insieme è rappresentato da una \textbf{linea chiusa} (di solito ovale o circolare). Gli elementi vengono scritti all'interno della figura, ciascuno indicato con un punto seguito dal proprio nome.
+\end{regola}
+
+\begin{esempio}
+Sia $D = \{1;\, 2;\, 3\}$. Il corrispondente diagramma di Eulero-Venn è:
+
+\begin{center}
+\begin{tikzpicture}
+  % Ellipse for set D
+  \draw[blu, thick] (0,0) ellipse (2.2cm and 1.3cm);
+  % Label
+  \node[blu, font=\bfseries] at (2.0, 1.1) {$D$};
+  % Elements
+  \filldraw[blu] (-0.9, 0.2) circle (1.5pt);
+  \node at (-0.9, 0.2) [right, font=\small] {1};
+  \filldraw[blu] (0.1, -0.3) circle (1.5pt);
+  \node at (0.1, -0.3) [right, font=\small] {2};
+  \filldraw[blu] (0.8, 0.4) circle (1.5pt);
+  \node at (0.8, 0.4) [right, font=\small] {3};
+\end{tikzpicture}
+\end{center}
+\end{esempio}
+
+% ==============================================================
+\section{Sottoinsiemi e inclusione}
+% ==============================================================
+
+\begin{definizione}
+Dati due insiemi $A$ e $B$, si dice che $B$ è un \textbf{sottoinsieme} di $A$ — oppure che $B$ è \textbf{incluso} in $A$ — se \emph{ogni} elemento di $B$ appartiene anche ad $A$.
+
+La notazione corretta è:
+\[
+  B \subseteq A
+\]
+che si legge «$B$ è incluso in $A$» oppure «$B$ è contenuto in $A$».
+
+Se almeno un elemento di $B$ non appartiene ad $A$, si scrive $B \not\subseteq A$.
+\end{definizione}
+
+\begin{esempio}
+Siano $A = \{1;\, 2;\, 3;\, 4;\, 5\}$ e $B = \{2;\, 4\}$.
+
+Poiché $2 \in A$ e $4 \in A$, tutti gli elementi di $B$ appartengono ad $A$, quindi $B \subseteq A$.
+
+\begin{center}
+\begin{tikzpicture}
+  % Outer ellipse A
+  \draw[blu, thick] (0,0) ellipse (2.8cm and 1.8cm);
+  \node[blu, font=\bfseries] at (2.5, 1.5) {$A$};
+  % Elements of A outside B
+  \filldraw[blu] (-1.6, 0.5) circle (1.5pt);
+  \node at (-1.6, 0.5) [right, font=\small] {1};
+  \filldraw[blu] (-1.4, -0.5) circle (1.5pt);
+  \node at (-1.4,-0.5) [right, font=\small] {3};
+  \filldraw[blu] (1.3, -0.6) circle (1.5pt);
+  \node at (1.3,-0.6) [right, font=\small] {5};
+  % Inner ellipse B
+  \draw[blu, thick, dashed] (0.3, 0.1) ellipse (1.1cm and 0.75cm);
+  \node[blu, font=\bfseries] at (1.15, 0.7) {$B$};
+  % Elements of B
+  \filldraw[blu] (-0.2, 0.1) circle (1.5pt);
+  \node at (-0.2, 0.1) [right, font=\small] {2};
+  \filldraw[blu] (0.7, 0.0) circle (1.5pt);
+  \node at (0.7, 0.0) [right, font=\small] {4};
+\end{tikzpicture}
+\end{center}
+\end{esempio}
+
+\begin{attenzione}
+\textbf{Attenzione!} L'insieme vuoto $\emptyset$ è sottoinsieme di \emph{qualsiasi} insieme. Ogni insieme è inoltre sottoinsieme di sé stesso: $A \subseteq A$.
+\end{attenzione}
+
+\begin{regola}
+I simboli di inclusione e appartenenza hanno significati distinti e non possono essere confusi:
+\begin{itemize}[leftmargin=1.5em]
+  \item $\in$ collega un \emph{elemento} a un insieme: \quad $2 \in A$
+  \item $\subseteq$ collega un \emph{insieme} a un altro insieme: \quad $B \subseteq A$
+\end{itemize}
+\end{regola}
+
+% ==============================================================
+\section{Operazioni con gli insiemi}
+% ==============================================================
+
+\subsection{Intersezione}
+
+\begin{definizione}
+L'\textbf{intersezione} di due insiemi $A$ e $B$ è il nuovo insieme che contiene \emph{tutti e soli} gli elementi che appartengono \textbf{sia} ad $A$ \textbf{sia} a $B$ (cioè gli elementi comuni).
+
+La notazione corretta è:
+\[
+  A \cap B
+\]
+che si legge «$A$ \textbf{intersecato} $B$» oppure «$A$ inter $B$».
+\end{definizione}
+
+\begin{esempio}
+Siano $A = \{1;\, 2;\, 3;\, 4;\, 5\}$ e $B = \{2;\, 4;\, 6;\, 8\}$.
+
+Gli elementi comuni sono 2 e 4, quindi:
+\[
+  A \cap B = \{2;\, 4\}
+\]
+
+\begin{center}
+\begin{tikzpicture}
+  % Ellipse A
+  \draw[blu, thick] (-1.1, 0) ellipse (2.0cm and 1.3cm);
+  \node[blu, font=\bfseries] at (-2.8, 1.1) {$A$};
+  % Ellipse B
+  \draw[blu, thick] (1.1, 0) ellipse (2.0cm and 1.3cm);
+  \node[blu, font=\bfseries] at (2.8, 1.1) {$B$};
+  % Shade intersection (approximate)
+  \begin{scope}
+    \clip (-1.1,0) ellipse (2.0cm and 1.3cm);
+    \fill[azzurro] (1.1,0) ellipse (2.0cm and 1.3cm);
+  \end{scope}
+  % Elements only in A
+  \filldraw[blu] (-2.2, 0.2) circle (1.5pt);
+  \node at (-2.2, 0.2) [right, font=\small] {1};
+  \filldraw[blu] (-2.0,-0.4) circle (1.5pt);
+  \node at (-2.0,-0.4) [right, font=\small] {3};
+  \filldraw[blu] (-1.8, 0.7) circle (1.5pt);
+  \node at (-1.8, 0.7) [right, font=\small] {5};
+  % Elements in intersection
+  \filldraw[blu] (-0.2, 0.25) circle (1.5pt);
+  \node at (-0.2, 0.25) [right, font=\small] {2};
+  \filldraw[blu] (-0.2,-0.3) circle (1.5pt);
+  \node at (-0.2,-0.3) [right, font=\small] {4};
+  % Elements only in B
+  \filldraw[blu] (1.8, 0.5) circle (1.5pt);
+  \node at (1.8, 0.5) [right, font=\small] {6};
+  \filldraw[blu] (1.8,-0.3) circle (1.5pt);
+  \node at (1.8,-0.3) [right, font=\small] {8};
+  % Label intersection
+  \node[font=\small\itshape, blu] at (0, -1.6) {La zona ombreggiata rappresenta $A \cap B$};
+\end{tikzpicture}
+\end{center}
+\end{esempio}
+
+\begin{attenzione}
+\textbf{Attenzione!} Se due insiemi non hanno elementi in comune, la loro intersezione è l'insieme vuoto: $A \cap B = \emptyset$. In questo caso si dice che $A$ e $B$ sono \textbf{disgiunti}.
+\end{attenzione}
+
+\subsection{Unione}
+
+\begin{definizione}
+L'\textbf{unione} di due insiemi $A$ e $B$ è il nuovo insieme che contiene \emph{tutti} gli elementi che appartengono ad $A$ \textbf{oppure} a $B$ \textbf{oppure} a entrambi.
+
+La notazione corretta è:
+\[
+  A \cup B
+\]
+che si legge «$A$ \textbf{unito} $B$» oppure «$A$ union $B$».
+\end{definizione}
+
+\begin{esempio}
+Siano $A = \{1;\, 2;\, 3\}$ e $B = \{2;\, 4;\, 5\}$.
+
+Raccogliendo tutti gli elementi (senza ripetere quelli comuni):
+\[
+  A \cup B = \{1;\, 2;\, 3;\, 4;\, 5\}
+\]
+
+\begin{center}
+\begin{tikzpicture}
+  % Shade entire union first
+  \fill[azzurro] (-1.1, 0) ellipse (2.0cm and 1.3cm);
+  \fill[azzurro] (1.1, 0) ellipse (2.0cm and 1.3cm);
+  % Ellipse A
+  \draw[blu, thick] (-1.1, 0) ellipse (2.0cm and 1.3cm);
+  \node[blu, font=\bfseries] at (-2.8, 1.1) {$A$};
+  % Ellipse B
+  \draw[blu, thick] (1.1, 0) ellipse (2.0cm and 1.3cm);
+  \node[blu, font=\bfseries] at (2.8, 1.1) {$B$};
+  % Elements only in A
+  \filldraw[blu] (-2.2, 0.2) circle (1.5pt);
+  \node at (-2.2, 0.2) [right, font=\small] {1};
+  \filldraw[blu] (-2.0,-0.3) circle (1.5pt);
+  \node at (-2.0,-0.3) [right, font=\small] {3};
+  % Elements in intersection
+  \filldraw[blu] (-0.2, 0.0) circle (1.5pt);
+  \node at (-0.2, 0.0) [right, font=\small] {2};
+  % Elements only in B
+  \filldraw[blu] (1.7, 0.4) circle (1.5pt);
+  \node at (1.7, 0.4) [right, font=\small] {4};
+  \filldraw[blu] (1.7,-0.4) circle (1.5pt);
+  \node at (1.7,-0.4) [right, font=\small] {5};
+  % Label
+  \node[font=\small\itshape, blu] at (0, -1.6) {La zona ombreggiata rappresenta $A \cup B$};
+\end{tikzpicture}
+\end{center}
+\end{esempio}
+
+\begin{attenzione}
+\textbf{Attenzione!} Nella rappresentazione per elencazione di $A \cup B$, ogni elemento va scritto \emph{una volta sola}, anche se appartiene a entrambi gli insiemi. Nell'esempio precedente, 2 appartiene sia ad $A$ che a $B$, ma compare una sola volta nell'unione.
+\end{attenzione}
+
+% ==============================================================
+\section*{Riepilogo del capitolo}
+% ==============================================================
+
+\begin{sapevi}
+\textbf{Lo sapevi?} Il matematico e filosofo Georg Cantor (1845–1918) è considerato il fondatore della teoria degli insiemi. Egli fu il primo a trattare matematicamente il concetto di infinito, dimostrando che esistono «infiniti più grandi di altri». Le sue idee, inizialmente contestate, sono oggi alla base di tutta la matematica moderna.
+\end{sapevi}
+
+\bigskip
+
+\begin{tcolorbox}[
+  enhanced,
+  breakable,
+  colback  = azzurro,
+  colframe = blu,
+  fonttitle = \bfseries,
+  title    = Riepilogo,
+  left=6pt, right=6pt, top=4pt, bottom=4pt, arc=4pt
+]
+\begin{itemize}[leftmargin=1.5em]
+  \item Un \textbf{insieme} è un raggruppamento ben definito di elementi con una caratteristica comune; si indica con una lettera maiuscola.
+  \item Un insieme può essere \textbf{finito}, \textbf{infinito} o \textbf{vuoto} ($\emptyset$ oppure $\{\}$).
+  \item $x \in A$ significa che $x$ appartiene ad $A$; $x \notin A$ significa che non vi appartiene.
+  \item Un insieme si può rappresentare \textbf{per elencazione} $\{a;\,b;\,c\}$, \textbf{per caratteristica} o tramite un \textbf{diagramma di Eulero-Venn}.
+  \item $B \subseteq A$ indica che $B$ è un \textbf{sottoinsieme} di $A$: tutti gli elementi di $B$ appartengono ad $A$.
+  \item L'\textbf{intersezione} $A \cap B$ contiene gli elementi comuni ad $A$ e $B$.
+  \item L'\textbf{unione} $A \cup B$ contiene tutti gli elementi di $A$ e di $B$ (senza ripetizioni).
+\end{itemize}
+\end{tcolorbox}

@@ -1,0 +1,63 @@
+# ============================================================
+#  .gitignore — Matemagica
+#  Ignora i file temporanei di LaTeX e la cartella di progetto
+# ============================================================
+
+# --- Cartella di progetto (note, bozze, istruzioni interne) ---
+progetto/
+progetto*/
+
+# --- File ausiliari LaTeX ------------------------------------
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.idx
+*.ilg
+*.ind
+*.glo
+*.gls
+*.glg
+*.acn
+*.acr
+*.alg
+*.ist
+*.xdy
+*.nav
+*.snm
+*.vrb
+*.dvi
+*.ps
+
+# --- File temporanei TikZ/pgf --------------------------------
+*.dpth
+*.md5
+*-figure*.pdf
+*-figure*.log
+
+# --- Output PDF (opzionale: rimuovi se vuoi tracciare il PDF) -
+main.pdf
+
+# --- Editor e sistema operativo ------------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.claude/
+.vscode/
+.zed/
+build/
+
+# --- Build script locali (se presenti) -----------------------
+build_local.sh

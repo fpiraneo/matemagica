@@ -1,0 +1,193 @@
+% ============================================================
+%  preamble.tex — Matemagica
+%  Da includere in main.tex con \input{preamble}
+% ============================================================
+
+% --- Compilatore -----------------------------------------------
+% Richiede LuaLaTeX
+
+% --- Pacchetti di base -----------------------------------------
+\usepackage{fontspec}          % Gestione font OpenType (LuaLaTeX)
+\usepackage{unicode-math}      % Matematica Unicode
+\usepackage{microtype}         % Ottimizzazione tipografica
+\usepackage{geometry}          % Impostazione pagina
+\usepackage{setspace}          % Interlinea
+\usepackage{parskip}           % Spaziatura tra paragrafi
+\usepackage{ragged2e}          % Testo allineato a sinistra
+\usepackage{xcolor}            % Colori
+\usepackage{tcolorbox}         % Riquadri colorati
+\tcbuselibrary{skins, breakable}
+\usepackage{booktabs}          % Tabelle professionali
+\usepackage{tikz}              % Disegni e diagrammi
+\usepackage{amsmath}           % Matematica
+\usepackage{enumitem}          % Liste personalizzate
+\usepackage{hyperref}          % Link PDF
+
+% --- Font ------------------------------------------------------
+\setmainfont{Atkinson Hyperlegible}
+\setmathfont{Latin Modern Math}
+
+% --- Geometria pagina (A5) -------------------------------------
+\geometry{
+  paper      = a4paper,
+  top        = 2.0cm,
+  bottom     = 2.0cm,
+  inner      = 2.2cm,   % margine interno leggermente più largo
+  outer      = 1.8cm,
+  marginpar  = 0cm,
+}
+
+% --- Tipografia ------------------------------------------------
+\setstretch{1.5}              % Interlinea aumentata (accessibilità)
+\RaggedRight                  % Testo allineato a sinistra (no giustificazione)
+\setlength{\parindent}{0pt}   % Nessun rientro (già gestito da parskip)
+\setlength{\parskip}{6pt}
+
+% --- Palette colori --------------------------------------------
+\definecolor{blu}{HTML}{2E6DA4}        % Primario — titoli, accenti
+\definecolor{azzurro}{HTML}{D6EAF8}    % Secondario — riquadri definizioni
+\definecolor{ambra}{HTML}{FEF9E7}      % Terziario — riquadri attenzione
+\definecolor{ambraborder}{HTML}{F0C040}% Bordo ambra
+\definecolor{lightgray}{HTML}{999999}      % Testi secondari (piè di pagina)
+\definecolor{darkgray}{HTML}{666666}       % Sottotitolo
+
+% --- Stili titoli di capitolo/sezione --------------------------
+\usepackage{titlesec}
+\usepackage{needspace}
+\titleformat{\chapter}[block]
+{\huge\bfseries\color{blu}}
+{\thechapter.}{0.5em}{}
+\titleformat{\section}[block]
+{\large\bfseries\color{blu}}
+{\thesection}{0.5em}{}
+\titleformat{\subsection}[block]
+{\normalsize\bfseries\color{blu}}
+{\thesubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.5ex plus 0.5ex minus 0.2ex}{0.8ex}
+\titlespacing*{\subsection}{0pt}{1.2ex plus 0.4ex minus 0.2ex}{0.6ex}
+\preto\section{\needspace{6\baselineskip}}
+\preto\subsection{\needspace{5\baselineskip}}
+\preto\subsubsection{\needspace{4\baselineskip}}
+
+% --- Intestazione e piè di pagina -----------------------------
+\usepackage{datetime2}         % Data di compilazione (LuaLaTeX-safe)
+\usepackage{fancyhdr}
+
+% Formato data AAAAMMDD — definito e attivato prima di \DTMtoday
+\DTMnewdatestyle{aaaammdd}{%
+  \renewcommand{\DTMdisplaydate}[4]{{\small\color{gray}ver. \number##1\DTMtwodigits{##2}\DTMtwodigits{##3}}}%
+  \renewcommand{\DTMDisplaydate}{\DTMdisplaydate}%
+}
+\DTMsetdatestyle{aaaammdd}
+
+\pagestyle{fancy}
+\fancyhf{}                     % Azzera tutti i campi
+
+% Piè di pagina: data sul lato interno, numero pagina sul lato esterno
+% Pagine dispari (destra): data a sinistra (interno), numero a destra (esterno)
+% Pagine pari  (sinistra): numero a sinistra (esterno), data a destra (interno)
+\fancyfoot[LO]{\DTMtoday}
+\fancyfoot[RO]{\thepage}
+\fancyfoot[LE]{\thepage}
+\fancyfoot[RE]{\DTMtoday}
+
+\fancyhead{}                        % Nessuna intestazione
+\renewcommand{\headrulewidth}{0pt}  % Nessuna riga sotto l'intestazione
+\renewcommand{\footrulewidth}{0pt}  % Nessuna riga sopra il piè di pagina
+
+% Stile plain — applicato automaticamente alla prima pagina di ogni capitolo
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[LO]{\DTMtoday}
+  \fancyfoot[RO]{\thepage}
+  \fancyfoot[LE]{\thepage}
+  \fancyfoot[RE]{\DTMtoday}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+% --- Hyperref --------------------------------------------------
+\hypersetup{
+  colorlinks = true,
+  linkcolor  = blu,
+  urlcolor   = blu,
+  pdftitle   = {Matemagica},
+  pdfauthor  = {},
+}
+
+% ============================================================
+%  stili/riquadri.tex — Ambienti riquadro
+%  (può essere separato in un file a parte)
+% ============================================================
+
+% --- Riquadro DEFINIZIONE (azzurro) ----------------------------
+\newtcolorbox{definizione}{
+  enhanced,
+  breakable,
+  colback    = azzurro,
+  colframe   = blu,
+  fonttitle  = \bfseries,
+  title      = Definizione,
+  left       = 6pt,
+  right      = 6pt,
+  top        = 4pt,
+  bottom     = 4pt,
+  arc        = 4pt,
+}
+
+% --- Riquadro REGOLA (azzurro, bordo più sottile) ---------------
+\newtcolorbox{regola}{
+  enhanced,
+  breakable,
+  colback    = azzurro,
+  colframe   = blu,
+  fonttitle  = \bfseries,
+  title      = Regola,
+  left       = 6pt,
+  right      = 6pt,
+  top        = 4pt,
+  bottom     = 4pt,
+  arc        = 4pt,
+}
+
+% --- Riquadro ESEMPIO (bianco con bordo blu) --------------------
+\newtcolorbox{esempio}{
+  enhanced,
+  breakable,
+  colback    = white,
+  colframe   = blu,
+  fonttitle  = \bfseries,
+  title      = Esempio,
+  left       = 6pt,
+  right      = 6pt,
+  top        = 4pt,
+  bottom     = 4pt,
+  arc        = 4pt,
+  boxrule    = 0.6pt,
+}
+
+% --- Riquadro ATTENZIONE (ambra) --------------------------------
+\newtcolorbox{attenzione}{
+  enhanced,
+  breakable,
+  colback    = ambra,
+  colframe   = ambraborder,
+  left       = 6pt,
+  right      = 6pt,
+  top        = 4pt,
+  bottom     = 4pt,
+  arc        = 4pt,
+}
+
+% --- Riquadro LO SAPEVI? (blu attenuato) ------------------------
+\newtcolorbox{sapevi}{
+  enhanced,
+  breakable,
+  colback    = blu!10,
+  colframe   = blu!60,
+  left       = 6pt,
+  right      = 6pt,
+  top        = 4pt,
+  bottom     = 4pt,
+  arc        = 4pt,
+  fontupper  = \small,
+}

@@ -1,0 +1,536 @@
+% ============================================================
+%  cap_geometria_solida.tex — Matemagica
+%  Geometria solida: cubo e parallelepipedo rettangolo
+% ============================================================
+
+\chapter{Geometria solida}
+
+% --- Obiettivi di apprendimento --------------------------------
+\section*{Obiettivi di apprendimento}
+\begin{itemize}[leftmargin=1.4em]
+    \item Comprendere che cosa studia la geometria solida e distinguere i solidi dai piani geometrici.
+    \item Riconoscere e descrivere le componenti di un cubo e di un parallelepipedo rettangolo (vertici, spigoli, facce).
+    \item Comprendere il concetto di sviluppo piano di un solido.
+    \item Calcolare l'area totale e il volume del cubo e del parallelepipedo rettangolo.
+    \item Utilizzare correttamente le unità di misura di superficie e di volume.
+\end{itemize}
+
+% ============================================================
+\section{Che cosa studia la geometria solida}
+% ============================================================
+
+Finora abbiamo lavorato con figure geometriche piane: segmenti, angoli, triangoli, quadrilateri. Queste figure esistono su un unico piano e hanno due dimensioni: lunghezza e larghezza.
+
+La \textbf{geometria solida} è il ramo della matematica che studia le figure nello spazio tridimensionale, cioè le figure che hanno tre dimensioni: lunghezza, larghezza e \textbf{altezza} (o profondità). Queste figure sono chiamate \textbf{solidi geometrici}.
+
+\begin{definizione}
+    Un \textbf{solido geometrico} è una figura che occupa una porzione limitata dello spazio tridimensionale. A differenza delle figure piane, un solido ha tre dimensioni.
+\end{definizione}
+
+I solidi geometrici si dividono in due grandi famiglie:
+
+\begin{itemize}[leftmargin=1.4em]
+    \item \textbf{Poliedri}: solidi le cui facce sono tutte superfici piane (poligoni). Esempi: cubo, parallelepipedo, piramide.
+    \item \textbf{Solidi di rotazione}: solidi che contengono superfici curve, ottenuti ruotando una figura piana attorno a un asse. Esempi: sfera, cilindro, cono.
+\end{itemize}
+
+In questo capitolo ci occuperemo di due poliedri fondamentali: il \textbf{cubo} e il \textbf{parallelepipedo rettangolo}.
+
+% ============================================================
+\section{Il volume di un solido}
+% ============================================================
+
+\begin{definizione}
+    Il \textbf{volume} di un solido è la misura dello spazio che esso occupa.
+\end{definizione}
+
+% ============================================================
+\section{Il cubo}
+% ============================================================
+
+\subsection{Definizione e componenti}
+
+\begin{definizione}
+    Il \textbf{cubo} è un solido geometrico poliedrico le cui sei facce sono tutte \textbf{quadrate} e tutte congruenti tra loro. Tutti i suoi spigoli hanno la stessa lunghezza.
+\end{definizione}
+
+Il cubo è uno dei solidi più regolari che esistano in geometria. È composto da tre tipi di elementi: \textbf{vertici}, \textbf{spigoli} e \textbf{facce}.
+
+% --- Figura: cubo con etichette ---
+\begin{figure}[htb]
+    \centering
+    \begin{tikzpicture}[scale=2.2,
+            every node/.style={font=\small}]
+        % Coordinate dei vertici (cubo unitario in proiezione assonometrica)
+        % Faccia anteriore: A B C D, faccia posteriore: E F G H
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (1,0);
+        \coordinate (C) at (1,1);
+        \coordinate (D) at (0,1);
+        \coordinate (E) at (0.35,0.35);
+        \coordinate (F) at (1.35,0.35);
+        \coordinate (G) at (1.35,1.35);
+        \coordinate (H) at (0.35,1.35);
+
+        % Spigoli nascosti (tratteggiati)
+        \draw[dashed, color=blu!50] (A) -- (E);
+        \draw[dashed, color=blu!50] (D) -- (H);
+        \draw[dashed, color=blu!50] (E) -- (F);
+        \draw[dashed, color=blu!50] (E) -- (H);
+
+        % Spigoli visibili
+        \draw[thick, color=blu] (A) -- (B) -- (C) -- (D) -- cycle;  % faccia anteriore
+        \draw[thick, color=blu] (B) -- (F) -- (G) -- (C);            % faccia destra
+        \draw[thick, color=blu] (D) -- (H) -- (G);                   % top e retro
+        \draw[thick, color=blu] (F) -- (G) -- (H);                   % faccia superiore destra
+
+        % Vertici
+        \foreach \p/\name/\pos in {
+                A/A/below left,
+                B/B/below right,
+                C/C/right,
+                D/D/left,
+                F/F/right,
+                G/G/above right,
+                H/H/above left}{
+                \fill[blu] (\p) circle (1.2pt);
+                \node[\pos, color=blu] at (\p) {$\name$};
+            }
+        \fill[blu] (E) circle (1.2pt);
+        \node[below, color=blu!60] at (E) {\footnotesize$E$};
+
+        % Etichetta lato
+        \draw[<->, color=blu!70, thin] (0,-0.18) -- (1,-0.18)
+        node[midway, below] {$l$};
+    \end{tikzpicture}
+    \caption{Il cubo: vertici (A–H), spigoli e facce quadrate.}
+\end{figure}
+
+\subsubsection{I vertici}
+
+\begin{definizione}
+    I \textbf{vertici} di un solido sono i punti in cui si incontrano gli spigoli. Sono i "angoli" tridimensionali del solido.
+\end{definizione}
+
+Il cubo ha \textbf{8 vertici}. Nella figura sono indicati con le lettere A, B, C, D (faccia anteriore) e E, F, G, H (faccia posteriore).
+
+\subsubsection{Gli spigoli}
+
+\begin{definizione}
+    Gli \textbf{spigoli} di un solido sono i segmenti in cui si incontrano due facce adiacenti. Sono i "bordi" del solido.
+\end{definizione}
+
+Il cubo ha \textbf{12 spigoli}, tutti della stessa lunghezza $l$ (detta \textbf{lato} del cubo).
+
+\subsubsection{Le facce}
+
+\begin{definizione}
+    Le \textbf{facce} di un poliedro sono i poligoni piani che delimitano il solido. Ogni faccia è una superficie piana.
+\end{definizione}
+
+Il cubo ha \textbf{6 facce}, tutte quadrate con lato $l$. Le sei facce sono disposte a \textbf{coppie su piani paralleli}:
+\begin{itemize}[leftmargin=1.4em]
+    \item faccia anteriore e faccia posteriore (parallele tra loro);
+    \item faccia superiore e faccia inferiore (parallele tra loro);
+    \item faccia destra e faccia sinistra (parallele tra loro).
+\end{itemize}
+
+\begin{sapevi}
+    \textbf{Lo sapevi?} Il cubo prende il nome dalla parola greca \emph{kybos}, che significa "dado". I dadi a sei facce usati nei giochi hanno esattamente la forma di un cubo! In matematica il cubo è anche chiamato \textbf{esaedro regolare}, perché ha 6 facce regolari uguali. È uno dei soli cinque solidi completamente regolari, noti come \emph{solidi platonici}.
+\end{sapevi}
+
+% ============================================================
+\subsection{Lo sviluppo piano del cubo}
+% ============================================================
+
+\begin{definizione}
+    Lo \textbf{sviluppo piano} (o \textbf{netto}) di un solido è la figura piana che si ottiene aprendo e distendendo tutte le facce del solido su un piano, come se si aprissero le pieghe di una scatola.
+\end{definizione}
+
+Lo sviluppo piano è utile per due motivi: permette di visualizzare tutte le facce del solido contemporaneamente, e consente di calcolare l'\textbf{area totale} del solido.
+
+Il cubo ha molti sviluppi piani possibili (11 in totale); il più semplice è a forma di croce:
+
+% --- Figura: sviluppo piano del cubo ---
+\begin{figure}[htb]
+    \centering
+    \begin{tikzpicture}[scale=1.0]
+        \def\s{1.1} % lato quadrato
+        % Riga centrale: 4 quadrati (sx, centro-sx, centro-dx, dx)
+        \foreach \i in {0,1,2,3} {
+                \draw[thick, color=blu, fill=azzurro!60]
+                (\i*\s, 0) rectangle (\i*\s+\s, \s);
+            }
+        % Sopra la seconda casella
+        \draw[thick, color=blu, fill=azzurro!60]
+        (\s, \s) rectangle (2*\s, 2*\s);
+        % Sotto la seconda casella
+        \draw[thick, color=blu, fill=azzurro!60]
+        (\s, -\s) rectangle (2*\s, 0);
+        % Etichette facce
+        \node at (0.5*\s, 0.5*\s) {\small 1};
+        \node at (1.5*\s, 0.5*\s) {\small 2};
+        \node at (2.5*\s, 0.5*\s) {\small 3};
+        \node at (3.5*\s, 0.5*\s) {\small 4};
+        \node at (1.5*\s, 1.5*\s) {\small 5};
+        \node at (1.5*\s, -0.5*\s) {\small 6};
+        % Etichetta lato
+        \draw[<->, thin, color=blu!70] (0, -1.5*\s) -- (\s, -1.5*\s)
+        node[midway, below] {$l$};
+    \end{tikzpicture}
+    \caption{Uno sviluppo piano del cubo (le 6 facce quadrate numerate da 1 a 6).}
+\end{figure}
+
+\begin{attenzione}
+    \textbf{Attenzione.} Non tutti i modi di disporre 6 quadrati uniti per un lato sono sviluppi validi del cubo. Esistono esattamente \textbf{11} disposizioni diverse che, una volta ripiegate, formano un cubo corretto.
+\end{attenzione}
+
+% ============================================================
+\subsection{Area totale del cubo}
+% ============================================================
+
+\begin{definizione}
+    L'\textbf{area totale} di un solido è la somma delle aree di tutte le sue facce. Rappresenta la superficie complessiva del solido.
+\end{definizione}
+
+Poiché il cubo ha 6 facce quadrate tutte uguali, ciascuna con lato $l$, l'area di ciascuna faccia è $l^2$. Quindi:
+
+\begin{regola}
+    \textbf{Area totale del cubo}
+
+    Dato un cubo di lato $l$:
+    \[
+        A_{\text{tot}} = 6 \cdot l^2
+    \]
+    L'area totale si misura in unità quadrate (cm², m², …).
+\end{regola}
+
+\begin{esempio}
+    \textbf{Calcolo dell'area totale di un cubo.}
+
+    Un cubo ha lato $l = 4\,\text{cm}$. Calcola la sua area totale.
+
+    \medskip
+    \textit{Soluzione:}
+    \[
+        A_{\text{tot}} = 6 \cdot l^2 = 6 \cdot 4^2 = 6 \cdot 16 = 96\,\text{cm}^2
+    \]
+
+    L'area totale del cubo è $96\,\text{cm}^2$.
+\end{esempio}
+
+% ============================================================
+\subsection{Volume del cubo}
+% ============================================================
+
+\begin{regola}
+    \textbf{Volume del cubo}
+
+    Dato un cubo di lato $l$:
+    \[
+        V = l^3
+    \]
+
+    Si legge: "$l$ al cubo". Non a caso, la terza potenza di un numero si chiama proprio \textbf{cubo} in riferimento a questo solido.
+\end{regola}
+
+\begin{esempio}
+    \textbf{Calcolo del volume di un cubo.}
+
+    Un cubo ha lato $l = 3\,\text{dm}$. Calcola il suo volume.
+
+    \medskip
+    \textit{Soluzione:}
+    \[
+        V = l^3 = 3^3 = 27\,\text{dm}^3
+    \]
+
+    Il volume del cubo è $27\,\text{dm}^3$.
+\end{esempio}
+
+\begin{attenzione}
+    \textbf{Errore comune.} Molti studenti confondono area totale e volume, oppure dimenticano l'esponente corretto. Ricorda:
+    \begin{itemize}[leftmargin=1.4em]
+        \item Area totale del cubo: $A = 6l^{\mathbf{2}}$ \quad (esponente 2, unità quadrate)
+        \item Volume del cubo: $V = l^{\mathbf{3}}$ \quad (esponente 3, unità cubiche)
+    \end{itemize}
+\end{attenzione}
+
+% ============================================================
+\section{Il parallelepipedo rettangolo}
+% ============================================================
+
+\subsection{Definizione e componenti}
+
+\begin{definizione}
+    Il \textbf{parallelepipedo rettangolo} è un solido geometrico \textbf{poliedrico} le cui 6 facce sono tutte rettangolari. Le facce opposte sono \textbf{congruenti} (hanno la stessa forma e le stesse dimensioni) e giacciono su piani paralleli.
+\end{definizione}
+
+\medskip
+\textbf{Perché si chiama "rettangolo"?} Il termine "rettangolo" indica che tutti gli angoli tra le facce (detti \textbf{angoli diedri}) sono angoli retti, cioè di $90°$. Esistono anche parallelepipedi \emph{obliqui}, in cui le facce laterali non sono perpendicolari alla base; nel programma di scuola media si studia però solo il parallelepipedo rettangolo.
+
+\medskip
+\textbf{Che cosa significa "poliedrico"?} Un solido si dice \textbf{poliedrico} (o \textbf{poliedro}) quando tutte le sue facce sono poligoni piani. Il termine viene dal greco \emph{polys} (molti) e \emph{hedra} (facce). Il cubo e il parallelepipedo rettangolo sono entrambi poliedri.
+
+% --- Figura: parallelepipedo rettangolo ---
+\begin{figure}[htb]
+    \centering
+    \begin{tikzpicture}[scale=1.8,
+            every node/.style={font=\small}]
+        % Dimensioni: a=1.6, b=1, c=0.55 (proiezione)
+        \def\a{1.6} \def\b{1.0} \def\offs{0.45}
+
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (\a,0);
+        \coordinate (C) at (\a,\b);
+        \coordinate (D) at (0,\b);
+        \coordinate (E) at (\offs,\offs);
+        \coordinate (F) at (\a+\offs,\offs);
+        \coordinate (G) at (\a+\offs,\b+\offs);
+        \coordinate (H) at (\offs,\b+\offs);
+
+        % Spigoli nascosti
+        \draw[dashed, color=blu!50] (A) -- (E);
+        \draw[dashed, color=blu!50] (D) -- (H);
+        \draw[dashed, color=blu!50] (E) -- (F);
+        \draw[dashed, color=blu!50] (E) -- (H);
+
+        % Spigoli visibili
+        \draw[thick, color=blu] (A) -- (B) -- (C) -- (D) -- cycle;
+        \draw[thick, color=blu] (B) -- (F) -- (G) -- (C);
+        \draw[thick, color=blu] (D) -- (H) -- (G);
+        \draw[thick, color=blu] (F) -- (G) -- (H);
+
+        % Vertici
+        \foreach \p/\name/\pos in {
+                A/A/below left, B/B/below right, C/C/right,
+                D/D/left, F/F/right, G/G/above right, H/H/above left}{
+                \fill[blu] (\p) circle (1pt);
+                \node[\pos, color=blu] at (\p) {$\name$};
+            }
+        \fill[blu] (E) circle (1pt);
+        \node[below left, color=blu!60, font=\footnotesize] at (E) {$E$};
+
+        % Quote dimensioni
+        \draw[<->, thin, color=blu!70] (0,-0.22) -- (\a,-0.22)
+        node[midway, below] {$a$};
+        \draw[<->, thin, color=blu!70] (\a+\offs+0.18, \offs) -- (\a+\offs+0.18, \b+\offs)
+        node[midway, right] {$b$};
+        \draw[<->, thin, color=blu!70] (\a+0.12, 0) -- (\a+\offs+0.12, \offs)
+        node[midway, right] {$c$};
+    \end{tikzpicture}
+    \caption{Il parallelepipedo rettangolo con dimensioni $a$ (lunghezza), $b$ (altezza), $c$ (larghezza/profondità).}
+\end{figure}
+
+Il parallelepipedo rettangolo ha tre dimensioni distinte:
+\begin{itemize}[leftmargin=1.4em]
+    \item $a$ = \textbf{lunghezza} (o base);
+    \item $b$ = \textbf{altezza};
+    \item $c$ = \textbf{larghezza} (o profondità).
+\end{itemize}
+
+\subsubsection{I vertici}
+Il parallelepipedo rettangolo ha \textbf{8 vertici} (A, B, C, D nella faccia anteriore; E, F, G, H nella faccia posteriore), esattamente come il cubo.
+
+\subsubsection{Gli spigoli}
+Il parallelepipedo rettangolo ha \textbf{12 spigoli}, divisi in tre gruppi di 4 spigoli paralleli e congruenti tra loro:
+\begin{itemize}[leftmargin=1.4em]
+    \item 4 spigoli di lunghezza $a$;
+    \item 4 spigoli di lunghezza $b$;
+    \item 4 spigoli di lunghezza $c$.
+\end{itemize}
+
+\subsubsection{Le facce}
+Il parallelepipedo rettangolo ha \textbf{6 facce rettangolari}, disposte a \textbf{coppie congruenti} su piani paralleli:
+
+\begin{itemize}[leftmargin=1.4em]
+    \item 2 facce di dimensioni $a \times b$ (faccia anteriore e posteriore);
+    \item 2 facce di dimensioni $b \times c$ (faccia destra e sinistra);
+    \item 2 facce di dimensioni $a \times c$ (faccia superiore e inferiore).
+\end{itemize}
+
+\medskip
+\textbf{Che cosa significa "congruente"?} Due figure geometriche sono \textbf{congruenti} quando hanno esattamente la stessa forma e le stesse dimensioni: sovrapposte perfettamente, coincidono punto per punto. In geometria solida si usa anche il termine tecnico \textbf{isometrico} (dal greco \emph{isos} = uguale, \emph{metron} = misura), che ha lo stesso significato. Nel linguaggio scolastico si preferisce "congruente".
+
+\begin{attenzione}
+    \textbf{Cubo o parallelepipedo?} Il cubo è un caso \emph{particolare} di parallelepipedo rettangolo, in cui le tre dimensioni sono tutte uguali: $a = b = c = l$. Ogni cubo è quindi un parallelepipedo rettangolo, ma non ogni parallelepipedo rettangolo è un cubo.
+\end{attenzione}
+
+% ============================================================
+\subsection{Lo sviluppo piano del parallelepipedo rettangolo}
+% ============================================================
+
+Come per il cubo, è possibile "aprire" il parallelepipedo rettangolo e distendere tutte le facce su un piano per ottenere il suo \textbf{sviluppo piano}.
+
+% --- Figura: sviluppo piano del parallelepipedo ---
+\begin{figure}[htb]
+    \centering
+    \begin{tikzpicture}[scale=1.0]
+        \def\a{2.0}  % lunghezza
+        \def\b{1.2}  % altezza
+        \def\c{0.65} % larghezza/profondità
+
+        % Riga centrale: c | a | c | a
+        % y=0 è la linea inferiore della riga centrale
+        % Faccia c×b (sinistra)
+        \draw[thick, color=blu, fill=azzurro!60]
+        (0,0) rectangle (\c,\b);
+        \node[font=\scriptsize] at (0.5*\c, 0.5*\b) {$c{\times}b$};
+
+        % Faccia a×b (centro-sinistra)
+        \draw[thick, color=blu, fill=azzurro!30]
+        (\c,0) rectangle (\c+\a,\b);
+        \node[font=\scriptsize] at (\c+0.5*\a, 0.5*\b) {$a{\times}b$};
+
+        % Faccia c×b (centro-destra)
+        \draw[thick, color=blu, fill=azzurro!60]
+        (\c+\a,0) rectangle (2*\c+\a,\b);
+        \node[font=\scriptsize] at (\c+\a+0.5*\c, 0.5*\b) {$c{\times}b$};
+
+        % Faccia a×b (destra)
+        \draw[thick, color=blu, fill=azzurro!30]
+        (2*\c+\a,0) rectangle (2*\c+2*\a,\b);
+        \node[font=\scriptsize] at (2*\c+\a+0.5*\a, 0.5*\b) {$a{\times}b$};
+
+        % Faccia a×c (sopra)
+        \draw[thick, color=blu, fill=azzurro!80]
+        (\c,\b) rectangle (\c+\a,\b+\c);
+        \node[font=\scriptsize] at (\c+0.5*\a, \b+0.5*\c) {$a{\times}c$};
+
+        % Faccia a×c (sotto)
+        \draw[thick, color=blu, fill=azzurro!80]
+        (\c,-\c) rectangle (\c+\a,0);
+        \node[font=\scriptsize] at (\c+0.5*\a, -0.5*\c) {$a{\times}c$};
+
+        % Quote
+        \draw[<->, thin, color=blu!70] (\c, -\c-0.25) -- (\c+\a, -\c-0.25)
+        node[midway, below, font=\scriptsize] {$a$};
+        \draw[<->, thin, color=blu!70] (-0.2, 0) -- (-0.2, \b)
+        node[midway, left, font=\scriptsize] {$b$};
+        \draw[<->, thin, color=blu!70] (0, -\c-0.25) -- (\c, -\c-0.25)
+        node[midway, below, font=\scriptsize] {$c$};
+    \end{tikzpicture}
+    \caption{Uno sviluppo piano del parallelepipedo rettangolo con dimensioni $a$, $b$, $c$.}
+\end{figure}
+
+% ============================================================
+\subsection{Area totale del parallelepipedo rettangolo}
+% ============================================================
+
+Dallo sviluppo piano si vede chiaramente che l'area totale è la somma delle aree delle 3 coppie di facce congruenti:
+
+\begin{regola}
+    \textbf{Area totale del parallelepipedo rettangolo}
+
+    Dato un parallelepipedo rettangolo con dimensioni $a$, $b$, $c$:
+    \[
+        A_{\text{tot}} = 2\,(ab + bc + ca)
+    \]
+    dove:
+    \begin{itemize}[leftmargin=1.4em, nosep]
+        \item $ab$ è l'area della coppia di facce anteriore/posteriore;
+        \item $bc$ è l'area della coppia di facce destra/sinistra;
+        \item $ca$ è l'area della coppia di facce superiore/inferiore.
+    \end{itemize}
+\end{regola}
+
+\begin{esempio}
+    \textbf{Calcolo dell'area totale di un parallelepipedo rettangolo.}
+
+    Un parallelepipedo rettangolo ha dimensioni $a = 5\,\text{cm}$, $b = 3\,\text{cm}$, $c = 2\,\text{cm}$. Calcola la sua area totale.
+
+    \medskip
+    \textit{Soluzione:}
+    \begin{align*}
+        ab             & = 5 \cdot 3 = 15\,\text{cm}^2                     \\
+        bc             & = 3 \cdot 2 = 6\,\text{cm}^2                      \\
+        ca             & = 2 \cdot 5 = 10\,\text{cm}^2                     \\[4pt]
+        A_{\text{tot}} & = 2\,(15 + 6 + 10) = 2 \cdot 31 = 62\,\text{cm}^2
+    \end{align*}
+
+    L'area totale è $62\,\text{cm}^2$.
+\end{esempio}
+
+% ============================================================
+\subsection{Volume del parallelepipedo rettangolo}
+% ============================================================
+
+\begin{regola}
+    \textbf{Volume del parallelepipedo rettangolo}
+
+    Dato un parallelepipedo rettangolo con dimensioni $a$, $b$, $c$:
+    \[
+        V = a \cdot b \cdot c
+    \]
+
+    \medskip
+    \textit{Nota:} Se $a = b = c = l$, si ottiene la formula del cubo: $V = l \cdot l \cdot l = l^3$.
+\end{regola}
+
+\begin{esempio}
+    \textbf{Calcolo del volume di un parallelepipedo rettangolo.}
+
+    Una scatola ha lunghezza $a = 20\,\text{cm}$, larghezza $c = 15\,\text{cm}$ e altezza $b = 10\,\text{cm}$. Calcola il suo volume.
+
+    \medskip
+    \textit{Soluzione:}
+    \[
+        V = a \cdot b \cdot c = 20 \cdot 10 \cdot 15 = 3\,000\,\text{cm}^3
+    \]
+
+    Il volume della scatola è $3\,000\,\text{cm}^3$.
+\end{esempio}
+
+\begin{attenzione}
+    \textbf{Errore comune.} Per calcolare il volume si moltiplicano le \emph{tre} dimensioni, non due. Moltiplicare solo $a \cdot b$ dà l'area di una faccia, non il volume.
+
+    \medskip
+    Verifica sempre che le tre misure siano espresse nella \emph{stessa} unità prima di calcolare: se una dimensione è in cm e un'altra in m, converti prima di moltiplicare.
+\end{attenzione}
+
+\begin{sapevi}
+    \textbf{Lo sapevi?} Il parallelepipedo rettangolo è la forma di moltissimi oggetti della vita quotidiana: mattoni, scatole, libri, stanze. Quando architetti e ingegneri calcolano quanta vernice serve per tinteggiare una stanza, usano esattamente la formula dell'area totale del parallelepipedo. Il volume è invece la grandezza chiave per sapere quanta aria contiene una stanza o quanta acqua entra in una vasca.
+\end{sapevi}
+
+% ============================================================
+\section{Riepilogo del capitolo}
+% ============================================================
+
+\begin{tcolorbox}[
+        enhanced, breakable,
+        colback  = azzurro,
+        colframe = blu,
+        fonttitle = \bfseries,
+        title    = {Riepilogo — Geometria solida},
+    ]
+
+    \textbf{Geometria solida:} studia le figure nello spazio tridimensionale.
+
+    \medskip
+    \textbf{Poliedro:} solido le cui facce sono tutte poligoni piani. Cubo e parallelepipedo rettangolo sono poliedri.
+
+    \medskip
+    \textbf{Vertici, spigoli, facce:}
+    \begin{itemize}[leftmargin=1.4em, nosep]
+        \item \emph{Vertice}: punto in cui si incontrano gli spigoli.
+        \item \emph{Spigolo}: segmento in cui si incontrano due facce.
+        \item \emph{Faccia}: poligono piano che delimita il solido.
+    \end{itemize}
+
+    \medskip
+    \textbf{Cubo} (lato $l$): 8 vertici, 12 spigoli, 6 facce quadrate.
+    \[
+        A_{\text{tot}} = 6l^2 \qquad V = l^3
+    \]
+
+    \textbf{Parallelepipedo rettangolo} (dimensioni $a,b,c$): 8 vertici, 12 spigoli, 6 facce rettangolari a coppie congruenti.
+    \[
+        A_{\text{tot}} = 2(ab+bc+ca) \qquad V = a \cdot b \cdot c
+    \]
+
+    \medskip
+    \textbf{Sviluppo piano:} figura piana ottenuta aprendo tutte le facce del solido su un piano.
+
+\end{tcolorbox}
+
+\end{document}

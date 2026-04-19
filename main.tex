@@ -1,0 +1,78 @@
+% =============================================================
+% main.tex — Matemagica
+% Documento principale LuaLaTeX
+%
+% COMPILAZIONE:
+%   lualatex main.tex
+%   lualatex main.tex   (secondo passaggio per riferimenti)
+%
+% STRUTTURA:
+%   main.tex
+%   preamble.tex          (pacchetti, font, colori, riquadri)
+%   capitoli/
+%     01.numeri.tex
+%     02.operazioni_aritmetiche.tex
+%     ...
+%   immagini/
+% =============================================================
+
+\documentclass[
+  a4paper,
+  12pt,
+  twoside,
+  openright
+]{book}
+
+\input{preamble}
+
+% =============================================================
+\begin{document}
+% =============================================================
+
+% -------------------------------------------------------------
+% FRONTESPIZIO
+% -------------------------------------------------------------
+\begin{titlepage}
+  \centering
+  \vspace*{3cm}
+
+  {\color{blu}\rule{\linewidth}{1.5pt}}
+  \vspace{0.6cm}
+
+  {\Huge\bfseries\color{blu} Matemagica}\\[0.4cm]
+  {\color{black}Libro di supporto per l'apprendimento della matematica nelle scuole medie}\\[0.2cm]
+  {\small\color{darkgray} Ispirato al Piano di studio DECS, Canton Ticino, Svizzera}
+
+  \vspace{0.6cm}
+  {\color{blu}\rule{\linewidth}{1.5pt}}
+
+  \vfill
+
+  \vspace{2cm}
+  {\small\color{black}Francesco ed Emma Piraneo Giuliano, \the\year}
+\end{titlepage}
+
+% -------------------------------------------------------------
+% PAGINE PRELIMINARI
+% -------------------------------------------------------------
+\frontmatter
+\tableofcontents
+\clearpage
+
+% -------------------------------------------------------------
+% CORPO DEL LIBRO
+% -------------------------------------------------------------
+\mainmatter
+
+\input{capitoli/00.colophon}
+\input{capitoli/01.numeri}
+\input{capitoli/02.operazioni_aritmetiche}
+\input{capitoli/03.insiemistica}
+\input{capitoli/10.potenze}
+\input{capitoli/30.misure}
+\input{capitoli/40.geometria_piana}
+\input{capitoli/50.geometria_solida}
+
+% =============================================================
+\end{document}
+% =============================================================

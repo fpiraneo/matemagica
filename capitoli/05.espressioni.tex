@@ -1,0 +1,334 @@
+% ============================================================
+%  cap05_espressioni.tex — Matemagica
+%  Capitolo 5: Espressioni aritmetiche
+% ============================================================
+
+\chapter{Espressioni aritmetiche}
+
+% --- Obiettivi di apprendimento ---
+\section*{Obiettivi di apprendimento}
+\begin{itemize}[leftmargin=1.5em]
+    \item Comprendere il concetto di espressione aritmetica.
+    \item Applicare correttamente le regole di precedenza tra le operazioni.
+    \item Risolvere espressioni con parentesi tonde, quadre e graffe.
+    \item Distinguere i due ruoli delle parentesi graffe: notazione insiemistica
+          e raggruppamento nelle espressioni.
+    \item Confrontare la notazione con sole parentesi tonde annidate e quella
+          con i tre ordini di parentesi.
+\end{itemize}
+
+% ============================================================
+\section{Che cos'è un'espressione aritmetica}
+% ============================================================
+
+\begin{definizione}
+    Un'\textbf{espressione aritmetica} è una scrittura matematica che collega
+    due o più numeri tramite segni di operazione. È una catena di operazioni il
+    cui risultato finale è un unico numero, detto \textbf{valore dell'espressione}.
+\end{definizione}
+
+\begin{esempio}
+    Le seguenti sono espressioni aritmetiche:
+    \[
+        12 + 5 \times 3 \qquad\qquad
+        (8 - 2) \times 4 + 6 : 2 \qquad\qquad
+        \{3 \times [10 - (2 + 1)]\} + 5
+    \]
+\end{esempio}
+
+\begin{attenzione}
+    \textbf{Un'espressione non è un'equazione.} Un'espressione aritmetica non
+    contiene il segno di uguale: va \emph{calcolata}, non \emph{risolta}.
+    Il segno $=$ appare solo nei passaggi intermedi che mostriamo durante il calcolo.
+\end{attenzione}
+
+% ============================================================
+\section{Le regole di precedenza}
+% ============================================================
+
+Per ottenere un risultato univoco, ogni persona che calcola la stessa
+espressione deve seguire le stesse regole. Queste si chiamano
+\textbf{regole di precedenza}.
+
+\begin{regola}
+    \textbf{Ordine di esecuzione delle operazioni.}
+    \begin{enumerate}[leftmargin=1.5em]
+        \item Si risolvono prima le operazioni racchiuse fra \textbf{parentesi},
+              cominciando da quelle più interne.
+        \item Fra le operazioni senza parentesi, \textbf{moltiplicazione} e
+              \textbf{divisione} hanno la precedenza su addizione e sottrazione.
+        \item Fra operazioni dello stesso livello (solo addizioni e sottrazioni,
+              oppure solo moltiplicazioni e divisioni) si procede
+              \textbf{da sinistra verso destra}.
+    \end{enumerate}
+\end{regola}
+
+\begin{esempio}
+    Calcolare $12 + 5 \times 3 - 8 : 4$.
+
+    Non ci sono parentesi, quindi si eseguono prima le moltiplicazioni e le divisioni,
+    da sinistra verso destra, poi le addizioni e le sottrazioni:
+    \begin{align*}
+        12 + 5 \times 3 - 8 : 4
+         & = 12 + 15 - 2 \\
+         & = 27 - 2      \\
+         & = 25
+    \end{align*}
+\end{esempio}
+
+\begin{attenzione}
+    \textbf{Errore comune — procedere semplicemente da sinistra verso destra.}
+    Senza rispettare le precedenze, $12 + 5 \times 3$ potrebbe essere calcolato
+    come $(12 + 5) \times 3 = 51$, risultato scorretto.
+    La risposta corretta è $12 + 15 = 27$, perché la moltiplicazione precede
+    l'addizione. \quad\textit{(corretto)}
+\end{attenzione}
+
+% ============================================================
+\section{Le parentesi nelle espressioni}
+% ============================================================
+
+Le parentesi servono a modificare l'ordine naturale delle operazioni:
+tutto ciò che è racchiuso fra una coppia di parentesi va calcolato
+\emph{prima} del resto.
+
+\subsection{Parentesi tonde annidate}
+
+Il modo più semplice di indicare più livelli di raggruppamento è usare
+più coppie di parentesi \textbf{tonde}, una dentro l'altra.
+Questa scrittura si dice \textbf{annidata} (dal latino \emph{nidus}, nido:
+ogni coppia di parentesi «contiene» quella più interna come un nido).
+
+\begin{regola}
+    Con le sole parentesi tonde annidate, si procede sempre dalla
+    \textbf{parentesi più interna} verso quella più esterna.
+\end{regola}
+
+\begin{esempio}
+    Calcolare $((3 + 2) \times (4 - 1) + 6) \times 2$.
+
+    Si individua la parentesi più esterna e si lavora dall'interno:
+    \begin{align*}
+        ((3 + 2) \times (4 - 1) + 6) \times 2
+         & = (5 \times 3 + 6) \times 2 &  & \text{[parentesi più interne]}     \\
+         & = (15 + 6) \times 2         &  & \text{[moltiplicazione]}           \\
+         & = 21 \times 2               &  & \text{[addizione nella parentesi]} \\
+         & = 42
+    \end{align*}
+\end{esempio}
+
+\begin{attenzione}
+    \textbf{La notazione con sole tonde annidate è corretta ma poco leggibile.}
+    Espressioni come $((8-(3+1))\times(5-(2+1)))+4$ sono difficili da leggere:
+    è faticoso contare quante parentesi si aprono e quante si chiudono,
+    e un errore di conteggio porta a un risultato sbagliato.
+    Per questo motivo, nella pratica matematica si usa una notazione più chiara,
+    basata su tre tipi di parentesi distinte.
+\end{attenzione}
+
+\subsection{I tre ordini di parentesi: tonde, quadre e graffe}
+
+Per rendere le espressioni più leggibili e meno soggette a errori di lettura,
+la matematica utilizza tre simboli distinti, usati dall'interno verso l'esterno:
+
+\begin{center}
+    \begin{tabular}{cll}
+        \toprule
+        \textbf{Simbolo} & \textbf{Nome}             & \textbf{Livello}    \\
+        \midrule
+        $(\quad)$        & Parentesi \textbf{tonde}  & Primo (più interno) \\
+        $[\quad]$        & Parentesi \textbf{quadre} & Secondo             \\
+        $\{\quad\}$      & Parentesi \textbf{graffe} & Terzo (più esterno) \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+\begin{regola}
+    Con i tre ordini di parentesi, si procede sempre dall'interno verso
+    l'esterno, rispettando la gerarchia:
+    \[
+        \text{tonde} \longrightarrow \text{quadre} \longrightarrow \text{graffe}
+    \]
+    All'interno di ciascuna coppia di parentesi valgono le normali regole
+    di precedenza: prima moltiplicazioni e divisioni, poi addizioni e sottrazioni.
+\end{regola}
+
+\begin{esempio}
+    Calcolare $\{3 \times [10 - (2 + 1)] + 5\} : 4$.
+
+    \textbf{Passo 1} — parentesi tonde (più interne):
+    \[
+        \{3 \times [10 - 3] + 5\} : 4
+    \]
+    \textbf{Passo 2} — parentesi quadre:
+    \[
+        \{3 \times 7 + 5\} : 4
+        = \{21 + 5\} : 4
+        = \{26\} : 4
+    \]
+    \textbf{Passo 3} — parentesi graffe:
+    \[
+        26 : 4 = 6{,}5
+    \]
+\end{esempio}
+
+\begin{esempio}
+    Calcolare $\{5 \times [(12 - 4) : (3 - 1)] - 2\} + 3 \times 4$.
+
+    \textbf{Passo 1} — parentesi tonde (ce ne sono due, allo stesso livello):
+    \begin{align*}
+        \{5 \times [8 : 2] - 2\} + 3 \times 4
+    \end{align*}
+    \textbf{Passo 2} — parentesi quadre:
+    \begin{align*}
+        \{5 \times 4 - 2\} + 3 \times 4
+        = \{20 - 2\} + 3 \times 4
+        = \{18\} + 3 \times 4
+    \end{align*}
+    \textbf{Passo 3} — fuori da tutte le parentesi, moltiplicazione prima:
+    \begin{align*}
+        18 + 12 = 30
+    \end{align*}
+\end{esempio}
+
+% ============================================================
+\section{Confronto tra i due approcci}
+% ============================================================
+
+Come abbiamo visto, le due notazioni sono \textbf{equivalenti dal punto di
+    vista matematico}: producono lo stesso risultato. La differenza è nella
+leggibilità.
+
+\begin{center}
+    \begin{tabular}{p{0.42\linewidth} p{0.42\linewidth}}
+        \toprule
+        \textbf{Solo parentesi tonde annidate}                                    & \textbf{Tre ordini di parentesi} \\
+        \midrule
+        $((8-(3+1))\times(5-(2+1)))+4$                                            &
+        $\{[8-(3+1)]\times[5-(2+1)]\}+4$                                                                             \\[4pt]
+        Tutte le parentesi hanno la stessa forma: più livelli ci sono,
+        più è difficile distinguerli a colpo d'occhio.                            &
+        Ogni livello ha un simbolo diverso: è immediato vedere quale operazione
+        va risolta prima.                                                                                            \\[4pt]
+        Richiede di contare attentamente l'apertura e la chiusura di ogni coppia. &
+        La forma visiva guida la lettura e riduce gli errori.                                                        \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+\begin{sapevi}
+    \textbf{Un doppio ruolo per le parentesi graffe.}
+
+    Nel capitolo sugli insiemi abbiamo usato le parentesi graffe per elencare
+    gli elementi di un insieme: $A = \{1;\; 3;\; 5\}$.
+    Nelle espressioni aritmetiche, le stesse graffe svolgono un ruolo diverso:
+    indicano il livello più esterno di raggruppamento.
+
+    I due usi si distinguono dal contesto:
+    \begin{itemize}[leftmargin=1.5em]
+        \item Se le graffe contengono un elenco di numeri separati da punto e
+              virgola, si tratta di un \textbf{insieme}.
+        \item Se le graffe contengono un'operazione, si tratta di un
+              \textbf{raggruppamento} in un'espressione.
+    \end{itemize}
+    In matematica è frequente che uno stesso simbolo abbia significati diversi
+    a seconda del contesto: riconoscere il contesto è parte del ragionamento
+    matematico.
+\end{sapevi}
+
+% ============================================================
+\section{Le parentesi e la proprietà distributiva}
+% ============================================================
+
+Le parentesi non servono solo a stabilire l'ordine delle operazioni:
+hanno anche un legame profondo con la \textbf{proprietà distributiva}
+della moltiplicazione rispetto all'addizione e alla sottrazione.
+
+\begin{regola}
+    \textbf{Proprietà distributiva.}
+    \[
+        a \times (b + c) = a \times b + a \times c
+        \qquad\qquad
+        a \times (b - c) = a \times b - a \times c
+    \]
+    Questo significa che una moltiplicazione che «abbraccia» una somma
+    (o una differenza) può essere distribuita su ciascun termine.
+\end{regola}
+
+\begin{esempio}
+    Verificare che $4 \times (5 + 3) = 4 \times 5 + 4 \times 3$.
+    \begin{align*}
+        4 \times (5 + 3)        & = 4 \times 8 = 32                       \\
+        4 \times 5 + 4 \times 3 & = 20 + 12 = 32 \quad\textit{(corretto)}
+    \end{align*}
+\end{esempio}
+
+\begin{attenzione}
+    \textbf{La proprietà distributiva NON vale per la divisione a sinistra.}
+    \[
+        (8 + 4) : 2 = 12 : 2 = 6
+        \qquad\text{ma}\qquad
+        8 : 2 + 4 : 2 = 4 + 2 = 6 \quad \text{(in questo caso funziona)}
+    \]
+    \[
+        12 : (4 + 2) = 12 : 6 = 2
+        \qquad\text{ma}\qquad
+        12 : 4 + 12 : 2 = 3 + 6 = 9 \quad \text{(risultato diverso!)}
+    \]
+    Quando il \emph{divisore} contiene una somma racchiusa fra parentesi,
+    la distribuzione non è applicabile.
+\end{attenzione}
+
+% ============================================================
+\section*{Approfondimento — La convenzione internazionale}
+% ============================================================
+
+\begin{sapevi}
+    \textbf{La posizione dell'American Physical Society.}
+
+    L'\emph{American Physical Society} (APS), una delle principali organizzazioni
+    scientifiche mondiali, ha codificato nelle proprie linee guida editoriali la
+    convenzione che da secoli i matematici adottano per le parentesi nelle
+    espressioni complesse.
+
+    La regola stabilisce che, quando la forma delle parentesi non ha un significato
+    speciale (come accade nelle espressioni aritmetiche), si deve lavorare
+    dall'interno verso l'esterno seguendo la sequenza:
+    \[
+        \{ \;[\; (\quad) \;]\; \}
+    \]
+    e che \textbf{l'annidamento di sole parentesi tonde va evitato},
+    perché rende la struttura dell'espressione difficile da leggere e da verificare.
+
+    Questa non è una preferenza stilistica: è una convenzione che riduce
+    gli errori e garantisce che la stessa espressione venga letta nello stesso
+    modo da chiunque, indipendentemente dalla lingua o dalla scuola di appartenenza.
+    Il fatto che alcuni testi scolastici introducano solo le parentesi tonde
+    annidate è quindi una semplificazione didattica temporanea, non una regola
+    matematica definitiva.
+\end{sapevi}
+
+% ============================================================
+\section*{Riepilogo}
+% ============================================================
+
+\begin{regola}
+    \textbf{Riepilogo del capitolo.}
+    \begin{itemize}[leftmargin=1.5em]
+        \item Un'\textbf{espressione aritmetica} è una catena di operazioni il
+              cui calcolo segue regole precise.
+        \item \textbf{Regole di precedenza}: prima le parentesi (dall'interno
+              verso l'esterno), poi moltiplicazione e divisione, infine addizione
+              e sottrazione; a parità di livello, da sinistra verso destra.
+        \item Le parentesi si usano in tre ordini: \textbf{tonde} $(\,)$,
+              \textbf{quadre} $[\,]$, \textbf{graffe} $\{\,\}$.
+        \item Le due notazioni (sole tonde annidate / tre ordini) sono
+              matematicamente equivalenti, ma la notazione a tre ordini è
+              più leggibile e corrisponde alla convenzione internazionale.
+        \item Le parentesi \textbf{graffe} hanno un doppio ruolo: indicano
+              un insieme (con elementi separati da punto e virgola) oppure
+              il livello più esterno di raggruppamento in un'espressione.
+        \item La \textbf{proprietà distributiva} lega parentesi e
+              moltiplicazione: $a \times (b + c) = a \times b + a \times c$.
+    \end{itemize}
+\end{regola}

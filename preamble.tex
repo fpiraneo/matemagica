@@ -10,6 +10,7 @@
 \usepackage{fontspec}          % Gestione font OpenType (LuaLaTeX)
 \usepackage{unicode-math}      % Matematica Unicode
 \usepackage{microtype}         % Ottimizzazione tipografica
+\microtypesetup{verbose=silent}
 \usepackage{geometry}          % Impostazione pagina
 \usepackage{setspace}          % Interlinea
 \usepackage{parskip}           % Spaziatura tra paragrafi
@@ -122,7 +123,7 @@
 % --- Riquadro DEFINIZIONE (azzurro) ----------------------------
 \newtcolorbox{definizione}{
   enhanced,
-  breakable,
+  %  breakable,
   colback    = azzurro,
   colframe   = blu,
   fonttitle  = \bfseries,
@@ -137,7 +138,7 @@
 % --- Riquadro REGOLA (azzurro, bordo più sottile) ---------------
 \newtcolorbox{regola}{
   enhanced,
-  breakable,
+  %  breakable,
   colback    = azzurro,
   colframe   = blu,
   fonttitle  = \bfseries,

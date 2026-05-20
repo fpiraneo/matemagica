@@ -1,0 +1,492 @@
+% ============================================================
+%  cap_radice.tex — La radice quadrata
+%  Matemagica — Capitolo: I numeri / La radice
+%  Compilare con LuaLaTeX (doppio passaggio)
+% ============================================================
+
+\chapter{La radice quadrata}
+
+% ------------------------------------------------------------
+\section*{Obiettivi di apprendimento}
+% ------------------------------------------------------------
+
+Al termine di questo capitolo sarai in grado di:
+
+\begin{itemize}
+    \item comprendere il significato geometrico della radice quadrata;
+    \item riconoscere i numeri quadrati perfetti;
+    \item calcolare la radice quadrata esatta di un numero quadrato perfetto;
+    \item approssimare la radice quadrata di un numero non quadrato perfetto;
+    \item distinguere i numeri razionali dai numeri irrazionali;
+    \item applicare le proprietà fondamentali della radice quadrata.
+\end{itemize}
+
+% ------------------------------------------------------------
+\section{Motivazione geometrica}
+% ------------------------------------------------------------
+
+Immagina di dover ricoprire con un disegno quadrato una parete di \(12\ \text{m}^2\),
+ma vuoi che il disegno occupi solo un terzo della superficie totale.
+
+L'area occupata dal disegno sarà:
+\[
+    A = 12 : 3 = 4\ \text{m}^2
+\]
+
+Il disegno ha forma quadrata, quindi devi trovare la lunghezza del suo lato \(\ell\)
+sapendo che \(\ell^2 = 4\).
+
+Poiché \(2^2 = 4\), il lato misura \(\ell = 2\ \text{m}\). \quad \textit{(corretto)}
+
+\medskip
+
+Ma cosa succede se il disegno deve occupare \(8\ \text{m}^2\)?
+Dovremmo trovare un numero \(\ell\) tale che \(\ell^2 = 8\).
+
+Proviamo ad avvicinarci per approssimazioni successive:
+
+\begin{center}
+    \begin{tabular}{cc}
+        \toprule
+        Approssimazione del lato   & Area                             \\
+        \midrule
+        \(2 < \ell < 3\)           & \(4 < \ell^2 < 9\)               \\
+        \(2{,}5 < \ell < 2{,}9\)   & \(6{,}25 < \ell^2 < 8{,}41\)     \\
+        \(2{,}7 < \ell < 2{,}8\)   & \(7{,}29 < \ell^2 < 7{,}84\)     \\
+        \(2{,}81 < \ell < 2{,}82\) & \(7{,}8961 < \ell^2 < 7{,}9524\) \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+Potremmo continuare ad approssimare il valore di \(\ell\) senza mai raggiungere
+il valore esatto. Questo accade perché \(8\) non è un \textbf{quadrato perfetto}.
+
+% ------------------------------------------------------------
+\section{Definizione di radice quadrata}
+% ------------------------------------------------------------
+
+La misura esatta del lato di un quadrato di area \(a\) si indica con il simbolo
+\(\sqrt{a}\) e si legge \emph{radice quadrata di \(a\)}.
+
+\begin{definizione}
+    La \textbf{radice quadrata} di un numero \(a \geq 0\) è il numero \(x \geq 0\)
+    tale che \(x^2 = a\). In simboli:
+    \[
+        \text{se } a \geq 0 \colon \quad \sqrt{a} = x \iff x^2 = a \quad (x \geq 0)
+    \]
+    La radice quadrata è l'operazione inversa dell'\textbf{elevamento al quadrato}.
+\end{definizione}
+
+\begin{attenzione}
+    \textbf{Attenzione alla condizione \(a \geq 0\).}
+
+    La radice quadrata è definita solo per numeri non negativi. Non esiste nessun
+    numero reale il cui quadrato sia negativo: qualunque numero moltiplicato per
+    sé stesso dà sempre un risultato positivo o zero. Per questo motivo
+    \(\sqrt{-4}\) non esiste nell'insieme dei numeri che utilizziamo alle medie.
+\end{attenzione}
+
+% ------------------------------------------------------------
+\section{I numeri quadrati perfetti}
+% ------------------------------------------------------------
+
+\begin{definizione}
+    Un numero intero è detto \textbf{quadrato perfetto} se è uguale al quadrato
+    di un numero intero. In altre parole, \(n\) è un quadrato perfetto se
+    \(\sqrt{n}\) è un numero intero.
+\end{definizione}
+
+I primi quadrati perfetti sono:
+
+\begin{center}
+    \begin{tabular}{ccc}
+        \toprule
+        Numero intero \(n\) & Quadrato \(n^2\) & Radice \(\sqrt{n^2}\) \\
+        \midrule
+        1                   & 1                & 1                     \\
+        2                   & 4                & 2                     \\
+        3                   & 9                & 3                     \\
+        4                   & 16               & 4                     \\
+        5                   & 25               & 5                     \\
+        6                   & 36               & 6                     \\
+        7                   & 49               & 7                     \\
+        8                   & 64               & 8                     \\
+        9                   & 81               & 9                     \\
+        10                  & 100              & 10                    \\
+        11                  & 121              & 11                    \\
+        12                  & 144              & 12                    \\
+        13                  & 169              & 13                    \\
+        14                  & 196              & 14                    \\
+        15                  & 225              & 15                    \\
+        20                  & 400              & 20                    \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+Conoscere questi quadrati perfetti a memoria è molto utile per calcolare
+rapidamente le radici quadrate esatte.
+
+\begin{esempio}
+    Calcola le seguenti radici quadrate esatte e verifica il risultato.
+
+    \medskip
+
+    \begin{tabular}{ll}
+        \(\sqrt{16} = 4\)          & perché \(4^2 = 16\) \quad \textit{(corretto)}          \\[4pt]
+        \(\sqrt{225} = 15\)        & perché \(15^2 = 225\) \quad \textit{(corretto)}        \\[4pt]
+        \(\sqrt{12{,}25} = 3{,}5\) & perché \(3{,}5^2 = 12{,}25\) \quad \textit{(corretto)} \\[4pt]
+        \(\sqrt{81} = 9\)          & perché \(9^2 = 81\) \quad \textit{(corretto)}          \\[4pt]
+        \(\sqrt{169} = 13\)        & perché \(13^2 = 169\) \quad \textit{(corretto)}        \\[4pt]
+        \(\sqrt{64} = 8\)          & perché \(8^2 = 64\) \quad \textit{(corretto)}          \\
+    \end{tabular}
+\end{esempio}
+
+% ------------------------------------------------------------
+\section{Numeri razionali e numeri irrazionali}
+% ------------------------------------------------------------
+
+Come abbiamo visto, la radice quadrata di un quadrato perfetto è sempre
+un numero intero o un numero decimale finito (come \(3{,}5\)).
+Questi numeri appartengono all'insieme dei \textbf{numeri razionali}.
+
+\begin{definizione}
+    Un \textbf{numero razionale} è un numero che può essere scritto come
+    frazione \(\dfrac{p}{q}\) con \(p\) e \(q\) interi e \(q \neq 0\).
+    Nella sua forma decimale, un numero razionale è sempre:
+    \begin{itemize}
+        \item un decimale finito (es.\ \(3{,}5 = \dfrac{7}{2}\)), oppure
+        \item un decimale periodico (es.\ \(0{,}\overline{3} = \dfrac{1}{3}\)).
+    \end{itemize}
+\end{definizione}
+
+\begin{definizione}
+    Un \textbf{numero irrazionale} è un numero che \emph{non} può essere
+    scritto come frazione tra due interi. Nella sua forma decimale ha
+    infinite cifre dopo la virgola che non si ripetono mai con un periodo
+    regolare.
+
+    La radice quadrata di un numero che non è un quadrato perfetto è sempre
+    un numero irrazionale.
+\end{definizione}
+
+\begin{esempio}
+    \(\sqrt{8}\) è un numero irrazionale:
+    \[
+        \sqrt{8} = 2{,}828\,427\,124\,746\,190\ldots
+    \]
+    Le cifre decimali continuano all'infinito senza alcuna ripetizione periodica.
+    Non possiamo scrivere \(\sqrt{8}\) come frazione esatta; possiamo solo
+    \textbf{approssimarlo}.
+
+    Allo stesso modo:
+    \[
+        \sqrt{11} = 3{,}316\,624\,790\ldots \qquad
+        \sqrt{3}  = 1{,}732\,050\,807\ldots
+    \]
+\end{esempio}
+
+\begin{sapevi}
+    \textbf{La crisi dei Pitagorici e \(\sqrt{2}\)}
+
+    I Pitagorici (VI secolo a.C.) credevano che tutti i numeri fossero
+    razionali, cioè esprimibili come rapporto di interi. Fu un grande
+    shock scoprire che la diagonale di un quadrato di lato 1 — che misura
+    esattamente \(\sqrt{2}\) — non è razionale.
+
+    Secondo alcune fonti, il matematico Ippaso di Metaponto fu espulso
+    dalla scuola pitagorica (o addirittura annegato!) per aver rivelato
+    questa scoperta scomoda. \(\sqrt{2} = 1{,}414\,213\,562\ldots\) rimane
+    uno dei numeri irrazionali più famosi della storia della matematica.
+\end{sapevi}
+
+% ------------------------------------------------------------
+\section{Approssimare la radice quadrata}
+% ------------------------------------------------------------
+
+Quando la radice quadrata non è un numero esatto, si effettua
+un'\textbf{approssimazione}: ci si accontenta di un certo numero di
+cifre decimali, sapendo di commettere un piccolo errore.
+Al posto del simbolo \(=\) si usa il simbolo \(\approx\) (che si legge
+\emph{circa uguale a}).
+
+\begin{regola}
+    \textbf{Regola di arrotondamento}
+
+    Per approssimare un numero decimale a una data cifra:
+    \begin{itemize}
+        \item se la cifra \emph{successiva} è \(\geq 5\), si \textbf{arrotonda per eccesso}
+              (si aumenta di 1 l'ultima cifra che si vuole conservare);
+        \item se la cifra \emph{successiva} è \(< 5\), si \textbf{arrotonda per difetto}
+              (si elimina semplicemente la parte restante).
+    \end{itemize}
+\end{regola}
+
+\begin{esempio}
+    Approssima \(\sqrt{8}\) e \(\sqrt{11}\) alle cifre indicate.
+
+    \[
+        \sqrt{8} = 2{,}828\,427\ldots
+    \]
+    \begin{itemize}
+        \item ai decimi: \(\sqrt{8} \approx 2{,}8\) \quad
+              (la cifra successiva è 2, quindi per difetto) \quad \textit{(corretto)}
+        \item ai centesimi: \(\sqrt{8} \approx 2{,}83\) \quad
+              (la cifra successiva è 8, quindi per eccesso) \quad \textit{(corretto)}
+    \end{itemize}
+
+    \[
+        \sqrt{11} = 3{,}316\,624\ldots
+    \]
+    \begin{itemize}
+        \item ai decimi: \(\sqrt{11} \approx 3{,}3\) \quad
+              (la cifra successiva è 1, quindi per difetto) \quad \textit{(corretto)}
+        \item ai centesimi: \(\sqrt{11} \approx 3{,}32\) \quad
+              (la cifra successiva è 6, quindi per eccesso) \quad \textit{(corretto)}
+    \end{itemize}
+\end{esempio}
+
+% ------------------------------------------------------------
+\section{Proprietà della radice quadrata}
+% ------------------------------------------------------------
+
+\begin{regola}
+    \textbf{Proprietà fondamentali della radice quadrata}
+
+    Siano \(a \geq 0\) e \(b \geq 0\) due numeri reali. Valgono le seguenti proprietà:
+
+    \medskip
+
+    \textbf{1. Prodotto sotto radice}
+    \[
+        \sqrt{a \cdot b} = \sqrt{a} \cdot \sqrt{b}
+    \]
+
+    \textbf{2. Quoziente sotto radice} \quad (con \(b > 0\))
+    \[
+        \sqrt{\dfrac{a}{b}} = \dfrac{\sqrt{a}}{\sqrt{b}}
+    \]
+
+    \textbf{3. Radice del quadrato}
+    \[
+        \sqrt{a^2} = a \quad (a \geq 0)
+    \]
+
+    \textbf{4. Quadrato della radice}
+    \[
+        \left(\sqrt{a}\right)^2 = a \quad (a \geq 0)
+    \]
+\end{regola}
+
+\begin{esempio}
+    Applica le proprietà della radice quadrata.
+
+    \medskip
+
+    \textbf{Proprietà del prodotto:}
+    \[
+        \sqrt{36} = \sqrt{4 \cdot 9} = \sqrt{4} \cdot \sqrt{9} = 2 \cdot 3 = 6
+        \quad \textit{(corretto)}
+    \]
+    \[
+        \sqrt{300} = \sqrt{100 \cdot 3} = \sqrt{100} \cdot \sqrt{3}
+        = 10\sqrt{3} \approx 10 \cdot 1{,}732 = 17{,}32
+        \quad \textit{(corretto)}
+    \]
+
+    \textbf{Proprietà del quoziente:}
+    \[
+        \sqrt{\frac{25}{4}} = \frac{\sqrt{25}}{\sqrt{4}} = \frac{5}{2} = 2{,}5
+        \quad \textit{(corretto)}
+    \]
+
+    \textbf{Quadrato della radice:}
+    \[
+        \left(\sqrt{7}\right)^2 = 7
+        \quad \textit{(corretto)}
+    \]
+\end{esempio}
+
+\begin{attenzione}
+    \textbf{Errori comuni da evitare}
+
+    \medskip
+
+    \textbf{Errore 1: somma sotto radice.}
+
+    La radice \emph{non} si distribuisce sulla somma:
+    \[
+        \sqrt{a + b} \neq \sqrt{a} + \sqrt{b}
+    \]
+    Esempio: \(\sqrt{9 + 16} = \sqrt{25} = 5\), ma
+    \(\sqrt{9} + \sqrt{16} = 3 + 4 = 7 \neq 5\).
+
+    \medskip
+
+    \textbf{Errore 2: radice di un numero negativo.}
+
+    Espressioni come \(\sqrt{-9}\) non hanno significato nell'insieme dei
+    numeri reali. Verificare sempre che il numero sotto la radice sia
+    non negativo prima di calcolare.
+
+    \medskip
+
+    \textbf{Errore 3: confondere quadrato e radice.}
+
+    \(\sqrt{25} = 5\), non \(5^2 = 25\). Sono operazioni inverse: la radice
+    \emph{disfa} il quadrato, il quadrato \emph{disfa} la radice.
+\end{attenzione}
+
+% ------------------------------------------------------------
+\section{Applicazioni geometriche}
+% ------------------------------------------------------------
+
+La radice quadrata compare spesso in problemi di geometria piana,
+in particolare quando si conosce l'area di una figura e si vuole
+ricavare una lunghezza.
+
+\begin{esempio}
+    \textbf{Lato di un quadrato data l'area.}
+
+    Un quadrato ha area \(A = 576\ \text{m}^2\). Qual è la lunghezza del suo lato?
+    \[
+        \ell = \sqrt{A} = \sqrt{576} = 24\ \text{m}
+        \quad \textit{(corretto)}
+    \]
+    Verifica: \(24^2 = 576\). \quad \textit{(corretto)}
+\end{esempio}
+
+\begin{esempio}
+    \textbf{Diagonale di un quadrato (Teorema di Pitagora).}
+
+    Per un quadrato di lato \(\ell\), la diagonale \(d\) si calcola con il
+    Teorema di Pitagora: \(d^2 = \ell^2 + \ell^2 = 2\ell^2\), quindi:
+    \[
+        d = \sqrt{2\ell^2} = \ell\sqrt{2}
+    \]
+
+    Se il lato è \(\ell = 0{,}6\ \text{m}\):
+    \[
+        d = 0{,}6 \cdot \sqrt{2} \approx 0{,}6 \cdot 1{,}414 = 0{,}848\ \text{m}
+        \approx 0{,}848\ \text{m}
+        \quad \textit{(corretto)}
+    \]
+\end{esempio}
+
+% ------------------------------------------------------------
+\section{Esercizi}
+% ------------------------------------------------------------
+
+\subsection{Calcolo con la calcolatrice}
+
+\begin{enumerate}[label=\arabic*.]
+
+    \item Calcola le seguenti radici quadrate con la calcolatrice e approssima
+          alle cifre indicate.
+
+          \begin{center}
+              \begin{tabular}{llll}
+                  \toprule
+                  Radice            & Ai decimi          & Ai centesimi        & All'unità      \\
+                  \midrule
+                  \(\sqrt{420}\)    & \(\approx 20{,}5\) & \(\approx 20{,}49\) & \(\approx 20\) \\
+                  \(\sqrt{2430}\)   & \(\approx 49{,}3\) & \(\approx 49{,}30\) & \(\approx 49\) \\
+                  \(\sqrt{255}\)    & \(\approx 15{,}9\) & \(\approx 15{,}97\) & \(\approx 16\) \\
+                  \(\sqrt{270}\)    & \(\approx 16{,}4\) & \(\approx 16{,}43\) & \(\approx 16\) \\
+                  \(\sqrt{2{,}45}\) & \(\approx 1{,}6\)  & \(\approx 1{,}56\)  & \(\approx 2\)  \\
+                  \(\sqrt{123}\)    & \(\approx 11{,}1\) & \(\approx 11{,}09\) & \(\approx 11\) \\
+                  \bottomrule
+              \end{tabular}
+          \end{center}
+
+    \item Completa la seguente tabella relativa a quadrati:
+
+          \begin{center}
+              \begin{tabular}{ccc}
+                  \toprule
+                  Lato                           & Area                     & Perimetro                      \\
+                  \midrule
+                  \(8{,}5\ \text{cm}\)           & \(72{,}25\ \text{cm}^2\) & \(34\ \text{cm}\)              \\
+                  \(24\ \text{m}\)               & \(576\ \text{m}^2\)      & \(96\ \text{m}\)               \\
+                  \(16\ \text{cm}\)              & \(256\ \text{cm}^2\)     & \(64\ \text{cm}\)              \\
+                  \(\approx 22{,}98\ \text{dm}\) & \(528\ \text{dm}^2\)     & \(\approx 91{,}92\ \text{dm}\) \\
+                  \bottomrule
+              \end{tabular}
+          \end{center}
+
+    \item Calcola la misura del lato di un quadrato nel caso in cui la sua
+          diagonale misuri \(15\ \text{cm}\). Approssima tutti i risultati al
+          decimo.
+
+    \item Calcola la misura della diagonale di un quadrato nel caso in cui il
+          lato misuri \(0{,}6\ \text{m}\). Approssima tutti i risultati al
+          millesimo.
+
+    \item L'area di un triangolo rettangolo isoscele vale \(4{,}5\ \text{cm}^2\).
+          Trova la misura dei due lati congruenti.
+
+    \item L'area della superficie totale di un cubo è \(324\ \text{cm}^2\).
+          Calcola il suo volume.
+
+\end{enumerate}
+
+% ------------------------------------------------------------
+\section{Riepilogo}
+% ------------------------------------------------------------
+
+\begin{itemize}
+    \item La \textbf{radice quadrata} di \(a \geq 0\) è il numero \(x \geq 0\)
+          tale che \(x^2 = a\): \(\sqrt{a} = x \iff x^2 = a\).
+    \item La radice quadrata è l'\textbf{operazione inversa} dell'elevamento
+          al quadrato.
+    \item I \textbf{quadrati perfetti} sono i numeri interi il cui la radice
+          quadrata è anch'essa un numero intero (1, 4, 9, 16, 25, \ldots).
+    \item Un numero razionale si scrive come frazione o decimale finito/periodico.
+          Un \textbf{numero irrazionale} ha infinite cifre decimali non periodiche;
+          \(\sqrt{2}\), \(\sqrt{3}\), \(\sqrt{8}\) sono esempi di numeri irrazionali.
+    \item Quando la radice non è esatta si \textbf{approssima} usando \(\approx\),
+          rispettando la regola di arrotondamento (\(\geq 5\) per eccesso,
+          \(< 5\) per difetto).
+    \item \textbf{Proprietà:} \(\sqrt{a \cdot b} = \sqrt{a}\cdot\sqrt{b}\);
+          \(\sqrt{a/b} = \sqrt{a}/\sqrt{b}\); \((\sqrt{a})^2 = a\).
+    \item \textbf{Non vale} \(\sqrt{a+b} = \sqrt{a}+\sqrt{b}\).
+    \item La radice quadrata non esiste (nei reali) per numeri negativi.
+\end{itemize}
+
+% ------------------------------------------------------------
+\section{Soluzioni degli esercizi}
+% ------------------------------------------------------------
+
+\subsection*{Esercizio 3}
+
+La diagonale di un quadrato di lato \(\ell\) vale \(d = \ell\sqrt{2}\),
+quindi \(\ell = d / \sqrt{2}\).
+
+\[
+    \ell = \frac{15}{\sqrt{2}} = \frac{15}{1{,}414\ldots} \approx 10{,}6\ \text{cm}
+\]
+
+\subsection*{Esercizio 4}
+
+\[
+    d = 0{,}6 \cdot \sqrt{2} \approx 0{,}6 \cdot 1{,}414 = 0{,}848\ \text{m}
+\]
+
+\subsection*{Esercizio 5}
+
+Un triangolo rettangolo isoscele ha i due cateti uguali (\(\ell\)).
+L'area è \(A = \ell^2 / 2\), quindi:
+\[
+    \ell^2 = 2A = 2 \cdot 4{,}5 = 9 \implies \ell = \sqrt{9} = 3\ \text{cm}
+\]
+
+\subsection*{Esercizio 6}
+
+La superficie totale di un cubo di spigolo \(a\) è \(S = 6a^2\).
+\[
+    a^2 = \frac{S}{6} = \frac{324}{6} = 54\ \text{cm}^2
+    \implies a = \sqrt{54} \approx 7{,}35\ \text{cm}
+\]
+Il volume è:
+\[
+    V = a^3 \approx (7{,}35)^3 \approx 396{,}9\ \text{cm}^3
+\]

@@ -1,0 +1,349 @@
+% ============================================================
+%  capitoli/frazioni.tex — Le frazioni
+%  Matemagica — Matematica per le scuole medie
+%  Autori: Francesco & Emma Piraneo Giuliano
+%  Licenza: CC BY-NC-SA 4.0
+% ============================================================
+
+\chapter{Le frazioni}
+
+% ------------------------------------------------------------
+\section*{Obiettivi di apprendimento}
+% ------------------------------------------------------------
+
+Al termine di questo capitolo sarai in grado di:
+
+\begin{itemize}[leftmargin=1.5em]
+    \item riconoscere e leggere una frazione;
+    \item identificare il \textbf{numeratore} e il \textbf{denominatore};
+    \item rappresentare una frazione come parte di un intero;
+    \item utilizzare la frazione come \textbf{operatore}, cioè per calcolare una parte di una quantità.
+\end{itemize}
+
+% ------------------------------------------------------------
+\section{Frazioni nella vita di tutti i giorni}
+% ------------------------------------------------------------
+
+Osserva queste frasi, tratte dalla vita quotidiana:
+
+\begin{itemize}[leftmargin=1.5em]
+    \item «Mi dia mezzo litro di latte e un chilo e mezzo di pane, per favore.»
+    \item «Mancano ancora tre quarti d'ora alla fine della lezione.»
+    \item «La mia squadra ha vinto l'incontro dopo aver dominato per i due terzi della partita.»
+    \item «Nel negozio all'angolo vengono praticati sconti del trenta percento.»
+\end{itemize}
+
+In tutti questi casi si parla di \textbf{frazioni}: simboli che indicano una parte di qualcosa.
+Anche le percentuali sono frazioni: il $30\%$ significa, letteralmente, \emph{trenta centesimi},
+cioè $\dfrac{30}{100}$.
+
+% ------------------------------------------------------------
+\section{La frazione come parte di un intero}
+% ------------------------------------------------------------
+
+\begin{definizione}
+    Si chiama \textbf{frazione} il simbolo $\dfrac{a}{b}$, con $b \neq 0$,
+    dove $a$ e $b$ sono numeri interi.
+    Una frazione rappresenta una o più parti uguali in cui è stato diviso un intero.
+\end{definizione}
+
+Il modo più immediato per capire le frazioni è immaginare una torta.
+
+\begin{figure}[htb]
+    \centering
+    \begin{tikzpicture}
+        % --- torta intera suddivisa in 8 spicchi, 3 colorati ---
+        \def\R{2.2}
+        % Sfondo grigio chiaro = spicchi non colorati
+        \foreach \i in {0,1,2,3,4,5,6,7} {
+                \fill[gray!20] (0,0) -- ({(\i)*45}:\R) arc[start angle={(\i)*45},
+                        end angle={(\i+1)*45}, radius=\R] -- cycle;
+            }
+        % Spicchi colorati (blu chiaro) = i primi 3
+        \foreach \i in {0,1,2} {
+                \fill[blu!40] (0,0) -- ({(\i)*45}:\R) arc[start angle={(\i)*45},
+                        end angle={(\i+1)*45}, radius=\R] -- cycle;
+            }
+        % Bordi
+        \draw[thick, blu] (0,0) circle (\R);
+        \foreach \i in {0,1,2,3,4,5,6,7} {
+                \draw[thick, blu] (0,0) -- ({(\i)*45}:\R);
+            }
+        % Etichetta
+        \node[below] at (0,-\R-0.4) {$\dfrac{3}{8}$ della torta};
+    \end{tikzpicture}
+    \caption{Una torta divisa in 8 parti uguali: 3 parti su 8 sono colorate.}
+\end{figure}
+
+La torta è stata divisa in \textbf{8 parti uguali}. Ne abbiamo prese \textbf{3}.
+Scriviamo quindi $\dfrac{3}{8}$ e leggiamo: \emph{«tre ottavi»}.
+
+\begin{definizione}
+    Nella frazione $\dfrac{a}{b}$:
+    \begin{itemize}[leftmargin=1.5em]
+        \item $a$ si chiama \textbf{numeratore} e indica \emph{quante parti} consideriamo;
+        \item $b$ si chiama \textbf{denominatore} e indica \emph{in quante parti uguali}
+              è stato diviso l'intero;
+        \item la linea orizzontale tra i due numeri si chiama \textbf{linea di frazione}.
+    \end{itemize}
+\end{definizione}
+
+\begin{figure}[htb]
+    \centering
+    \begin{tikzpicture}[>=stealth, thick]
+        % Frazione grande al centro
+        \node[font=\Large] (num) at (0, 0.7)  {$a$};
+        \node[font=\Large] (bar) at (0, 0)    {};
+        \draw[blu, very thick] (-0.4, 0) -- (0.4, 0);
+        \node[font=\Large] (den) at (0,-0.7)  {$b$};
+        % Freccia numeratore
+        \draw[blu, ->] (1.8, 0.7) node[right, font=\small\bfseries] {numeratore} -- (0.25, 0.7);
+        % Freccia linea di frazione
+        \draw[blu, ->] (-2.4, 0) node[left, font=\small\bfseries] {linea di frazione} -- (-0.45, 0);
+        % Freccia denominatore
+        \draw[blu, ->] (1.8,-0.7) node[right, font=\small\bfseries] {denominatore} -- (0.25,-0.7);
+    \end{tikzpicture}
+    \caption{Le parti di una frazione.}
+\end{figure}
+
+\begin{regola}
+    Per \textbf{leggere} una frazione si pronuncia prima il numeratore
+    (come numero cardinale) e poi il denominatore (come numero ordinale):
+    \begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+        \item $\dfrac{1}{2}$ si legge \emph{un mezzo}
+        \item $\dfrac{3}{4}$ si legge \emph{tre quarti}
+        \item $\dfrac{5}{8}$ si legge \emph{cinque ottavi}
+        \item $\dfrac{7}{10}$ si legge \emph{sette decimi}
+    \end{itemize}
+    Per denominatori maggiori di 10 si aggiunge il suffisso \emph{-esimi}:
+    $\dfrac{3}{11}$ si legge \emph{tre undicesimi}.
+\end{regola}
+
+% --- Esempio visivo: torta + rettangolo ----------------------
+
+\begin{esempio}
+    \textbf{Rappresentazioni della stessa frazione in forme diverse.}
+
+    \medskip
+    La frazione $\dfrac{2}{5}$ può essere rappresentata sia con una figura circolare
+    sia con un rettangolo: la forma non cambia il significato.
+
+    \medskip
+    \begin{center}
+        \begin{tikzpicture}
+            % --- Cerchio: 2/5 colorati ---
+            \def\R{1.6}
+            \foreach \i in {0,1,2,3,4} {
+                    \fill[gray!20] (0,0) -- ({90 + (\i)*72}:\R)
+                    arc[start angle={90+(\i)*72}, end angle={90+(\i+1)*72}, radius=\R] -- cycle;
+                }
+            \foreach \i in {0,1} {
+                    \fill[blu!40] (0,0) -- ({90 + (\i)*72}:\R)
+                    arc[start angle={90+(\i)*72}, end angle={90+(\i+1)*72}, radius=\R] -- cycle;
+                }
+            \draw[thick, blu] (0,0) circle (\R);
+            \foreach \i in {0,1,2,3,4} {
+                    \draw[thick, blu] (0,0) -- ({90+(\i)*72}:\R);
+                }
+            \node[below] at (0,-\R-0.35) {$\dfrac{2}{5}$};
+        \end{tikzpicture}
+        \hspace{2cm}
+        \begin{tikzpicture}
+            % --- Rettangolo: 5 colonne, 2 colorate ---
+            \def\W{0.9}  % larghezza di ogni cella
+            \def\H{1.6}  % altezza
+            \foreach \i in {0,1,2,3,4} {
+                    \fill[gray!20] ({\i*\W}, 0) rectangle ({(\i+1)*\W}, \H);
+                }
+            \foreach \i in {0,1} {
+                    \fill[blu!40] ({\i*\W}, 0) rectangle ({(\i+1)*\W}, \H);
+                }
+            \draw[thick, blu] (0,0) rectangle ({5*\W}, \H);
+            \foreach \i in {1,2,3,4} {
+                    \draw[thick, blu] ({\i*\W},0) -- ({\i*\W},\H);
+                }
+            \node[below] at ({5*\W/2}, -0.35) {$\dfrac{2}{5}$};
+        \end{tikzpicture}
+    \end{center}
+
+    \medskip
+    In entrambe le figure l'intero è diviso in \textbf{5 parti uguali}
+    e \textbf{2} di esse sono colorate: la frazione è $\dfrac{2}{5}$ in ogni caso.
+\end{esempio}
+
+\begin{attenzione}
+    \textbf{Il denominatore non può essere zero.}
+
+    Scrivere $\dfrac{3}{0}$ non ha senso matematico: non è possibile dividere
+    qualcosa in \emph{zero} parti uguali.
+    Per questo motivo la condizione $b \neq 0$ è sempre obbligatoria.
+\end{attenzione}
+
+% ------------------------------------------------------------
+\section{La frazione come operatore}
+% ------------------------------------------------------------
+
+La frazione non serve solo a descrivere una parte di una figura:
+può anche essere applicata a una \textbf{quantità concreta} per calcolarne una parte.
+In questo caso si dice che la frazione agisce da \textbf{operatore}.
+
+\begin{regola}
+    Per calcolare $\dfrac{a}{b}$ di una quantità $Q$:
+    \begin{enumerate}[leftmargin=1.5em, itemsep=2pt]
+        \item si divide $Q$ per il denominatore $b$ (si ottiene il valore di \emph{una} parte);
+        \item si moltiplica il risultato per il numeratore $a$ (si ottengono le $a$ parti cercate).
+    \end{enumerate}
+    \[
+        \frac{a}{b} \text{ di } Q \;=\; (Q \div b) \times a
+    \]
+\end{regola}
+
+\begin{esempio}
+    \textbf{Luigi ha percorso $\dfrac{3}{5}$ di una pista lunga 350\,m.
+        Quanti metri ha percorso?}
+
+    \medskip
+    Passo 1 — divido la pista in 5 parti uguali:
+    \[
+        350 \div 5 = 70 \text{ m per ogni parte}
+    \]
+
+    Passo 2 — prendo 3 di quelle parti:
+    \[
+        70 \times 3 = 210 \text{ m}
+    \]
+
+    \medskip
+    \textbf{Rappresentazione grafica (barra frazionaria):}
+
+    \medskip
+    \begin{center}
+        \begin{tikzpicture}
+            \def\TotW{7.5}   % larghezza totale della barra
+            \def\H{0.7}      % altezza
+            \def\W{\TotW/5}  % larghezza di ogni parte
+            % 5 celle
+            \foreach \i in {0,1,2,3,4} {
+                    \fill[gray!20] ({\i*\W},0) rectangle ({(\i+1)*\W},\H);
+                }
+            % 3 celle colorate
+            \foreach \i in {0,1,2} {
+                    \fill[blu!40] ({\i*\W},0) rectangle ({(\i+1)*\W},\H);
+                }
+            % bordi
+            \draw[thick,blu] (0,0) rectangle (\TotW,\H);
+            \foreach \i in {1,2,3,4} {
+                    \draw[thick,blu] ({\i*\W},0) -- ({\i*\W},\H);
+                }
+            % etichette sotto ogni cella
+            \foreach \i in {0,1,2,3,4} {
+                    \node[below, font=\small] at ({(\i+0.5)*\W}, -0.05) {70\,m};
+                }
+            % parentesi graffa per le 3 parti colorate
+            \draw[blu, thick, decorate,
+                decoration={brace, amplitude=6pt, raise=4pt}]
+            (0, \H) -- ({3*\W}, \H)
+            node[midway, above=10pt, font=\small\bfseries] {$\frac{3}{5}$ di 350\,m $= 210$\,m};
+            % etichetta totale sotto
+            \node[below=1.1cm, font=\small] at ({\TotW/2},0) {350\,m totali};
+        \end{tikzpicture}
+    \end{center}
+
+    \medskip
+    Luigi ha percorso \textbf{210 m}.
+\end{esempio}
+
+\begin{attenzione}
+    \textbf{Errore comune: confondere numeratore e denominatore nell'operatore.}
+
+    Alcuni allievi, per calcolare $\dfrac{3}{5}$ di 350, dividono per 3 e moltiplicano per 5.
+
+    \medskip
+    \begin{tabular}{ll}
+        Procedimento errato:   & $350 \div 3 \times 5 \approx 583$ \\[4pt]
+        Procedimento corretto: & $350 \div 5 \times 3 = 210$
+        \quad\textit{(corretto)}
+    \end{tabular}
+
+    \medskip
+    Ricorda: si divide \textbf{sempre} per il denominatore (il numero \emph{in basso}).
+\end{attenzione}
+
+% ------------------------------------------------------------
+\section*{Lo sapevi?}
+% ------------------------------------------------------------
+
+\begin{sapevi}
+    \textbf{Le frazioni nell'antico Egitto e il Papiro di Rhind}
+
+    Le frazioni sono uno degli strumenti matematici più antichi che conosciamo.
+    Gli antichi Egizi le usavano già oltre \textbf{3\,500 anni fa}, come testimoniano
+    diversi papiri conservati fino ai giorni nostri.
+
+    Il più importante è il \textbf{Papiro di Rhind} (o Papiro di Ahmes),
+    scritto attorno al 1650 a.C. dal matematico e scriba Ahmes.
+    Si tratta di una raccolta di 87 problemi matematici, molti dei quali riguardano
+    proprio le frazioni.
+
+    Gli Egizi avevano però un'abitudine diversa dalla nostra: usavano quasi
+    esclusivamente le cosiddette \textbf{frazioni unitarie}, cioè frazioni con
+    numeratore uguale a 1, come $\dfrac{1}{2}$, $\dfrac{1}{3}$, $\dfrac{1}{7}$.
+    Per esprimere frazioni più grandi, le \emph{sommavano} tra loro.
+    Ad esempio, quella che noi scriviamo $\dfrac{2}{5}$ gli Egizi la scrivevano come
+    $\dfrac{1}{3} + \dfrac{1}{15}$.
+
+    Un risultato notevole, vero? Dimostra che già migliaia di anni fa gli esseri umani
+    avevano sviluppato strumenti precisi per ragionare sulle parti di un intero.
+\end{sapevi}
+
+\begin{sapevi}
+    \textbf{Chiavi inglesi: millimetri contro frazioni di pollice}
+
+    Se hai mai messo mano a una cassetta degli attrezzi, potresti aver notato
+    che le chiavi meccaniche non sono tutte uguali: alcune riportano misure
+    in \textbf{millimetri} (sistema metrico), altre in \textbf{frazioni di pollice}
+    (sistema imperiale, usato negli Stati Uniti).
+
+    Nel sistema metrico confrontare le chiavi è immediato: una chiave da 13\,mm
+    è più grande di una da 11\,mm — basta leggere i numeri interi.
+
+    Nel sistema imperiale, invece, le stesse misure vengono espresse come frazioni
+    di pollice: $\dfrac{7}{16}$\,in, $\dfrac{1}{2}$\,in, $\dfrac{9}{16}$\,in,
+    $\dfrac{5}{8}$\,in, \ldots\ e capire subito quale chiave sia più grande
+    richiede di \textbf{confrontare frazioni con denominatori diversi}:
+    non è affatto immediato!
+
+    Ad esempio: $\dfrac{9}{16}$ o $\dfrac{5}{8}$? Qual è la chiave più grande?
+
+    Per rispondere bisogna trovare un denominatore comune: $\dfrac{5}{8} = \dfrac{10}{16}$,
+    quindi $\dfrac{10}{16} > \dfrac{9}{16}$: la chiave da $\dfrac{5}{8}$\,in è più grande.
+
+    Ecco un caso concreto in cui il sistema metrico — basato su numeri interi — rende
+    la vita molto più semplice delle frazioni. Ma capire come funziona il confronto
+    tra frazioni è fondamentale: lo affronteremo in un capitolo successivo.
+\end{sapevi}
+
+% ------------------------------------------------------------
+\section*{Riepilogo del capitolo}
+% ------------------------------------------------------------
+
+\begin{tcolorbox}[
+        enhanced,
+        breakable,
+        colback  = blu!5,
+        colframe = blu,
+        title    = {Riepilogo — Le frazioni},
+        fonttitle = \bfseries,
+        arc      = 4pt,
+    ]
+    \begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+        \item Una \textbf{frazione} $\dfrac{a}{b}$ (con $b \neq 0$) rappresenta
+              $a$ parti di un intero diviso in $b$ parti uguali.
+        \item $a$ si chiama \textbf{numeratore}, $b$ si chiama \textbf{denominatore}.
+        \item Il denominatore non può mai essere \textbf{zero}.
+        \item Una frazione può agire da \textbf{operatore}: per calcolare $\dfrac{a}{b}$
+              di una quantità $Q$, si calcola $(Q \div b) \times a$.
+        \item Si divide sempre per il \textbf{denominatore} (numero in basso),
+              poi si moltiplica per il \textbf{numeratore} (numero in alto).
+    \end{itemize}
+\end{tcolorbox}
